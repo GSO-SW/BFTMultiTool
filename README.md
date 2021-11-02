@@ -10,4 +10,4 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 |   		|	        |		|		|			
 				
 				
-
+![image](AddFiles/BFTMultiTool_GitFlow.drawio.png)
