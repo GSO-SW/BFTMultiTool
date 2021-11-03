@@ -52,6 +52,7 @@ namespace MultiToolKlassenBibliothek
                     case "1":
                         //Konsoleninhalt wird gelöscht
                         Console.Clear();
+                        //Feature1 wird aufgerufen.
                         MultiToolKlassenBibliothek.BeispielThemenbereich.Feature1();
                         break;
 
