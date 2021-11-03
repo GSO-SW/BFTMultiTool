@@ -5,9 +5,15 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 
 | Bereich     	| Feature 	|Rolle		|Name		|Username	|Branch		|
 | ----------- 	| ----------- 	|-----------	|-----------	|-----------	|-----------	|
-|Administration	|Release      	|Administrator	|Kander Akinci 	|AI-Assistant	|Release, main	|
-|Elektrotechnik	|Ohmisches Gesetz und Leistungsberechnung|Teamkoordinator|x		|x		|x		|
-|   		|	        |		|		|		|		|	
+|**Administration**	|Release      	|Administrator	|Kander Akinci 	|AI-Assistant	|Release, main	|
+|		|	|		|		|		|		|		|
+|**Elektrotechnik**	|Ohmisches Gesetz und Leistungsberechnung|Teamkoordinator|David Schaele		|DavidCXV		|ETEntwicklung, Feature 1	|
+|   		|	        |Entwickler|Nicolai Mockenhaupt	|NeoEkusoshisuto|Feature 2|
+|   		|	        |Entwickler|Nico Billig	|Nico-GSO|Feature 3|
+|   		|	        |Entwickler|David Waderna|Davobeats|Feature 4|
+
+
+|		|	|		|		|		|		|		|
 				
 				
 ![image](AddFiles/BFTMultiTool_GitFlow.drawio.png)
