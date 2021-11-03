@@ -46,10 +46,11 @@ namespace MultiToolKlassenBibliothek
                 Console.WriteLine("\t4 - Feature4\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
-
+        
                 switch (HauptAusw)
                 {
                     case "1":
+                        //Konsoleninhalt wird gelöscht
                         Console.Clear();
                         MultiToolKlassenBibliothek.BeispielThemenbereich.Feature1();
                         break;
