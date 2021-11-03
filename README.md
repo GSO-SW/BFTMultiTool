@@ -13,23 +13,24 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 |   		|	        |Entwickler|Nicolai Mockenhaupt	|NeoEkusoshisuto||
 |   		|	        |Entwickler|Nico Billig	|Nico-GSO||
 |   		|	        |Entwickler|David Waderna|Davobeats||
-|		|	|		|		|		|		|		|
-|**Physik**	|	|Teamkoordinator|Jonas Högele	|		|		|		|		|
-|		|	|		|		|		|		|		|
-|		|	|		|		|		|		|		|
-|		|	|		|		|		|		|		|
-|**Informatik**	|	|Teamkoordinator|		|		|		|		|		|
-|		|	|		|		|		|		|		|
-|		|	|		|		|		|		|		|
-|		|	|		|		|		|		|		|
-|**Wirtschaft**	|	|Teamkoordinator|		|		|		|		|		|
-|		|	|		|		|		|		|		|
-|		|	|		|		|		|		|		|
-|		|	|		|		|		|		|		|
-|**Mathematik**	|	|Teamkoordinator|		|		|		|		|		|
-|		|	|		|		|		|		|		|
-|		|	|		|		|		|		|		|
-|		|	|		|		|		|		|		|
+|		|	|		|		|		|		|		
+|**Physik**	|	|Teamkoordinator|Jonas Högele	|Jonashgl|PHEntwicklung		|
+|		|	|	Entwickler	|Arad Ahmen|arad021	|		|		
+|		|	|	Entwickler	|Tobias Cremer	|TobiasC53		|		|
+|		|	|Entwickler	|Jowan Hamko|jowanh2
+|		|	|		|		|		|		|		
+|**Informatik**	|	|Teamkoordinator|Haitam Kazzaz	|Haitham2004|ITEntwicklung		|				
+|		|	|		|		|		|		|		
+|		|	|		|		|		|		|		
+|		|	|		|		|		|		|		
+|**Wirtschaft**	|	|Teamkoordinator|Florian Reuter	|Florian116	|WIEntwicklung	|				
+|		|	|		|		|		|		|		
+|		|	|		|		|		|		|		
+|		|	|		|		|		|		|		
+|**Mathematik**	|	|Teamkoordinator|Moritz Mersmann|MoritzM1110|MAEntwicklung	|				
+|		|	|		|		|		|		|		
+|		|	|		|		|		|		|		
+|		|	|		|		|		|		|		
 				
 				
 ![image](AddFiles/BFTMultiTool_GitFlow.drawio.png)
