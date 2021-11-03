@@ -3,16 +3,16 @@ Die Schüler der Klasse BFT11 wurden damit beauftragt eine Multi-Tool Software z
 
 Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese Bereiche orientieren Sich an den Naturwissenschaftlichen Unterrichtsfächern der Berufsfachschule. Die nachfolgende Tabelle zeigt welche Features in den einzelnen Bereichen umgesetzt werden.
 
-***Jeder User hat nur die Berechtigung auf die zugewiesenen Branches zu committen*** 
+***Die Teamkoordinatoren können direkt in die jeweilige Entwicklungs-Branch schreiben. Die Entwickler müssen ein Pull-Request bei den jeweiligen Koodrinatoren stellen*** 
 
 | Bereich     	| Feature 	|Rolle		|Name		|Username	|Branch		|
 | ----------- 	| ----------- 	|-----------	|-----------	|-----------	|-----------	|
 |**Administration**	|Release      	|Administrator	|Kander Akinci 	|AI-Assistant	|Release, main	|
 |		|	|		|		|		|		|		|
-|**Elektrotechnik**	|Ohmisches Gesetz und Leistungsberechnung|Teamkoordinator|David Schaele		|DavidCXV		|ETEntwicklung, Feature 1	|
-|   		|	        |Entwickler|Nicolai Mockenhaupt	|NeoEkusoshisuto|Feature 2|
-|   		|	        |Entwickler|Nico Billig	|Nico-GSO|Feature 3|
-|   		|	        |Entwickler|David Waderna|Davobeats|Feature 4|
+|**Elektrotechnik**	|Ohmisches Gesetz und Leistungsberechnung|Teamkoordinator|David Schaele		|DavidCXV		|ETEntwicklung	|
+|   		|	        |Entwickler|Nicolai Mockenhaupt	|NeoEkusoshisuto||
+|   		|	        |Entwickler|Nico Billig	|Nico-GSO||
+|   		|	        |Entwickler|David Waderna|Davobeats||
 |		|	|		|		|		|		|		|
 |**Physik**	|	|		|		|		|		|		|
 |		|	|		|		|		|		|		|
