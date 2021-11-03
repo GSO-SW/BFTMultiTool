@@ -14,19 +14,19 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 |   		|	        |Entwickler|Nico Billig	|Nico-GSO||
 |   		|	        |Entwickler|David Waderna|Davobeats||
 |		|	|		|		|		|		|		|
-|**Physik**	|	|		|		|		|		|		|
+|**Physik**	|	|Teamkoordinator|Jonas Högele	|		|		|		|		|
 |		|	|		|		|		|		|		|
 |		|	|		|		|		|		|		|
 |		|	|		|		|		|		|		|
-|**Informatik**	|	|		|		|		|		|		|
+|**Informatik**	|	|Teamkoordinator|		|		|		|		|		|
 |		|	|		|		|		|		|		|
 |		|	|		|		|		|		|		|
 |		|	|		|		|		|		|		|
-|**Wirtschaft**	|	|		|		|		|		|		|
+|**Wirtschaft**	|	|Teamkoordinator|		|		|		|		|		|
 |		|	|		|		|		|		|		|
 |		|	|		|		|		|		|		|
 |		|	|		|		|		|		|		|
-|**Mathematik**	|	|		|		|		|		|		|
+|**Mathematik**	|	|Teamkoordinator|		|		|		|		|		|
 |		|	|		|		|		|		|		|
 |		|	|		|		|		|		|		|
 |		|	|		|		|		|		|		|
