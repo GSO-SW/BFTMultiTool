@@ -11,8 +11,22 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 |   		|	        |Entwickler|Nicolai Mockenhaupt	|NeoEkusoshisuto|Feature 2|
 |   		|	        |Entwickler|Nico Billig	|Nico-GSO|Feature 3|
 |   		|	        |Entwickler|David Waderna|Davobeats|Feature 4|
-
-
+|		|	|		|		|		|		|		|
+|**Physik**	|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
+|**Informatik**	|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
+|**Wirtschaft**	|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
+|**Mathematik**	|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
+|		|	|		|		|		|		|		|
 |		|	|		|		|		|		|		|
 				
 				
