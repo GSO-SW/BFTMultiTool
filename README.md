@@ -3,6 +3,7 @@ Die Schüler der Klasse BFT11 wurden damit beauftragt eine Multi-Tool Software z
 
 Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese Bereiche orientieren Sich an den Naturwissenschaftlichen Unterrichtsfächern der Berufsfachschule. Die nachfolgende Tabelle zeigt welche Features in den einzelnen Bereichen umgesetzt werden.
 
+
 ***Die Teamkoordinatoren können direkt in die jeweilige Entwicklungs-Branch schreiben. Die Entwickler müssen ein Pull-Request bei den jeweiligen Koodrinatoren stellen*** 
 
 | Bereich     	| Feature 	|Rolle		|Name		|Username	|Branch		|
