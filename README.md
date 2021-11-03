@@ -3,6 +3,8 @@ Die Schüler der Klasse BFT11 wurden damit beauftragt eine Multi-Tool Software z
 
 Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese Bereiche orientieren Sich an den Naturwissenschaftlichen Unterrichtsfächern der Berufsfachschule. Die nachfolgende Tabelle zeigt welche Features in den einzelnen Bereichen umgesetzt werden.
 
+***Jeder User hat nur die Berechtigung auf die zugewiesenen Branches zu committen*** 
+
 | Bereich     	| Feature 	|Rolle		|Name		|Username	|Branch		|
 | ----------- 	| ----------- 	|-----------	|-----------	|-----------	|-----------	|
 |**Administration**	|Release      	|Administrator	|Kander Akinci 	|AI-Assistant	|Release, main	|
