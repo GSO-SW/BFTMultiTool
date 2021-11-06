@@ -28,9 +28,9 @@ namespace MultiToolKlassenBibliothek
             Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm\n" +
                               "Eingabe: hauptmenü\t->\truft das Hauptmenü auf\n\n");
 
-
+            
             string HauptAusw;
-
+            //Um den Exit/Error Status festzuhalten 
             bool Exit = false;
             bool Ecode;
 
