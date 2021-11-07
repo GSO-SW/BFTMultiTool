@@ -25,13 +25,14 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 |		|	|	Entwickler|Mansour Alassaf	|mansourr23	|Feature11|	
 |		|	|	|		|		|		|		
 |**Wirtschaft**	|	|Teamkoordinator|Florian Reuter	|Florian116	|WIEntwicklung,Feature12|				
-|		|	|		|		|		|Feature13|		
-|		|	|		|		|		|Feature14|		
-|		|	|		|		|		|		|		
-|**Mathematik**	|Menü MT / ... |Teamkoordinator|Moritz Mersmann|MoritzM1110|MAEntwicklung,Feature15|				
-|		|Funktionsgleichung, Nullstellen und Funktionswerte von Lineare Funktionen berechnen|	Entwickler	|Dennis Jakob	|Dennis180|Feature16|		
-|		|	|	Entwickler	|Deniz Kest |	DenoDenoDeno123454321|Feature17|		
-|		|Flächenberechnung verschiedener Formen|	Entwickler	|	Samir Yusuf	|	AugeRaus	|Feature18|		
+|		|	|		|Tamim Hashimi|	Tamim-2003|Feature13|		
+|		|	|		|Murtaza Behzad|		|Feature14|		
+|		|	|		|Deniz Kartal|	DenizDRoger|Feature15|	
+|		|	|		|		|		|		|	
+|**Mathematik**	|Menü MT / ... |Teamkoordinator|Moritz Mersmann|MoritzM1110|MAEntwicklung,Feature16|				
+|		|Funktionsgleichung, Nullstellen und Funktionswerte von Lineare Funktionen berechnen|	Entwickler	|Dennis Jakob	|Dennis180|Feature17|		
+|		|	|	Entwickler	|Deniz Kest |	DenoDenoDeno123454321|Feature18|		
+|		|Flächenberechnung verschiedener Formen|	Entwickler	|	Samir Yusuf	|	AugeRaus	|Feature19|		
 				
 				
 ![image](AddFiles/BFTMultiTool_GitFlow.drawio.png)
