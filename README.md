@@ -10,28 +10,28 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 | ----------- 	| ----------- 	|-----------	|-----------	|-----------	|-----------	|
 |**Administration**	|Release      	|Administrator	|Kander Akinci 	|AI-Assistant	|Release, main	|
 |		|	|		|		|		|		|		|
-|**Elektrotechnik**	|Ohmisches Gesetz und Leistungsberechnung|Teamkoordinator|David Schaele		|DavidCXV		|ETEntwicklung	|
-|   		|	        |Entwickler|Nicolai Mockenhaupt	|NeoEkusoshisuto||
-|   		|	        |Entwickler|Nico Billig	|Nico-GSO||
-|   		|	        |Entwickler|David Waderna|Davobeats||
+|**Elektrotechnik**	|Menü ET / Spannung als Energieaufteilung & Strom aus Ladungen je Zeit|Teamkoordinator|David Schaele|DavidCXV|ETEntwicklung,Feature1|
+|   		|Spannungsfall & Leitungsquerschnitt berechnen |Entwickler|Nicolai Mockenhaupt	|NeoEkusoshisuto|Feature2|
+|   		|Ohm'schesGesetz & Leistungsgesetz |Entwickler|Nico Billig	|Nico-GSO|Feature3|
+|   		|Widerstand, Kondensator & Spule Info und Berechnung|Entwickler|David Waderna|Davobeats|Feature4|
 |		|	|		|		|		|		|		
-|**Physik**	|	|Teamkoordinator|Jonas Högele	|Jonashgl|PHEntwicklung		|
-|		|	|	Entwickler	|Arad Ahmen|arad021	|		|		
-|		|	|	Entwickler	|Tobias Cremer	|TobiasC53		|		|
-|		|	|Entwickler	|Jowan Hamko|jowanh2
+|**Physik**	|Menü PY /Vorsätze für Maßeinheiten umwandeln SI –Einheiten umrechnen	|Teamkoordinator|Jonas Högele	|Jonashgl|PHEntwicklung	,Feature5|
+|		|Schwerkraft –Vergleichzu anderen Planeten, Allg,Schwerkraftberechnen|	Entwickler	|Arad Ahmen|arad021	|	Feature6|		
+|		|	|	Entwickler	|Tobias Cremer	|TobiasC53		|	Feature7|
+|		|Volumen von Würfel, Kugel, Pyramide und Prisma|Entwickler	|Jowan Hamko|jowanh2|Feature8|
+|		|	||||		|		
+|**Informatik**	|Menü IT / Zahlensysteme ineinander umrechnen|Teamkoordinator|Haitam Kazzaz	|Haitham2004|ITEntwicklung,Feature9|				
+|		|	|Entwickler	|	Emre-Can Zeren	|EmreZ55	|Feature10|		
+|		|	|	Entwickler|Mansour Alassaf	|mansourr23	|Feature11|	
+|		|	|	|		|		|		|		
+|**Wirtschaft**	|	|Teamkoordinator|Florian Reuter	|Florian116	|WIEntwicklung,Feature12|				
+|		|	|		|		|		|Feature13|		
+|		|	|		|		|		|Feature14|		
 |		|	|		|		|		|		|		
-|**Informatik**	|	|Teamkoordinator|Haitam Kazzaz	|Haitham2004|ITEntwicklung		|				
-|		|	|		|		|		|		|		
-|		|	|		|		|		|		|		
-|		|	|		|		|		|		|		
-|**Wirtschaft**	|	|Teamkoordinator|Florian Reuter	|Florian116	|WIEntwicklung	|				
-|		|	|		|		|		|		|		
-|		|	|		|		|		|		|		
-|		|	|		|		|		|		|		
-|**Mathematik**	|	|Teamkoordinator|Moritz Mersmann|MoritzM1110|MAEntwicklung	|				
-|		|	|		|		|		|		|		
-|		|	|		|		|		|		|		
-|		|	|		|		|		|		|		
+|**Mathematik**	|Menü MT / ... |Teamkoordinator|Moritz Mersmann|MoritzM1110|MAEntwicklung,Feature15|				
+|		|Funktionsgleichung, Nullstellen und Funktionswerte von Lineare Funktionen berechnen|	Entwickler	|Dennis Jakob	|Dennis180|Feature16|		
+|		|	|	Entwickler	|Deniz Kest |	DenoDenoDeno123454321|Feature17|		
+|		|Flächenberechnung verschiedener Formen|	Entwickler	|	Samir Yusuf	|	AugeRaus	|Feature18|		
 				
 				
 ![image](AddFiles/BFTMultiTool_GitFlow.drawio.png)
