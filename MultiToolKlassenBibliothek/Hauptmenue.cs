@@ -45,7 +45,8 @@ namespace MultiToolKlassenBibliothek
                 Console.WriteLine("\te - Elektrotechnik");
                 Console.WriteLine("\ti - Informatik");
                 Console.WriteLine("\tm - Mathematik");
-                Console.WriteLine("\tp - Physik\n");
+                Console.WriteLine("\tp - Physik");
+                Console.WriteLine("\tw - Wirtschaft\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
@@ -53,20 +54,30 @@ namespace MultiToolKlassenBibliothek
                 {                                                                       
                     case "e":
                         Console.Clear();
-                        MultiToolKlassenBibliothek.BeispielThemenbereich.Menue();                                                   
+                        MultiToolKlassenBibliothek.BeispielThemenbereich.Menue();
+                        //ETMultiToolKlassenBibliothek.ETMenue.ETSubMenue();
                         break;
 
                     case "i":
                         Console.WriteLine("i");
+                        //ITMultiToolKlassenBibliothek.ITMenue.ITSubMenue();
                         break;
 
                     case "m":
                         Console.WriteLine("m");
+                        //MAMultiToolKlassenBibliothek.MAMenue.MASubMenue();
                         break;
 
                     case "p":
                         Console.WriteLine("p");
+                        //PHMultiToolKlassenBibliothek.PHMenue.PHSubMenue();
                         break;
+
+                    case "w":
+                        Console.WriteLine("w");
+                        //WIMultiToolKlassenBibliothek.WIMenue.WISubMenue();
+                        break;
+
                     case "exit":
                         Exit = true;
                         break;
