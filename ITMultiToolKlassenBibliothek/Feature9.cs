@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ITMultiToolKlassenBibliothek
 {
-    class Feature10
+    class Feature9
     {
-        public static void Feature10Funcion1()
+        public static void Feature9Funcion1()
         {
             Console.WriteLine("Feature10 SubSubMenue");
         }

@@ -43,11 +43,9 @@ namespace ITMultiToolKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Feature10");
-                Console.WriteLine("\t2 - Feature11");
-                Console.WriteLine("\t3 - Feature12");
-                Console.WriteLine("\t4 - Feature13");
-                Console.WriteLine("\t5 - Feature14\n");
+                Console.WriteLine("\t1 - Feature9");
+                Console.WriteLine("\t2 - Feature10");
+                Console.WriteLine("\t5 - Feature11\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -56,7 +54,7 @@ namespace ITMultiToolKlassenBibliothek
                     
                     case "1":
                         Console.Clear();
-                        Feature10.Feature10Funcion1();
+                        Feature9.Feature9Funcion1();
                         
                         break;
 
