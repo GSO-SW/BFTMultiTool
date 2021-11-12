@@ -58,22 +58,22 @@ namespace MultiToolKlassenBibliothek
                         break;
 
                     case "i":
-                        Console.WriteLine("i");
+                        Console.Clear();
                         //ITMultiToolKlassenBibliothek.ITMenue.ITSubMenue();
                         break;
 
                     case "m":
                         Console.Clear();
-                        MAMenue.MASubMenue();
+                        //ITMultiToolKlassenBibliothek.MAMenue.MASubMenue();
                         break;
 
                     case "p":
-                        Console.WriteLine("p");
+                        Console.Clear();
                         //PHMultiToolKlassenBibliothek.PHMenue.PHSubMenue();
                         break;
 
                     case "w":
-                        Console.WriteLine("w");
+                        Console.Clear();
                         //WIMultiToolKlassenBibliothek.WIMenue.WISubMenue();
                         break;
 

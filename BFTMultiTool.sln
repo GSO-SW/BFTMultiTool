@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiToolKlassenBibliothek"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTool", "MultiTool\MultiTool.csproj", "{0DB3A745-AE29-4EBD-BE0C-5290DAFC344D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAMultiToolKlassenBibliothek", "MAMultiToolKlassenBibliothek\MAMultiToolKlassenBibliothek.csproj", "{806976DA-7CAD-4E8D-A12C-0CE51099A26A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonsolenExtrasBibliothek", "KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj", "{F047F542-95DC-4651-8E23-A46E19DB8DFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KonsolenExtrasBibliothek", "KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj", "{F047F542-95DC-4651-8E23-A46E19DB8DFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{0DB3A745-AE29-4EBD-BE0C-5290DAFC344D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DB3A745-AE29-4EBD-BE0C-5290DAFC344D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DB3A745-AE29-4EBD-BE0C-5290DAFC344D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{806976DA-7CAD-4E8D-A12C-0CE51099A26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{806976DA-7CAD-4E8D-A12C-0CE51099A26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{806976DA-7CAD-4E8D-A12C-0CE51099A26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{806976DA-7CAD-4E8D-A12C-0CE51099A26A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F047F542-95DC-4651-8E23-A46E19DB8DFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F047F542-95DC-4651-8E23-A46E19DB8DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F047F542-95DC-4651-8E23-A46E19DB8DFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
