@@ -60,12 +60,12 @@ namespace MultiToolKlassenBibliothek
                 {                                                                       
                     case "e":
                         Console.Clear();
-                        ETMultiToolKlassenBibliothek.ETMenue.ETSubMenue();
+                        //ETMultiToolKlassenBibliothek.ETMenue.ETSubMenue();
                         break;
 
                     case "i":
                         Console.Clear();
-                        //ITMultiToolKlassenBibliothek.ITMenue.ITSubMenue();
+                        ITMultiToolKlassenBibliothek.ITMenue.ITSubMenue();
                         break;
 
                     case "m":
