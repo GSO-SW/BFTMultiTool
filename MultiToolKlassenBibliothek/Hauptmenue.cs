@@ -54,7 +54,6 @@ namespace MultiToolKlassenBibliothek
                 {                                                                       
                     case "e":
                         Console.Clear();
-                        MultiToolKlassenBibliothek.BeispielThemenbereich.Menue();
                         //ETMultiToolKlassenBibliothek.ETMenue.ETSubMenue();
                         break;
 
@@ -64,8 +63,8 @@ namespace MultiToolKlassenBibliothek
                         break;
 
                     case "m":
-                        Console.WriteLine("m");
-                        //MAMultiToolKlassenBibliothek.MAMenue.MASubMenue();
+                        Console.Clear();
+                        MAMenue.MASubMenue();
                         break;
 
                     case "p":

@@ -28,7 +28,7 @@ namespace MultiToolKlassenBibliothek
             Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm\n" +
                               "Eingabe: hauptmenü\t->\truft das Hauptmenü auf\n\n");
 
-            
+
             string HauptAusw;
             //Um den Exit/Error Status festzuhalten 
             bool Exit = false;
@@ -46,7 +46,7 @@ namespace MultiToolKlassenBibliothek
                 Console.WriteLine("\t4 - Feature4\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
-        
+
                 switch (HauptAusw)
                 {
                     case "1":
@@ -93,13 +93,5 @@ namespace MultiToolKlassenBibliothek
             if (Exit == true)
                 Environment.Exit(0);
         }
-
-        public static void Feature1()
-        {
-            Console.WriteLine("Feature1");
-            Console.ReadKey();
-            
-        }
-
     }
 }
