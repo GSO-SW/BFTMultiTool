@@ -60,7 +60,7 @@ namespace MultiToolKlassenBibliothek
                 {                                                                       
                     case "e":
                         Console.Clear();
-                        ETMultiToolKlassenBibliothek.ETMenue.ETSubMenue();
+                        //ETMultiToolKlassenBibliothek.ETMenue.ETSubMenue();
                         break;
 
                     case "i":
@@ -70,7 +70,7 @@ namespace MultiToolKlassenBibliothek
 
                     case "m":
                         Console.Clear();
-                        //ITMultiToolKlassenBibliothek.MAMenue.MASubMenue();
+                        //MAMultiToolKlassenBibliothek.MAMenue.MASubMenue();
                         break;
 
                     case "p":
@@ -80,7 +80,7 @@ namespace MultiToolKlassenBibliothek
 
                     case "w":
                         Console.Clear();
-                        //WIMultiToolKlassenBibliothek.WIMenue.WISubMenue();
+                        WIMultiToolKlassenBibliothek.WIMenue.WISubMenue();
                         break;
 
                     case "exit":
