@@ -65,12 +65,12 @@ namespace MultiToolKlassenBibliothek
 
                     case "i":
                         Console.Clear();
-                        ITMultiToolKlassenBibliothek.ITMenue.ITSubMenue();
+                        //ITMultiToolKlassenBibliothek.ITMenue.ITSubMenue();
                         break;
 
                     case "m":
                         Console.Clear();
-                        //ITMultiToolKlassenBibliothek.MAMenue.MASubMenue();
+                        MAMultiToolKlassenBibliothek.MAMenue.MASubMenue();
                         break;
 
                     case "p":
