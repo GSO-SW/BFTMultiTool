@@ -5,12 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Figgle" Version="0.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
-    <ProjectReference Include="..\PHMultiToolKlassenBibliothek\PHMultiToolKlassenBibliothek.csproj" />
   </ItemGroup>
 
 </Project>
