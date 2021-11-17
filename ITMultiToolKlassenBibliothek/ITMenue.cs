@@ -39,6 +39,8 @@ namespace ITMultiToolKlassenBibliothek
 
                 //Beschreibung der Software.
                 Console.WriteLine("\n\n  IT / Zahlensysteme ineinander umrechnen \n\n");
+                Console.WriteLine("\n\n  IT / Nullstellen berechnen \n\n");
+
 
                 Hmenue = false;
 
@@ -46,7 +48,7 @@ namespace ITMultiToolKlassenBibliothek
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\t1 - Zahlensystem umrechnen");
                 Console.WriteLine("\t2 - Nullstellen berechnen");
-                Console.WriteLine("\t5 - Feature11\n");
+                Console.WriteLine("\t3 - Feature11\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
