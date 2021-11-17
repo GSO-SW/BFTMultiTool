@@ -3,6 +3,7 @@ using Figgle;
 
 
 
+
 namespace ITMultiToolKlassenBibliothek
 {
     public class ITMenue
@@ -30,21 +31,21 @@ namespace ITMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Beispiel Submenü <<<\n" +
+                                  "                              >>> Informatik <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
                 Console.WriteLine("Eingabe: hauptmenü\t->\tzurück zum Hauptmenü");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\nBeschreibung Bereich \n\n");
+                Console.WriteLine("\n\n  IT / Zahlensysteme ineinander umrechnen \n\n");
 
                 Hmenue = false;
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Feature9");
-                Console.WriteLine("\t2 - Feature10");
+                Console.WriteLine("\t1 - Zahlensystem umrechnen");
+                Console.WriteLine("\t2 - Nullstellen berechnen");
                 Console.WriteLine("\t5 - Feature11\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
@@ -54,18 +55,20 @@ namespace ITMultiToolKlassenBibliothek
                     
                     case "1":
                         Console.Clear();
-                        Feature9.Feature9Funcion1();
+                        Feauture9.Feature9Funcion1();
                         
                         break;
 
                     case "2":
                         Console.Clear();
-                        //
+                        Feauture10.Feature10Funcion1();
+
                         break;
 
                     case "3":
                         Console.Clear();
-                        //
+                        Feauture11.Feature11Funcion1();
+
                         break;
 
                     case "4":

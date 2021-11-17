@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ITMultiToolKlassenBibliothek
 {
-    class Feature9
+    class Feauture11
     {
-        public static void Feature9Funcion1()
+        public static void Feature11Funcion1()
         {
-            Console.WriteLine("Feature10 SubSubMenue");
+            Console.WriteLine("Feature11 SubSubMenue");
         }
 
     }
