@@ -57,7 +57,7 @@ namespace ITMultiToolKlassenBibliothek
                     
                     case "1":
                         Console.Clear();
-                        Feauture9.Feature9Funcion1();
+                        Feature9.Feature9Funcion1();
                         
                         break;
 
@@ -69,19 +69,10 @@ namespace ITMultiToolKlassenBibliothek
 
                     case "3":
                         Console.Clear();
-                        Feauture11.Feature11Funcion1();
+                        Feature11.Feature11Funcion1();
 
                         break;
 
-                    case "4":
-                        Console.Clear();
-                        //
-                        break;
-
-                    case "5":
-                        Console.Clear();
-                        //
-                        break;
                     case "hauptmenü":
                         Console.Clear();
                         Hmenue = true;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITMultiToolKlassenBibliothek
 {
-    class Feauture11
+    class Feature11
     {
         public static void Feature11Funcion1()
         {
