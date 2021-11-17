@@ -1,16 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Figgle;
-
-
 
 namespace ETMultiToolKlassenBibliothek
 {
-    public class ETMenue
+    class Feature2
     {
-        public static void ETSubMenue()
+        public static void Feature2Funcion1()
         {
-
-
+            Console.Clear();
             string HauptAusw;
 
             bool Exit = false;
@@ -30,7 +31,7 @@ namespace ETMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Elektrotechnik Submenü <<<\n" +
+                                  "                              >>> Feature2 SubSubMenue <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
@@ -43,40 +44,29 @@ namespace ETMultiToolKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Feature1");
-                Console.WriteLine("\t2 - Feature2");
-                Console.WriteLine("\t3 - Feature3");
-                Console.WriteLine("\t4 - Feature4\n");
+                Console.WriteLine("\t1 - Spannungsfall berechnen");
+                Console.WriteLine("\t2 - Leitungsquerschnitt berechnen\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
                 switch (HauptAusw)
                 {
-                    
+
                     case "1":
                         Console.Clear();
-                        Feature1.Feature1Funcion1();
+                        //
                         break;
 
                     case "2":
                         Console.Clear();
-                        Feature2.Feature2Funcion1();
-                        break;
-
-                    case "3":
-                        Console.Clear();
-                        Feature3.Feature3Funcion1();
-                        break;
-
-                    case "4":
-                        Console.Clear();
-                        Feature4.Feature4Funcion1();
+                        //
                         break;
                                             
                     case "hauptmenü":
                         Console.Clear();
                         Hmenue = true;
                         break;
+                   
                     case "exit":
                         Exit = true;
                         break;
@@ -87,8 +77,8 @@ namespace ETMultiToolKlassenBibliothek
                         Console.ReadKey();
 
                         (int, int) cPosAM = Console.GetCursorPosition();
-                        
-                        
+
+
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
 
                         break;
@@ -99,7 +89,7 @@ namespace ETMultiToolKlassenBibliothek
 
             if (Exit)
                 Environment.Exit(0);
-
         }
+
     }
 }
