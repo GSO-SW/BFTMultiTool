@@ -37,16 +37,16 @@ namespace PHMultiToolKlassenBibliothek
                 Console.WriteLine("Eingabe: hauptmenü\t->\tZurück zum Hauptmenü");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\nBeschreibung Bereich \n\n");
+                Console.WriteLine("\n\nHier können Sie physikalische Features benutzen, welche das Leben in der Berufsschule für Technik vereinfachen könnten.\nFolgende Möglichkeiten sind im Bereich Physik möglich: \n\n");
 
                 Hmenue = false;
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Objekt Volumen berechnen");
+                Console.WriteLine("\t1 - Maßeinheiten umrechnen"); // Objekt Volumen berechnen     Schwerkraft berechnen      Maßeinheiten umrechnen      Feature8 (Noch nicht verfügbar)
                 Console.WriteLine("\t2 - Schwerkraft berechnen");
-                Console.WriteLine("\t3 - Maßeinheiten umrechnen");
-                Console.WriteLine("\t4 - Feature8 (Noch nicht verfügbar)\n");
+                Console.WriteLine("\t3 - Feature8 (Noch nicht verfügbar)");
+                Console.WriteLine("\t4 - Objekt Volumen berechnen\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 

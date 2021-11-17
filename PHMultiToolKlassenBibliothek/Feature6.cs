@@ -10,7 +10,7 @@ namespace PHMultiToolKlassenBibliothek
     {
         public static void Feature6Funcion1()
         {
-            Console.WriteLine("Feature1 SubSubMenue");
+            Console.WriteLine("Feature6 SubSubMenue");
         }
 
     }
