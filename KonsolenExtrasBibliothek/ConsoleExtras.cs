@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices; // To enable P/Invoke signatures.
 
-namespace MultiToolKlassenBibliothek
+namespace KonsolenExtrasBibliothek
 {
     public class ConsoleExtras
     {
