@@ -31,11 +31,11 @@ namespace ETMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Feature4 SubSubMenue <<<\n" +
+                                  "                              >>> Feature4 SubSubMenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
-                Console.WriteLine("Eingabe: hauptmenü\t->\tzurück zum Hauptmenü");
+                Console.WriteLine("Eingabe: submenü\t->\tzurück zum Submenü");
 
                 //Beschreibung der Software.
                 Console.WriteLine("\n\nBeschreibung Bereich \n\n");
@@ -68,7 +68,7 @@ namespace ETMultiToolKlassenBibliothek
                         //
                         break;
                                             
-                    case "hauptmenü":
+                    case "submenü":
                         Console.Clear();
                         Hmenue = true;
                         break;

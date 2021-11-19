@@ -9,6 +9,8 @@ namespace ETMultiToolKlassenBibliothek
 {
     class Feature1
     {
+
+        #region Subsubmenü
         public static void Feature1Funcion1()              
         {
             Console.Clear();
@@ -35,15 +37,12 @@ namespace ETMultiToolKlassenBibliothek
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
-                Console.WriteLine("Eingabe: submenue\t->\tzurück zum Submenü");
+                Console.WriteLine("Eingabe: submenü\t->\tzurück zum Submenü");
 
                 //Beschreibung der Software.
                 Console.WriteLine("\n\nBeschreibung Bereich \n\n");
 
                 Hmenue = false;
-
-                //TestPush Chaufan
-                //Änderungen Chaufan Feature 1
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
@@ -65,7 +64,7 @@ namespace ETMultiToolKlassenBibliothek
                         //
                         break;
                                           
-                    case "submenue":
+                    case "submenü":
                         Console.Clear();
                         Hmenue = true;
                         break;
@@ -93,6 +92,32 @@ namespace ETMultiToolKlassenBibliothek
             if (Exit)
                 Environment.Exit(0);
         }
+        #endregion
 
+        #region Rechnungen
+        public static void SpannungalsEnergieaufteiling() 
+        { 
+               
+               
+        }
+
+        public static void StromausLadungjeZeit() 
+        {
+           
+            double zeit;
+            double ladung;
+
+            Console.WriteLine("Geben sie die Zeit in Sekunden ein!");
+            zeit = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Geben sie nun noch ihren Wert für die elektrische Ladung ein!");
+            ladung = Convert.ToDouble(Console.ReadLine());
+
+            double stromstärke = ladung / zeit;
+
+            Console.WriteLine("Die Strom stärke beträgt: " + stromstärke);
+                  
+        }
+        #endregion
     }
 }
