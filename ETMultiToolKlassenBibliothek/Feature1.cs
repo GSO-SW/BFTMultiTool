@@ -18,6 +18,7 @@ namespace ETMultiToolKlassenBibliothek
 
             bool Exit = false;
             bool Hmenue;
+            
 
             do
             {
@@ -33,7 +34,7 @@ namespace ETMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Feature1 SubSubmenü <<<\n" +
+                                  "                              >>> Einheitenbiliothek + Berechnungen SubSubmenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
@@ -56,12 +57,12 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "1":
                         Console.Clear();
-                        //
+                        //SpannungalsEnergieaufteiling();
                         break;
 
                     case "2":
                         Console.Clear();
-                        //
+                        StromausLadungjeZeit();
                         break;
                                           
                     case "submenü":
@@ -103,20 +104,20 @@ namespace ETMultiToolKlassenBibliothek
 
         public static void StromausLadungjeZeit() 
         {
-           
-            double zeit;
-            double ladung;
+            double time;
+            double charge;
 
             Console.WriteLine("Geben sie die Zeit in Sekunden ein!");
-            zeit = Convert.ToDouble(Console.ReadLine());
+            time = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Geben sie nun noch ihren Wert für die elektrische Ladung ein!");
-            ladung = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Geben sie nun noch ihren Wert für die elektrische Ladung in Ampere ein!");
+            charge = Convert.ToDouble(Console.ReadLine());
 
-            double stromstärke = ladung / zeit;
+            double stromstärke = charge / time;
 
             Console.WriteLine("Die Strom stärke beträgt: " + stromstärke);
-                  
+            Console.ReadKey();
+            Console.Clear();      
         }
         #endregion
     }

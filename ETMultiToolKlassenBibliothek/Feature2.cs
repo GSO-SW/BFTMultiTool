@@ -31,7 +31,7 @@ namespace ETMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Feature2 SubSubMenü <<<\n" +
+                                  "                              >>> Strom Aufbau SubSubMenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
@@ -54,12 +54,12 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "1":
                         Console.Clear();
-                        //
+                        //Spannungsfallberechnen();
                         break;
 
                     case "2":
                         Console.Clear();
-                        //
+                        //Leitungsquerschnittberechnen();
                         break;
                                             
                     case "submenü":
@@ -89,6 +89,16 @@ namespace ETMultiToolKlassenBibliothek
 
             if (Exit)
                 Environment.Exit(0);
+        }
+
+        public static void Spannungsfallbrechnen() 
+        { 
+        
+        }
+
+        public static void Leitungsquerschnittberechnen() 
+        { 
+        
         }
 
     }

@@ -31,7 +31,7 @@ namespace ETMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Feature3 SubSubMenü <<<\n" +
+                                  "                              >>> Wiederstand/Leistungs Übersicht SubSubMenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
@@ -44,8 +44,8 @@ namespace ETMultiToolKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Ohmsches Gesetz berechnen");
-                Console.WriteLine("\t2 - Leistungsgesetz berechnen\n");
+                Console.WriteLine("\t1 - Ohmsches Gesetz");
+                Console.WriteLine("\t2 - Leistungsgesetz\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -54,12 +54,12 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "1":
                         Console.Clear();
-                        //
+                        //OhmschesGesetz();
                         break;
 
                     case "2":
                         Console.Clear();
-                        //
+                        //Leitungsgesetz();
                         break;
                                           
                     case "submenü":
@@ -91,5 +91,14 @@ namespace ETMultiToolKlassenBibliothek
                 Environment.Exit(0);
         }
 
+        public static void OhmschesGesetz() 
+        {
+        
+        }
+
+        public static void Leitungsgesetz() 
+        { 
+        
+        }
     }
 }

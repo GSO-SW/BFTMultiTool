@@ -31,7 +31,7 @@ namespace ETMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Feature4 SubSubMenü <<<\n" +
+                                  "                              >>> Elektronische Bauelemente SubSubMenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
@@ -46,7 +46,7 @@ namespace ETMultiToolKlassenBibliothek
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\t1 - Spule berechnen");
                 Console.WriteLine("\t2 - Kondensator berechnen");
-                Console.WriteLine("\t3 - Widerstand berechnen\n");
+                Console.WriteLine("\t3 - Elektrischen-Widerstand berechnen\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -55,17 +55,17 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "1":
                         Console.Clear();
-                        //
+                        //Spulebrechnen();
                         break;
 
                     case "2":
                         Console.Clear();
-                        //
+                        //Kondensatorbrechnen();
                         break;
 
                     case "3":
                         Console.Clear();
-                        //
+                        //Widerstandbrechnen();
                         break;
                                             
                     case "submenü":
@@ -97,6 +97,20 @@ namespace ETMultiToolKlassenBibliothek
                 Environment.Exit(0);
         }
 
+        public static void Spulebrechnen() 
+        { 
+        
+        }
+
+        public static void Kondensatorberechnen() 
+        { 
+        
+        }
+
+        public static void Widerstandbrechnen() 
+        { 
+        
+        }
 
     }
 }

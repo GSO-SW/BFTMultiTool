@@ -43,10 +43,10 @@ namespace ETMultiToolKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Feature1");
-                Console.WriteLine("\t2 - Feature2");
-                Console.WriteLine("\t3 - Feature3");
-                Console.WriteLine("\t4 - Feature4\n");
+                Console.WriteLine("\t1 - Einheitenbibliothek + Berechnungen");
+                Console.WriteLine("\t2 - Strom AufbAU ");
+                Console.WriteLine("\t3 - Wiederstand/Leistungs Übersicht");
+                Console.WriteLine("\t4 - Elektronische Bauelemente\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -55,12 +55,12 @@ namespace ETMultiToolKlassenBibliothek
                     
                     case "1":
                         Console.Clear();
-                        Feature1.Feature1Funcion1();
+                        Feature1.Feature1Funcion1(); //Mit diesem Feature lassen sich viele Formen der Et berechnen 
                         break;
 
                     case "2":
                         Console.Clear();
-                        Feature2.Feature2Funcion1();
+                        Feature2.Feature2Funcion1(); // 
                         break;
 
                     case "3":
