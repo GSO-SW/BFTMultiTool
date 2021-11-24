@@ -38,9 +38,7 @@ namespace ITMultiToolKlassenBibliothek
                 Console.WriteLine("Eingabe: hauptmenü\t->\tzurück zum Hauptmenü");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\n  IT / Zahlensysteme ineinander umrechnen \n\n");
-                Console.WriteLine("\n\n  IT / Nullstellen berechnen \n\n");
-
+                Console.WriteLine("\n\n  Hier können Sie informatike Features benutzen, welche das Leben in der Berufsschule für Technik vereinfachen könnten.\nFolgende Möglichkeiten sind im Bereich Informatik möglich: \n\n");
 
                 Hmenue = false;
 
