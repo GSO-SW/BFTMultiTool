@@ -99,6 +99,8 @@ namespace ETMultiToolKlassenBibliothek
 
         public static void Spulebrechnen() 
         {
+            Console.Clear();
+            Console.WriteLine("Ladung des Kondensators \nQ = die Elektrische Ladung, D = die Verschiebungsdichte, A = Feldquerschnitt bzw. Fläche der Kondensatorplatten.\nIhre Formel der Ladung des Kondensators lautet also: Q= D*A");
             
         }
 
