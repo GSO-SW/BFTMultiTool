@@ -1,20 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Figgle;
-
-
 
 namespace MAMultiToolKlassenBibliothek
 {
-    public class MAMenue
+    class Feature18
     {
-        public static void MASubMenue()
+        public static void Feature18Funcion1()
         {
-
 
             string HauptAusw;
 
             bool Exit = false;
-            bool Hmenue;
+            bool submenü;
 
             do
             {
@@ -30,58 +31,42 @@ namespace MAMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Mathematikrechner SubMenü BFTMultiTool <<<\n" +
+                                  "                              >>> Mathematikrechner: Quadratische Funktionen <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
-                Console.WriteLine("Eingabe: hauptmenü\t->\tzurück zum Hauptmenü");
+                Console.WriteLine("Eingabe: submenü\t->\tzurück zum MatheSubMenü");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\nWillkommen im Mathematikrechner des BFTMultiTools. Hier können sie zwischen verschiedenen Themenbereichen wählen, welche ihnen beim Lösen von verschiedenen Aufgaben helfen können.\n\n");
+                Console.WriteLine("\n\nHier können zwischen den Rechenwegen Scheitelpunktform in Normalform, oder Normalform in Scheitelpunktform wählen. \n");
 
-                Hmenue = false;
+                submenü = false;
 
                 //Eingabeaufforderung 
-                Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Lineare Funktionen");
-                Console.WriteLine("\t2 - Quadratische Funktionen");
-                Console.WriteLine("\t3 - Flächenberechnung\n");
+                Console.WriteLine("Wählen Sie einen der folgenden Rechenwege:\n");
+                Console.WriteLine("\t1 - Scheitelpunktform in Normalform");
+                Console.WriteLine("\t2 - Normalform in Scheitelpunktform");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
                 switch (HauptAusw)
                 {
-                    
+
                     case "1":
                         Console.Clear();
-                        Feature17.Feature17Funcion1();
-                        
+                        ScheitelpunktformNormalform();
+
                         break;
 
                     case "2":
                         Console.Clear();
-                        Feature18.Feature18Funcion1();
+                        NormalformScheitelpunktform();
 
                         break;
 
-                    case "3":
+                    case "submenü":
                         Console.Clear();
-                        Feature19.Feature19Funcion1();
-
-                        break;
-
-                    case "4":
-                        Console.Clear();
-                        //
-                        break;
-
-                    case "5":
-                        Console.Clear();
-                        //
-                        break;
-                    case "hauptmenü":
-                        Console.Clear();
-                        Hmenue = true;
+                        submenü = true;
                         break;
                     case "exit":
                         Exit = true;
@@ -93,19 +78,29 @@ namespace MAMultiToolKlassenBibliothek
                         Console.ReadKey();
 
                         (int, int) cPosAM = Console.GetCursorPosition();
-                        
-                        
+
+
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
 
                         break;
                 }
 
 
-            } while (!Exit & !Hmenue);
+            } while (!Exit & !submenü);
 
             if (Exit)
                 Environment.Exit(0);
+        }
 
+        static void ScheitelpunktformNormalform()
+        {
+            Console.WriteLine("Scheitelpunktform");
+        }
+
+        static void NormalformScheitelpunktform()
+        {
+            Console.WriteLine("NormalformScheitelpunktdorm");
         }
     }
 }
+
