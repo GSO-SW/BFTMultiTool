@@ -55,17 +55,17 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "1":
                         Console.Clear();
-                        //Spulebrechnen();
+                        Spulebrechnen();
                         break;
 
                     case "2":
                         Console.Clear();
-                        //Kondensatorbrechnen();
+                        Kondensatorberechnen();
                         break;
 
                     case "3":
                         Console.Clear();
-                        //Widerstandbrechnen();
+                        Widerstandbrechnen();
                         break;
                                             
                     case "submenü":
@@ -98,8 +98,8 @@ namespace ETMultiToolKlassenBibliothek
         }
 
         public static void Spulebrechnen() 
-        { 
-        
+        {
+            
         }
 
         public static void Kondensatorberechnen() 
