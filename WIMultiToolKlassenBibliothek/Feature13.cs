@@ -11,7 +11,8 @@ namespace WIMultiToolKlassenBibliothek
         public static void Feature13Funcion1()
         {
             Console.WriteLine("Feature13 SubSubMenue");
-            Console.Clear();
+            //florian ist ein laulo
+
         }
     }
 }
