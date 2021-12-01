@@ -93,7 +93,7 @@ namespace ETMultiToolKlassenBibliothek
 
         public static void Spannungsfallbrechnen() 
         { 
-        
+         //Hallo Leute
         }
 
         public static void Leitungsquerschnittberechnen() 
