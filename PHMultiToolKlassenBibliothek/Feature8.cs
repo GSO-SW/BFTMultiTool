@@ -111,12 +111,12 @@ namespace PHMultiToolKlassenBibliothek
         public static void Kugel()
         {
             Console.WriteLine("Kugel");
-            Console.WriteLine("Bitte geben Radius ein");
-            Console.WriteLine("")
+            Console.WriteLine("Bitte geben sie Radius ein");
+            Console.WriteLine("While E==Charakter & E<0");
         }
 
 
-
+        
 
 
 
