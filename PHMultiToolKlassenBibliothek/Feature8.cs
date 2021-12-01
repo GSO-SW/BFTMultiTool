@@ -111,21 +111,36 @@ namespace PHMultiToolKlassenBibliothek
         public static void Kugel()
         {
             Console.WriteLine("Kugel");
-            Console.WriteLine("Bitte geben Radius ein");
-            Console.WriteLine("")
+            Console.WriteLine("Bitte geben sie Radius ein");
+            do
+            {
+                string str_radius = Console.ReadLine();
+                double dou_radius = 0;
+                double volumen = 0;
+                bool parse_value;
+
+                do
+                {
+                    parse_value = Double.TryParse(str_radius, out dou_radius);
+                }
+                while (parse_value==false);
+             
+                volumen=(4/3)*Math.PI*Math*dou_radius³);
+
+            }
+            while (true);
         }
 
 
-        
 
 
 
 
-        // -------------------------------------------------------------------------------------------------
-        //                          Pyramide
+    // -------------------------------------------------------------------------------------------------
+    //                          Pyramide
 
 
-        public static void Pyramide()
+    public static void Pyramide()
         {
 
         }
