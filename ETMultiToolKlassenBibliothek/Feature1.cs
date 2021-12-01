@@ -49,6 +49,9 @@ namespace ETMultiToolKlassenBibliothek
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\t1 - Spannung als Energieaufteilung berechnen");
                 Console.WriteLine("\t2 - Strom aus Ladungen je Zeit berechnen\n");
+                Console.WriteLine("\t2 - Strom aus Ladungen je Zeit berechnen\n");
+                Console.WriteLine("\t2 - Strom aus Ladungen je Zeit berechnen\n");
+                Console.WriteLine("\t2 - Strom aus Ladungen je Zeit berechnen\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
