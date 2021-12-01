@@ -120,8 +120,6 @@ namespace ETMultiToolKlassenBibliothek
             Console.Clear();      
         }
         #endregion
-   
-               
-
+                 
     }
 }
