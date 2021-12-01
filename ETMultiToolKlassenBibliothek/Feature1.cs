@@ -102,7 +102,7 @@ namespace ETMultiToolKlassenBibliothek
                
         }
 
-        public static void StromausLadungjeZeit() 
+        public static void StromausLadungjeZeit()
         {
             double time;
             double charge;
@@ -117,7 +117,8 @@ namespace ETMultiToolKlassenBibliothek
 
             Console.WriteLine("Die Strom stärke beträgt: " + stromstärke);
             Console.ReadKey();
-            Console.Clear();      
+            Console.Clear();
+                        
         }
         #endregion
     }
