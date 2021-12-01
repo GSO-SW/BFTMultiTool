@@ -30,7 +30,7 @@ namespace WIMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Beispiel Submenü <<<\n" +
+                                  "                              >>> Wirtschaft Submenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
@@ -43,10 +43,10 @@ namespace WIMultiToolKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Feature12");
-                Console.WriteLine("\t2 - Feature13");
-                Console.WriteLine("\t3 - Feature14");
-                Console.WriteLine("\t4 - Feature15\n");
+                Console.WriteLine("\t1 - Immobilienrechner");
+                Console.WriteLine("\t2 - Zins und Zinseszins Rechner ");
+                Console.WriteLine("\t3 - Amortizaton");
+                Console.WriteLine("\t4 - Lohnsteuerberechnung\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -60,17 +60,17 @@ namespace WIMultiToolKlassenBibliothek
 
                     case "2":
                         Console.Clear();
-                        //
+                        Feature13.Feature13Funcion1();
                         break;
 
                     case "3":
                         Console.Clear();
-                        //
+                        Feature14.Feature14Funcion1();
                         break;
 
                     case "4":
                         Console.Clear();
-                        //
+                        Feature15.Feature15Funcion1();
                         break;
 
                     case "5":
