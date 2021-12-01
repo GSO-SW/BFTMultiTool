@@ -55,17 +55,17 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "1":
                         Console.Clear();
-                        //Spulebrechnen();
+                        Spulebrechnen();
                         break;
 
                     case "2":
                         Console.Clear();
-                        //Kondensatorbrechnen();
+                        Kondensatorberechnen();
                         break;
 
                     case "3":
                         Console.Clear();
-                        //Widerstandbrechnen();
+                        Widerstandbrechnen();
                         break;
                                             
                     case "submenü":
@@ -98,8 +98,10 @@ namespace ETMultiToolKlassenBibliothek
         }
 
         public static void Spulebrechnen() 
-        { 
-        
+        {
+            Console.Clear();
+            Console.WriteLine("Ladung des Kondensators \nQ = die Elektrische Ladung, D = die Verschiebungsdichte, A = Feldquerschnitt bzw. Fläche der Kondensatorplatten.\nIhre Formel der Ladung des Kondensators lautet also: Q= D*A");
+            
         }
 
         public static void Kondensatorberechnen() 
