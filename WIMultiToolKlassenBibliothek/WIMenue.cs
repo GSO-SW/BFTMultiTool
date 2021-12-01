@@ -45,7 +45,7 @@ namespace WIMultiToolKlassenBibliothek
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\t1 - Immobilienrechner");
                 Console.WriteLine("\t2 - Zins und Zinseszins Rechner ");
-                Console.WriteLine("\t3 - Amortizaton");
+                Console.WriteLine("\t3 - Amortization");
                 Console.WriteLine("\t4 - Lohnsteuerberechnung\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
