@@ -125,7 +125,7 @@ namespace PHMultiToolKlassenBibliothek
                 }
                 while (parse_value==false);
              
-                volumen=(4/3)*Math.PI*Math*dou_radius³);
+                volumen=(4/3)*Math.PI *dou_radius Math.Pow));
 
             }
             while (true);
@@ -142,10 +142,25 @@ namespace PHMultiToolKlassenBibliothek
 
     public static void Pyramide()
         {
+            Console.WriteLine("Pyramide");
+            Console.WriteLine("Bitte geben sie Höhe ein");
+            do
+            {
+                string str_höhe = Console.ReadLine();
+                double dou_höhe = 0;
+                double dou_grundfläche = 0;
+                double volumen = 0;
+                bool parse_value;
+                do
+                {
 
-        }
+                    Console.WriteLine("Bitte geben die Grundfläche ein");
+                    dou_grundfläche = Convert.ToDouble(Console.ReadLine());
+                    parse_value = Double.TryParse(str_höhe, out dou_grundfläche);
+                }
+                while (parse_value == false);
 
-
+                volumen = (1/3)*dou_grundfläche * dou_höhe = (1 / 3) * dou_höhe;
 
 
 
