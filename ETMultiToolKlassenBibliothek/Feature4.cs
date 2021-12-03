@@ -44,9 +44,9 @@ namespace ETMultiToolKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Spule berechnen");
-                Console.WriteLine("\t2 - Kondensator berechnen");
-                Console.WriteLine("\t3 - Elektrischen-Widerstand berechnen\n");
+                Console.WriteLine("\t1 - Spule");
+                Console.WriteLine("\t2 - Kondensator ");
+                Console.WriteLine("\t3 - Elektrischen-Widerstand\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -98,9 +98,13 @@ namespace ETMultiToolKlassenBibliothek
         }
         public static void Spule()
         {
-            Console.WriteLine("Um das Programm zu schließen, bitte 'exit' eingeben!\n" +
+            string intro = "Spulenmenü";
+            Console.WriteLine(intro.ToUpper());
+            
+            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
             "Um ins vorherige Menü zu gelanden, bitte 'submenü' eingeben!\n"); //Hinweis der beiden Ausgaben
 
+            bool exit = false;
 
             Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +
             "Für die Formel, geben Sie bitte (1) ein.\n" +
@@ -108,27 +112,33 @@ namespace ETMultiToolKlassenBibliothek
             "Für die Definition der Spule, bitte (3) eingeben.\n");
 
             double auswahlspule = Convert.ToDouble(Console.ReadLine());
-            
-            if(auswahlspule == 1)
+
+            if (auswahlspule == 1)
             {
                 Spuleformel();
             }
-            
-            else if(auswahlspule ==2)
+
+            else if (auswahlspule == 2)
             {
                 Spulenutze();
             }
-            
-            else if(auswahlspule ==3)
+
+            else if (auswahlspule == 3)
             {
                 Spuledefinition();
             }
-            
+
+            else if (exit)
+            {
+                exit = true;
+            }
+                
+
             else
             {
                 Console.WriteLine("Fehler");
             }
-            
+
             Console.Clear();
         }
 
@@ -202,32 +212,50 @@ namespace ETMultiToolKlassenBibliothek
             Console.WriteLine("Um das Programm zu schließen, bitte 'exit' eingeben!\n" +
             "Um ins vorherige Menü zu gelanden, bitte 'submenü' eingeben!\n"); //Hinweis der beiden Ausgaben
 
+            bool exit = false;
 
-            Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +
+            Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +  //Der Nutze erfährt die möglichkeiten zum Auswählen
             "Für die Formel, geben Sie bitte (1) ein.\n" +
             "Für den Nutze des Kondensators, bitte (2) eingeben.\n" +
             "Für die Definition des Kondensators, bitte (3) eingeben.\n");
             double auswahlmöflichkeiten = Convert.ToDouble(Console.ReadLine());
 
-            if(auswahlmöflichkeiten == 1)
+            if(auswahlmöflichkeiten == 1)                                         //Ausgabe der ersten Auswahl
             {
                 KondensatorFormel();
             }
-            if(auswahlmöflichkeiten == 2)
+            else if(auswahlmöflichkeiten == 2)                                    //Ausgabe der zweiten Auswahl
             {
                 Kondensatornutze();
             }
+            else if(auswahlmöflichkeiten == 3)                                    //Ausgabe der dritten Auswahl
+            {
+                Kondensatordefinition();
+            }
+            else if(exit)                                                         //Wenn exit eingegeben wird, schließt sich die Konsole
+            {                                                                     
+                Environment.Exit(0);
+            }
+                                                   
+            else                                                                  //Wenn der nutzer was komplett anderes ausgibt, erhält er eine Fehlermeldung
+            {
+                Console.WriteLine("Fehler");
+            }
 
-
+            Console.Clear();                                                     //Konsole löscht sich für weitere Ausgaben
             
-           
-            Kondensatordefinition();
         }
 
         public static void KondensatorFormel()
         {
             int auswahl;
+            string Intro = "Kondensator Menü";
+            Console.WriteLine(Intro.ToUpper());
 
+            Console.WriteLine("Um das Programm zu beenden, bitte 'exit' eingeben!\n" +
+            "Um ins vorherige Menü zu kommen, geben Sie bitte 'submenü'\n");
+            
+            
             Console.WriteLine("Sie haben Folgende möglichkeiten zu wählen:\nLadung(1)" +
             "\nKapazität(2)\n" +
             "Reihenschaltung(3)\n" +
