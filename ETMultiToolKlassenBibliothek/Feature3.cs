@@ -94,11 +94,17 @@ namespace ETMultiToolKlassenBibliothek
         public static void OhmschesGesetz() 
         {
         
+            //test
+
+
         }
 
         public static void Leitungsgesetz() 
         { 
         
+
+
+
         }
     }
 }
