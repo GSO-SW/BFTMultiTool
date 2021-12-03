@@ -11,7 +11,7 @@ namespace WIMultiToolKlassenBibliothek
         public static void Feature15Funcion1()
         {
             Console.WriteLine("Feature15 SubSubMenue");
-            Console.Clear();
+            //hallo 
         }
     }
 }
