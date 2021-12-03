@@ -54,12 +54,12 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "1":
                         Console.Clear();
-                        //OhmschesGesetz();
+                        OhmschesGesetz();
                         break;
 
                     case "2":
                         Console.Clear();
-                        //Leitungsgesetz();
+                        Leitungsgesetz();
                         break;
                                           
                     case "submenü":
