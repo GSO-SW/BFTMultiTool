@@ -95,11 +95,17 @@ namespace MAMultiToolKlassenBibliothek
         static void ScheitelpunktformNormalform()
         {
             Console.WriteLine("Scheitelpunktform");
+
+
+
         }
 
         static void NormalformScheitelpunktform()
         {
             Console.WriteLine("NormalformScheitelpunktdorm");
+
+
+
         }
     }
 }
