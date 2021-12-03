@@ -93,18 +93,25 @@ namespace ETMultiToolKlassenBibliothek
 
         public static void OhmschesGesetz() 
         {
+            Console.WriteLine("Ohmsches Gesetz");
+            Console.WriteLine("Um das Programm zu verlassen geben Sie bitte exit ein.");
+            Console.WriteLine("Um in das Menü zurückzukehren geben Sie bitte SubExit ein.");
+            Console.WriteLine("Über was genau möchten Sie Informationen erhalten?")
+            Console.WriteLine("Geben Sie bitte für Definition und Bedeutung 1, für die Formel 2 und für Anwendungsgebiete und Beispiele 3 ein.")
         
-            //test
 
 
         }
 
         public static void Leitungsgesetz() 
-        { 
-        
+        {
+            Console.WriteLine("Leistungsgesetz");
+            Console.WriteLine("Um das Programm zu verlassen geben Sie bitte exit ein.");
+            Console.WriteLine("Um in das Menü zurückzukehren geben Sie bitte SubExit ein.");
+            Console.WriteLine("Über was genau möchten Sie Informationen erhalten?");
+            Console.WriteLine("Geben Sie bitte für Definition und Bedeutung 1, für die Formel 2 und für Anwendungsgebiete und Beispiele 3 ein.");
 
-
-
+            
         }
     }
 }
