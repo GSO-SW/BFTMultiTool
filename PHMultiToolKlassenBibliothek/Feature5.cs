@@ -1,4 +1,10 @@
-﻿using System;
+﻿
+
+
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -144,20 +150,7 @@ namespace PHMultiToolKlassenBibliothek
                 {
                     case "1":
                         Console.Clear();
-                        string Meter;
-
-                        // Hier noch 2 bool Exit und hmenue hinzufügen
-
-                        do
-                        {
-                            Hmenue = false;
-                            Console.WriteLine("Willkommen zur Berechnung von Meter in Kilometer.\n");
-                            Console.WriteLine("Geben Sie bitte Ihre Daten in Meter an:");
-                            Console.ReadKey();
-                        } while (!Exit & !Hmenue);
-
-                        if (Exit)
-                            Environment.Exit(0);
+                        SiEinheit.Kilometer();
                         break;
 
 
@@ -261,5 +254,34 @@ namespace PHMultiToolKlassenBibliothek
             if (Exit)
                 Environment.Exit(0);
         }
+        public static void Kilometer()
+        {
+            string Eingabe;
+
+            bool Exit = false;
+            bool Hmenue;
+
+            do
+            {
+                (int, int) cPosBM = Console.GetCursorPosition();
+
+                Hmenue = false;
+
+                Console.WriteLine("Willkommen zur Berechnung von Meter in Kilometer.\n");
+                Console.WriteLine("Geben Sie bitte Ihre Daten in Meter an. Um zum Hauptmenü zu gelangen oder um das Programm zu beenden,\nmüssen Sie die Rechnung beenden.");
+                double Meter = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine($"Ihr gewünschte Zahl: {Meter} - beträgt {Meter / 1000} Kilometer.");
+                Console.WriteLine("Wenn Sie nun `exit` eingeben, schließt sich das Programm. Bei `hauptmenü` gelangen Sie zum Hauptmenü des Programms.");
+                Eingabe = Console.ReadLine();
+
+            }
+            while (!Exit & !Hmenue);
+            if (Exit)
+            Environment.Exit(0);
+        }
     }
 }
+//Console.WriteLine("Willkommen zur Berechnung von Meter in Kilometer.\n");
+//Console.WriteLine("Geben Sie bitte Ihre Daten in Meter an oder schreiben Sie `Exit` um das Programm zu schließen.\nMit `hauptmenü` kommen Sie zum Hauptmenü");
+//double Meter = Convert.ToDouble(Console.ReadLine());
+//Console.WriteLine($"Ihr gewünschte Zahl: {Meter} - beträgt {Meter / 1000} Kilometer.");
