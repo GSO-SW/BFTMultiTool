@@ -45,8 +45,9 @@ namespace ITMultiToolKlassenBibliothek
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\t1 - Zahlensystem umrechnen");
-                Console.WriteLine("\t2 - Nullstellen berechnen");
-                Console.WriteLine("\t3 - Feature11\n");
+                Console.WriteLine("\t2 - Daten ausrechnen und Sortieren");
+                Console.WriteLine("\t3 - Witze Easter Egg\n");
+                Console.WriteLine("\t4 - Bandbreit berechnen\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
