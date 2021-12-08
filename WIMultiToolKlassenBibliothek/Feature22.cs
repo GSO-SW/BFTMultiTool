@@ -11,7 +11,7 @@ namespace WIMultiToolKlassenBibliothek
         public static void Feature22Funcion1()
         {
             Console.WriteLine("Fix- und Variablekosten");
-            Console.Clear();
+
             Console.WriteLine("Geben sie Ihre Fixkosten ein");
             double Fk = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Geben sie Ihre Variable Kosten ein");
@@ -23,8 +23,8 @@ namespace WIMultiToolKlassenBibliothek
             double Vz = Fk / GpS;
             Console.WriteLine("{0,-20}{1,20:F2}", "Verkaufszahl", Vz);
 
-
-
+            Console.ReadKey();
+            Console.Clear();
 
 
 
