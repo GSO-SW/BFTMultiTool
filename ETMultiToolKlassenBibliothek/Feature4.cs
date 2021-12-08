@@ -15,7 +15,7 @@ namespace ETMultiToolKlassenBibliothek
             string HauptAusw;
 
             bool Exit = false;
-            bool Hmenue;
+            bool Submenü;
 
             do
             {
@@ -40,7 +40,7 @@ namespace ETMultiToolKlassenBibliothek
                 //Beschreibung der Software.
                 Console.WriteLine("\n\nBeschreibung Bereich \n\n");
 
-                Hmenue = false;
+                Submenü = false;
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
@@ -70,7 +70,7 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "submenü":
                         Console.Clear();
-                        Hmenue = true;
+                        Submenü = true;
                         break;
 
                     case "exit":
@@ -91,251 +91,329 @@ namespace ETMultiToolKlassenBibliothek
                 }
 
 
-            } while (!Exit & !Hmenue);
+            } while (!Exit & !Submenü);
 
             if (Exit)
                 Environment.Exit(0);
+        
         }
+
+
         public static void Spule()
         {
             string intro = "Spulenmenü";
             Console.WriteLine(intro.ToUpper());
-            
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'submenü' eingeben!\n"); //Hinweis der beiden Ausgaben
-
+            Console.WriteLine("\n");
             bool exit = false;
-
-            Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +
-            "Für die Formel, geben Sie bitte (1) ein.\n" +
-            "Für den Nutze der Spule, bitte (2) eingeben.\n" +
-            "Für die Definition der Spule, bitte (3) eingeben.\n");
-
-            double auswahlspule = Convert.ToDouble(Console.ReadLine());
-
-            if (auswahlspule == 1)
+            bool subsubmenü = false;
+            do
             {
-                Spuleformel();
-            }
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'submenü' eingeben!\n");
 
-            else if (auswahlspule == 2)
+                Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +
+                "Für die Formel, geben Sie bitte (1) ein.\n" +
+                "Für den Nutze der Spule, bitte (2) eingeben.\n" +
+                "Für die Definition der Spule, bitte (3) eingeben.\n");
+
+                string auswahlspule = Convert.ToString(Console.ReadLine());
+
+                switch (auswahlspule)
+                {
+                    case "1":
+                        Console.Clear();
+                        Spuleformel();
+                        break;
+
+                    case "2":
+                        Console.Clear();
+                        Spulenutze();
+                        break;
+
+                    case "3":
+                        Console.Clear();
+                        Spuledefinition();
+                        break;
+
+                    case "submenü":
+                        Console.Clear();
+                        subsubmenü = true;
+                        break;
+
+                    case "exit":
+                        Console.Clear();
+                        exit = true;
+                        break;
+
+                    default:
+                        Console.WriteLine("Fehlereingabe!");
+                        break;
+
+                }
+
+            }
+            while (!exit & !subsubmenü);
+
+            if (exit)
             {
-                Spulenutze();
-            }
-
-            else if (auswahlspule == 3)
-            {
-                Spuledefinition();
-            }
-
-            else if (exit)
-            {
-                exit = true;
-            }
-                
-
-            else
-            {
-                Console.WriteLine("Fehler");
-            }
-
-            Console.Clear();
-        }
-
-        public static void Spuleformel()
-        {
-
-            Console.WriteLine("Sie haben folgende möglichkeiten:\n" +
-            "" + "Induktivität Spule(1)\n" +
-            "" + "Reihenschaltung Spule(2)\n" +
-            "" + "Parallelschaltung Spule(3)\n" +
-            "" + "Energieinhalt des magnetischen Feldes Spule(4)\n");
-            
-            
-            int auswahl = Convert.ToInt32(Console.ReadLine());
-
-            if (auswahl == 1)
-            {
-                Console.WriteLine("Induktivität der Spule\n" + //Erste Ausgabe 
-                "N = Anzahl der Windungen, l = Länge, A= Querschnittsfläche der Spule, µr = Permeabilität" +
-                "(µr steht in diesem Fall für relative Permeabilität, µo = Magnetische Feldkonstante, L = die Induktivität\n" +
-                "Die Formel normal-Formel lautet: L = N^2*µo*µr*A/l");
-                Console.WriteLine("\n");
-            }
-
-            else if (auswahl == 2)
-            {
-                Console.WriteLine("Reihenschaltung der Spule\n" +  //Zweite Ausgabe
-                "Lges = Wird zusammengesetzt aus den Ersatzinduktivitäten der Spule. => z.B L1 + L2 + L3" +
-                "(Wenn mehrere induktivitäten möglich sind, diese ebenfalls einbeziehen!)\n" +
-                "Formel: Lges = L1 + L2 + L3(...)");
-                Console.WriteLine("\n");
-            }
-
-            else if (auswahl == 3)
-            {
-                Console.WriteLine("Parallelschaltung der Spule\n" +  //Dritte Ausgabe
-                "1/Lges = Wird erneut von den Ersatzinduktivitäten der Spule zusammengesetzt. => z.B 1/L1 + 1/L2 + 1/L3" +
-                "(Hier auch wieder bei mehreren induktivitäten diese auch einbeziehen!)\n" +
-                "FOrmel: 1/Lges = 1/L1 + 1/L2 + 1/L3(...)");
-                Console.WriteLine("\n");
-            }
-
-
-            else if (auswahl == 4)
-            {
-                Console.WriteLine("Energieinhalt des magnetischen Feldes einer Spule\n" + //Vierte Ausgabe
-                "Wmagn = Die Energie, L = Induktivität der Spule, I = Stromstärke\n" +
-                "Die Formel lautet: Wmagn = 1/2*L*I^2");
-            }
-
-            else
-            {
-                Console.WriteLine("Fehler");
-            }
-
-            Console.Clear();
-        }
-
-        public static void Spulenutze()
-        {
-        
-        }
-
-        public static void Spuledefinition()
-        {
-
-        }
-
-        public static void Kondensator()
-        {
-            Console.WriteLine("Um das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'submenü' eingeben!\n"); //Hinweis der beiden Ausgaben
-
-            bool exit = false;
-
-            Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +  //Der Nutze erfährt die möglichkeiten zum Auswählen
-            "Für die Formel, geben Sie bitte (1) ein.\n" +
-            "Für den Nutze des Kondensators, bitte (2) eingeben.\n" +
-            "Für die Definition des Kondensators, bitte (3) eingeben.\n");
-            double auswahlmöflichkeiten = Convert.ToDouble(Console.ReadLine());
-
-            if(auswahlmöflichkeiten == 1)                                         //Ausgabe der ersten Auswahl
-            {
-                KondensatorFormel();
-            }
-            else if(auswahlmöflichkeiten == 2)                                    //Ausgabe der zweiten Auswahl
-            {
-                Kondensatornutze();
-            }
-            else if(auswahlmöflichkeiten == 3)                                    //Ausgabe der dritten Auswahl
-            {
-                Kondensatordefinition();
-            }
-            else if(exit)                                                         //Wenn exit eingegeben wird, schließt sich die Konsole
-            {                                                                     
                 Environment.Exit(0);
             }
-                                                   
-            else                                                                  //Wenn der nutzer was komplett anderes ausgibt, erhält er eine Fehlermeldung
-            {
-                Console.WriteLine("Fehler");
-            }
-
-            Console.Clear();                                                     //Konsole löscht sich für weitere Ausgaben
-            
         }
 
-        public static void KondensatorFormel()
+        static void Spuleformel()
         {
-            int auswahl;
+            string intro = "Spulenformel";
+            Console.WriteLine(intro.ToUpper());
+            Console.WriteLine("\n");
+            bool subsubmenü = false;
+            bool exit = false;
+
+            do
+            {
+                Console.WriteLine("Sie haben folgende möglichkeiten:\n" +
+                "" + "Induktivität Spule(1)\n" +
+                "" + "Reihenschaltung Spule(2)\n" +
+                "" + "Parallelschaltung Spule(3)\n" +
+                "" + "Energieinhalt des magnetischen Feldes Spule(4)\n");
+
+
+                string auswahl = Convert.ToString(Console.ReadLine());
+
+                switch (auswahl)
+                {
+                    case "1":
+                        Console.Clear();
+                        Console.WriteLine("Induktivität der Spule\n" +
+                    "N = Anzahl der Windungen, l = Länge, A= Querschnittsfläche der Spule, µr = Permeabilität" +
+                    "(µr steht in diesem Fall für relative Permeabilität, µo = Magnetische Feldkonstante, L = die Induktivität\n" +
+                    "Die Formel normal-Formel lautet: L = N^2*µo*µr*A/l");
+                        break;
+
+                    case "2":
+
+                        Console.Clear();
+                        Console.WriteLine("Reihenschaltung der Spule\n" +
+                        "Lges = Wird zusammengesetzt aus den Ersatzinduktivitäten der Spule. => z.B L1 + L2 + L3" +
+                        "(Wenn mehrere induktivitäten möglich sind, diese ebenfalls einbeziehen!)\n" +
+                        "Formel: Lges = L1 + L2 + L3(...)");
+                        break;
+
+                    case "3":
+                        Console.Clear();
+                        Console.WriteLine("Parallelschaltung der Spule\n" +
+                    "1/Lges = Wird erneut von den Ersatzinduktivitäten der Spule zusammengesetzt. => z.B 1/L1 + 1/L2 + 1/L3" +
+                    "(Hier auch wieder bei mehreren induktivitäten diese auch einbeziehen!)\n" +
+                    "FOrmel: 1/Lges = 1/L1 + 1/L2 + 1/L3(...)");
+                        Console.WriteLine("\n");
+                        break;
+
+                    case "4":
+                        Console.Clear();
+                        Console.WriteLine("Energieinhalt des magnetischen Feldes einer Spule\n" + //Vierte Ausgabe
+                        "Wmagn = Die Energie, L = Induktivität der Spule, I = Stromstärke\n" +
+                        "Die Formel lautet: Wmagn = 1/2*L*I^2");
+                        break;
+
+                    case "subsubmenü":
+                        Console.Clear();
+                        subsubmenü = true;
+                        break;
+
+                    case "exit":
+                        Console.Clear();
+                        exit = true;
+                        break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Fehlereingabe!");
+                        break;
+
+                }
+            }while (!exit & !subsubmenü);
+
+                if (exit)
+            
+                Environment.Exit(0);
+        }  
+
+
+        static void Spulenutze()
+        {
+
+        }
+
+        static void Spuledefinition()
+        {
+
+        }
+
+        static void Kondensator()
+        {
+            string intro = "Kondensator";
+            Console.WriteLine(intro.ToUpper());
+            Console.WriteLine("\n");
+            bool exit = false;
+            bool subsubmenü = false;
+            do
+            {
+                Console.WriteLine("Um das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'submenü' eingeben!\n");
+
+                Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +
+                "Für die Formel, geben Sie bitte (1) ein.\n" +
+                "Für den Nutze des Kondensators, bitte (2) eingeben.\n" +
+                "Für die Definition des Kondensators, bitte (3) eingeben.\n");
+                string auswahlmöglichkeiten = Convert.ToString(Console.ReadLine());
+
+                switch (auswahlmöglichkeiten)
+                {
+                    case "1":
+                        Console.Clear();
+                        KondensatorFormel();
+                        break;
+
+                    case "2":
+                        Console.Clear();
+                        Kondensatornutze();
+                        break;
+
+                    case "3":
+                        Console.Clear();
+                        Kondensatordefinition();
+                        break;
+
+                    case "subsubmenü":
+                        Console.Clear();
+                        subsubmenü = true;
+                        break;
+
+                    case "exit":
+                        Console.Clear();
+                        exit = true;
+                        break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Fehlermeldung!");
+                        break;
+                }
+
+
+
+
+            } while (!exit & !subsubmenü);
+
+                if (exit)
+                    Environment.Exit(0);
+        }
+
+                
+
+        static void KondensatorFormel()
+        {
+            string auswahl;
             string Intro = "Kondensator Menü";
             Console.WriteLine(Intro.ToUpper());
+            bool subsubmenü = false;
+            bool exit = false;
 
-            Console.WriteLine("Um das Programm zu beenden, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu kommen, geben Sie bitte 'submenü'\n");
-            
-            
-            Console.WriteLine("Sie haben Folgende möglichkeiten zu wählen:\nLadung(1)" +
-            "\nKapazität(2)\n" +
-            "Reihenschaltung(3)\n" +
-            "Parallelschaltung(4)\n" +
-            "Energieinhalt(5)\n");
-            auswahl = Convert.ToInt32(Console.ReadLine());
-
-            if (auswahl == 1)
+            do
             {
-                Console.Clear();
-                Console.WriteLine("Ladung des Kondensators berechnen: \n" +  //Erste Ausgabe
-                "Q = die Elektrische Ladung, " + "D = die Verschiebungsdichte, A = Feldquerschnitt bzw. Fläche der Kondensatorplatten.\n" +
-                "Ihre Formel der Ladung des Kondensators lautet also: Q = D*A");
-                Console.WriteLine("\n");
-            }
+
+                Console.WriteLine("Um das Programm zu beenden, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu kommen, geben Sie bitte 'submenü'\n");
 
 
-            else if (auswahl == 2)
-            {
-                Console.Clear();
-                Console.WriteLine("Kapazität des Kondensators:\n" +  //Zweite Ausgabe
-                "C = Kapazität des Kondensators, Q = elektrische Ladung, U = Spannung\n" +
-                "Ihre Formel der Kapazität des Kondensators lautet also C = Q/U");
-                Console.WriteLine("\n");
-            }
+                Console.WriteLine("Sie haben Folgende möglichkeiten zu wählen:\nLadung(1)" +
+                "\nKapazität(2)\n" +
+                "Reihenschaltung(3)\n" +
+                "Parallelschaltung(4)\n" +
+                "Energieinhalt(5)\n");
+                auswahl = Convert.ToString(Console.ReadLine());
 
-            else if (auswahl == 3)
-            {
-                Console.Clear();
-                Console.WriteLine("Reihenschaltungen von Kondensatoren:\n" +  //Dritte Ausgabe
-                "Cges = Die ersatz Kapazität, die Gesamt Zusammensätzung von 1/C1, 1/C2, 1/C3 (und weiter falls mehrere ersatzkapazitäten gegeben sind!)\n" +
-                "Bedeutet die Formel lautet: Cges = 1/Cges = 1/C1 + 1/C2 + 1/C3 (...)");
-                Console.WriteLine("\n");
-            }
+                switch (auswahl)
+                {
+                    case "1":
+                        Console.Clear();
+                        Console.WriteLine("Ladung des Kondensators berechnen: \n" +
+                            "Q = die Elektrische Ladung, " + "D = die Verschiebungsdichte, A = Feldquerschnitt bzw. Fläche der Kondensatorplatten.\n" +
+                            "Ihre Formel der Ladung des Kondensators lautet also: Q = D*A");
+                        Console.WriteLine("\n");
+                        break;
 
-            else if (auswahl == 4)
-            {
-                Console.Clear();
-                Console.WriteLine("Parallelschaltung von Kondensatoren:\n" +  //Vierte Ausgabe
-                "Erneut Cges = Die ersatz Kapazität, die Gesamt Zusammensätzung aus C1, C2, C3 (und weiter falls mehrere ersatzkapazitäten gegeben sind!)\n" +
-                "Diesmal heißt es also für die Formel: Cges = C1 + C2 + C3 (...)");
-                Console.WriteLine("\n)");
-            }
+                    case "2":
+                        Console.Clear();
+                        Console.WriteLine("Kapazität des Kondensators:\n" +
+                            "C = Kapazität des Kondensators, Q = elektrische Ladung, U = Spannung\n" +
+                            "Ihre Formel der Kapazität des Kondensators lautet also C = Q/U");
+                        break;
 
-            else if (auswahl == 5)
-            {
-                Console.Clear();
-                Console.WriteLine("Energieinalt des Kondensators:\n" +  //Fünfte Ausgabe
-                "Welektr. = Energieinhalt von Kondensatoren, C = Kapazität eines Kondensators, U = Urspannung\n" +
-                "Formel heißt: Welektr= 1/2*C*U^2");
-                Console.WriteLine("\n");
+                    case "3":
+                        Console.Clear();
+                        Console.WriteLine("Reihenschaltungen von Kondensatoren:\n" +
+                            "Cges = Die ersatz Kapazität, die Gesamt Zusammensätzung von 1/C1, 1/C2, 1/C3 (und weiter falls mehrere ersatzkapazitäten gegeben sind!)\n" +
+                            "Bedeutet die Formel lautet: Cges = 1/Cges = 1/C1 + 1/C2 + 1/C3 (...)");
+                        break;
 
-            }
-            else
-            {
-                Console.WriteLine("Fehler");
-            }
+                    case "4":
+                        Console.Clear();
+                        Console.WriteLine("Parallelschaltung von Kondensatoren:\n" +
+                            "Erneut Cges = Die ersatz Kapazität, die Gesamt Zusammensätzung aus C1, C2, C3 (und weiter falls mehrere ersatzkapazitäten gegeben sind!)\n" +
+                            "Diesmal heißt es also für die Formel: Cges = C1 + C2 + C3 (...)");
+                        break;
 
-            Console.Clear();
+                    case "5":
+                        Console.Clear();
+                        Console.WriteLine("Energieinalt des Kondensators:\n" +  //Fünfte Ausgabe
+                        "Welektr. = Energieinhalt von Kondensatoren, C = Kapazität eines Kondensators, U = Urspannung\n" +
+                        "Formel heißt: Welektr= 1/2*C*U^2");
+                        break;
+
+                    case "subsubmenü":
+                        Console.Clear();
+                        subsubmenü = true;
+                        break;
+
+                    case "exit":
+                        Console.Clear();
+                        exit = true;
+                        break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Fehlermeldung");
+                        break;
+
+                }
+            } while (!exit & !subsubmenü);
+
+                    if (exit)
+                        Environment.Exit(0);
+
+               
+
         }
 
-        public static void Kondensatornutze()
+        static void Kondensatornutze()
         {
 
         }
 
-        public static void Kondensatordefinition()
+        static void Kondensatordefinition()
         {
 
         }
 
-        public static void Widerstand()
+        static void Widerstand()
         {
             Widerstandformel();
             Widerstandnutze();
             Widerstanddefinition();
         }
 
-        public static void Widerstandformel()
-            {
+        static void Widerstandformel()
+        {
             int auswahl;
 
             Console.Clear();
@@ -413,16 +491,18 @@ namespace ETMultiToolKlassenBibliothek
 
         }
 
-        public static void Widerstandnutze()
+        static void Widerstandnutze()
         {
 
         }
 
-        public static void Widerstanddefinition()
+        static void Widerstanddefinition()
         {
 
         }
 
-        
+
+                    
     }
+
 }
