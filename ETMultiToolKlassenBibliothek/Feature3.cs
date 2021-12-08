@@ -149,7 +149,7 @@ namespace ETMultiToolKlassenBibliothek
 
                         Console.Write("R = U/I, U = R*I und I = U/R\n\n");
 
-                        Console.Write("Merkhilfe zum Ohmschen Gesetz:\n\n")
+                        Console.Write("Merkhilfe zum Ohmschen Gesetz:\n\n");
                         Console.Write("Merdreieck:\n");
 
                         Console.Write("Man zeichnet ein Dreieck mit drei feldern und einem Strich der das Dreieck horizontal halbiert," +
