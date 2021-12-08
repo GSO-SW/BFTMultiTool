@@ -30,8 +30,10 @@ namespace ETMultiToolKlassenBibliothek
                 //Konsolentitel wird geändert.
                 Console.Title = "BFTMultiTool";
 
+
+                //Überschrift
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Wiederstand/Leistungs Übersicht SubSubMenü <<<\n" +
+                                  "             >>> Ohmsches Gesetz / Leistungsgesetz Übersicht SubSubMenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
@@ -42,31 +44,33 @@ namespace ETMultiToolKlassenBibliothek
 
                 Hmenue = false;
 
-                //Eingabeaufforderung 
-                Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Ohmsches Gesetz");
-                Console.WriteLine("\t2 - Leistungsgesetz\n");
+                //Eingabeaufforderung, Auswahl Oberthema
+                Console.WriteLine("Wählen Sie bitte einen der folgenden Themenbereichen:\n");
+                Console.WriteLine("\tO - Ohmsches Gesetz");
+                Console.WriteLine("\tL - Leistungsgesetz\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
+
+                //Auswahl
                 switch (HauptAusw)
                 {
 
-                    case "1":
+                    case "O":
                         Console.Clear();
                         OhmschesGesetz();
                         break;
 
-                    case "2":
+                    case "L":
                         Console.Clear();
                         Leitungsgesetz();
                         break;
-                                          
+
                     case "submenü":
                         Console.Clear();
-                        Hmenue = true;
+                        Hmenue = true;   //zurück zum Submenü
                         break;
-                    
+
                     case "exit":
                         Exit = true;
                         break;
@@ -85,33 +89,139 @@ namespace ETMultiToolKlassenBibliothek
                 }
 
 
-            } while (!Exit & !Hmenue);
+            } while (!Exit & !Hmenue);   //Schleife
 
             if (Exit)
                 Environment.Exit(0);
         }
 
-        public static void OhmschesGesetz() 
+        public static void OhmschesGesetz()   //1. Unterthema
         {
-            Console.WriteLine("Ohmsches Gesetz");
-            Console.WriteLine("Um das Programm zu verlassen geben Sie bitte exit ein.");
-            Console.WriteLine("Um in das Menü zurückzukehren geben Sie bitte SubExit ein.");
-            Console.WriteLine("Über was genau möchten Sie Informationen erhalten?")
-            Console.WriteLine("Geben Sie bitte für Definition und Bedeutung 1, für die Formel 2 und für Anwendungsgebiete und Beispiele 3 ein.")
-        
+
+            Console.Clear();
+            string oAuswahl;
+
+            bool Exit = false;
+            bool submenue = false;
+
+            {
+                //Bedienungsanleitung und Eingabeaufforderung
+            Console.WriteLine("Ohmsches Gesetz\n");
+            Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+            Console.WriteLine("Eingabe: submenü\t->\tzurück zum Submenü\n");
+            Console.WriteLine("Über was genau möchten Sie Informationen erhalten?\n");
+            Console.WriteLine("Geben Sie bitte für Definition und Bedeutung 1, für die Formel 2 und für Anwendungsgebiete und Beispiele 3 ein.\n");
+            Console.Write("Eingabe:");
+            oAuswahl = Console.ReadLine();
+
+            switch (oAuswahl)
+            {
+
+                case "1":
+                    Console.Clear();
+
+                    break;
+
+                case "2":
+                    Console.Clear();
+
+                    break;
+
+                case "3":
+                    Console.Clear();
+
+                    break;
+
+                case "submenü":
+                    Console.Clear();
+                    submenue = true;   //zurück zum Submenü
+                    break;
+
+                case "exit":
+                    Console.Clear();
+                    Exit = true;
+                    break;
+
+                default:
+
+                    Console.WriteLine("Ungültige Eingabe");
+                    Console.ReadKey();
+
+                    break;
+
+            }
 
 
-        }
+        } while (!Exit & !submenue);   //Schleife
 
-        public static void Leitungsgesetz() 
-        {
-            Console.WriteLine("Leistungsgesetz");
-            Console.WriteLine("Um das Programm zu verlassen geben Sie bitte exit ein.");
-            Console.WriteLine("Um in das Menü zurückzukehren geben Sie bitte SubExit ein.");
-            Console.WriteLine("Über was genau möchten Sie Informationen erhalten?");
-            Console.WriteLine("Geben Sie bitte für Definition und Bedeutung 1, für die Formel 2 und für Anwendungsgebiete und Beispiele 3 ein.");
+        if (Exit)
+            Environment.Exit(0);
 
-            
-        }
     }
-}
+
+        public static void Leitungsgesetz()   //2. Unterthema
+        {
+
+            Console.Clear();
+            string lAuswahl;
+
+            bool Exit = false;
+            bool submenue = false;
+
+            {
+                //Bedienungsanleitung und Eingabeaufforderung
+            Console.WriteLine("Leistungsgesetz\n");
+            Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+            Console.WriteLine("Eingabe: submenü\t->\tzurück zum Submenü\n");
+            Console.WriteLine("Über was genau möchten Sie Informationen erhalten?\n");
+            Console.WriteLine("Geben Sie bitte für Definition und Bedeutung 1, für die Formel 2 und für Anwendungsgebiete und Beispiele 3 ein.\n");
+            Console.Write("Eingabe:");
+            lAuswahl = Console.ReadLine();
+
+            switch (lAuswahl)
+            {
+
+                case "1":
+                    Console.Clear();
+
+                    break;
+
+                case "2":
+                    Console.Clear();
+
+                    break;
+
+                case "3":
+                    Console.Clear();
+
+                    break;
+
+                case "submenü":
+                    Console.Clear();
+                    submenue = true;   //zurück zum Submenü
+                    break;
+
+                case "exit":
+                    Console.Clear();
+                    Exit = true;
+                    break;
+
+                default:
+
+                    Console.WriteLine("Ungültige Eingabe");
+                    Console.ReadKey();
+
+
+
+
+                    break;
+
+            }
+
+                
+        }   while (!Exit & !submenue);   //Schleife
+
+        if (Exit)
+            Environment.Exit(0);
+
+    }
