@@ -10,9 +10,9 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 | ----------- 	| ----------- 	|-----------	|-----------	|-----------	|-----------	|
 |**Administration**	|Release      	|Administrator	|Kander Akinci 	|AI-Assistant	|Release, main	|
 |		|	|		|		|		|		|		|
-|**Elektrotechnik**	|Menü ET / Spannung als Energieaufteilung & Strom aus Ladungen je Zeit|Teamkoordinator|David Schaele|DavidCXV|ETEntwicklung,Feature1|
+|**Elektrotechnik**	|Menü ET / Ohm'sches Gesetz & Leistungsgesetz berechnen (ggf. + Erweiterungen) |Teamkoordinator|David Schaele|DavidCXV|ETEntwicklung,Feature1|
 |   		|Spannungsfall & Leitungsquerschnitt berechnen |Entwickler|Nicolai Mockenhaupt	|NeoEkusoshisuto|Feature2|
-|   		|Ohm'schesGesetz & Leistungsgesetz |Entwickler|Nico Billig	|Nico-GSO|Feature3|
+|   		|Ohm'schesGesetz & Leistungsgesetz beschreiben |Entwickler|Nico Billig	|Nico-GSO|Feature3|
 |   		|Widerstand, Kondensator & Spule Info und Berechnung|Entwickler|David Waderna|Davobeats|Feature4|
 |		|	|		|		|		|		|		
 |**Physik**	|Menü PY /Vorsätze für Maßeinheiten umwandeln SI –Einheiten umrechnen	|Teamkoordinator|Jonas Högele	|Jonashgl|PHEntwicklung	,Feature5|
