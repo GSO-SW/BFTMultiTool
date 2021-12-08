@@ -22,7 +22,9 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 |		|	||||		|		
 |**Informatik**	|Menü IT / Zahlensysteme ineinander umrechnen|Teamkoordinator|Haitam Kazzaz	|Haitham2004|ITEntwicklung,Feature9|				
 |		|	|Entwickler	|	Emre-Can Zeren	|EmreZ55	|Feature10|		
-|		|	|	Entwickler|Mansour Alassaf	|mansourr23	|Feature11|	
+|		|	|	Entwickler|Mansour Alassaf	|mansourr23	|Feature11|
+|		|	|	Entwickler|Raphel Hoeck	|Raphel2005H	|Feature20|
+|		|	|	Entwickler|Sergey Zavadovskiy	|SergeyAbi	|Feature21|
 |		|	|	|		|		|		|		
 |**Wirtschaft**	|	|Teamkoordinator|Florian Reuter	|Florian116	|WIEntwicklung,Feature12|				
 |		|	|		|Tamim Hashimi|	Tamim-2003|Feature13|		
