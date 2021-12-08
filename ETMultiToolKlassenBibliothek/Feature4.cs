@@ -103,7 +103,6 @@ namespace ETMultiToolKlassenBibliothek
         {
             string intro = "Spulenmenü";
             Console.WriteLine(intro.ToUpper());
-            Console.WriteLine("\n");
             bool exit = false;
             bool subsubmenü = false;
             do
@@ -164,7 +163,6 @@ namespace ETMultiToolKlassenBibliothek
         {
             string intro = "Spulenformel";
             Console.WriteLine(intro.ToUpper());
-            Console.WriteLine("\n");
             bool subsubmenü = false;
             bool exit = false;
 
@@ -240,17 +238,75 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Spulenutze()
         {
+            string intro = "nutze der Spule";
+            Console.WriteLine(intro.ToUpper());
+            bool exit = false;
+            bool subsubmenü = false;
+
+            do
+            {
+                Console.WriteLine("Eine Spule ist ein elektrisches Bauelement, bei dem ein langer dünner Leiter spiralförmig um einen meist zylindrischen Körper gewickelt wird.\n" +
+            "Spulen werden in vielen Bereichen eingesetzt, u. a. sind sie die Grundbausteine von Elektromagneten und Elektromotoren.\n" +
+            "Jeder fließende elektrische Strom induziert um den Leiter ein Magnetfeld.Bei einer kreisförmigen Leiterschlaufe verläuft das senkrecht durch die Kreismitte,\n" +
+            " daher ergibt sich bei den vielen hintereinanderliegenden Schlaufen einer Spule in deren Innerem ein annähernd homogenes Magnetfeld in Längsrichtung der Spule.");
+
+                string auswahl = Convert.ToString(Console.ReadLine());
+                switch(auswahl)
+                {
+                    case "exit":
+                        Console.Clear();
+                        exit = true;
+                        break;
+
+                    case "subsubmenü":
+                        Console.Clear();
+                        subsubmenü = true;
+                        break;
+                }
+
+            }while (!exit & !subsubmenü);
+            if (exit)
+                Environment.Exit(0);
+            
 
         }
 
         static void Spuledefinition()
         {
+            string intro = "Spuledefinition";
+            Console.WriteLine(intro.ToUpper());
+            bool exit = false;
+            bool subsubmenü = false;
+
+            do
+            {
+                Console.WriteLine("n der Elektrotechnik sind Spulen wichtige Bestandteile elektrischer Baugruppen oder Geräte. Spulen fallen unter die sogenannten passiven elektrischen Bauelemente.\n" +
+                "Sie werden oft auch als Induktivitäten oder Drosseln bezeichnet. Eine Spule ist ein Leiter(Draht, meist Kupferlackdraht oder Hochfrequenzlitze),\n" +
+                "der zu einer oder mehreren Windungen geformt ist. Die Windungsanordnung, ihr Durchmesser und das Kernmaterial legen die Induktivität und weitere Eigenschaften der Spule fest.");
+
+                string auswahl = Convert.ToString(Console.ReadLine());
+                switch (auswahl)
+                {
+                    case "exit":
+                        Console.Clear();
+                        exit = true;
+                        break;
+
+                    case "subsubmenü":
+                        Console.Clear();
+                        subsubmenü = true;
+                        break;
+                }
+
+            } while (!exit & !subsubmenü);
+            if (exit)
+                Environment.Exit(0);
 
         }
 
         static void Kondensator()
         {
-            string intro = "Kondensator";
+            string intro = "Kondensatormenü";
             Console.WriteLine(intro.ToUpper());
             Console.WriteLine("\n");
             bool exit = false;
@@ -294,7 +350,6 @@ namespace ETMultiToolKlassenBibliothek
                         break;
 
                     default:
-                        Console.Clear();
                         Console.WriteLine("Fehlermeldung!");
                         break;
                 }
@@ -397,7 +452,35 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Kondensatornutze()
         {
+            string intro = "nutze des Kondensators";
+            Console.WriteLine(intro.ToUpper());
+            bool exit = false;
+            bool subsubmenü = false;
 
+            do
+            {
+                Console.WriteLine("Ein Kondensator (von lateinisch condensare ‚verdichten‘) ist ein passives elektrisches Bauelement mit der Fähigkeit,\n" +
+                "in einem Gleichstromkreis elektrische Ladung und die damit zusammenhängende Energie statisch in einem elektrischen Feld zu speichern.\n" +
+                " Die gespeicherte Ladung pro Spannung wird als elektrische Kapazität bezeichnet und in der Einheit Farad gemessen.\n" +
+                "In einem Wechselstromkreis wirkt ein Kondensator als Wechselstromwiderstand mit einem frequenzabhängigen Impedanzwert.");
+
+                string auswahl = Convert.ToString(Console.ReadLine());
+                switch (auswahl)
+                {
+                    case "exit":
+                        Console.Clear();
+                        exit = true;
+                        break;
+
+                    case "subsubmenü":
+                        Console.Clear();
+                        subsubmenü = true;
+                        break;
+                }
+
+            } while (!exit & !subsubmenü);
+            if (exit)
+                Environment.Exit(0);
         }
 
         static void Kondensatordefinition()
@@ -407,9 +490,62 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Widerstand()
         {
-            Widerstandformel();
-            Widerstandnutze();
-            Widerstanddefinition();
+            string intro = "Widerstandmenü";
+            Console.WriteLine(intro.ToUpper());
+            Console.WriteLine("\n");
+            bool exit = false;
+            bool subsubmenü = false;
+            do
+            {
+                Console.WriteLine("Um das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'submenü' eingeben!\n");
+
+                Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +
+                "Für die Formel, geben Sie bitte (1) ein.\n" +
+                "Für den Nutze des Kondensators, bitte (2) eingeben.\n" +
+                "Für die Definition des Kondensators, bitte (3) eingeben.\n");
+                string auswahlmöglichkeiten = Convert.ToString(Console.ReadLine());
+
+                switch (auswahlmöglichkeiten)
+                {
+                    case "1":
+                        Console.Clear();
+                        Widerstandformel();
+                        break;
+
+                    case "2":
+                        Console.Clear();
+                        Widerstandnutze();
+                        break;
+
+                    case "3":
+                        Console.Clear();
+                        Widerstanddefinition();
+                        break;
+
+                    case "subsubmenü":
+                        Console.Clear();
+                        subsubmenü = true;
+                        break;
+
+                    case "exit":
+                        Console.Clear();
+                        exit = true;
+                        break;
+
+                    default:
+                        Console.WriteLine("Fehlermeldung!");
+                        break;
+                }
+
+
+
+
+            } while (!exit & !subsubmenü);
+
+            if (exit)
+                Environment.Exit(0);
+
         }
 
         static void Widerstandformel()
