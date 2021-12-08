@@ -44,10 +44,11 @@ namespace ITMultiToolKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Zahlensystem umrechnen");
-                Console.WriteLine("\t2 - Daten ausrechnen und Sortieren");
-                Console.WriteLine("\t3 - Witze Easter Egg\n");
-                Console.WriteLine("\t4 - Bandbreit berechnen\n");
+                Console.WriteLine("\t1 - Zahlensystem umrechnen\n");
+                Console.WriteLine("\t2 - Daten ausrechnen und Sortieren\n");
+                Console.WriteLine("\t3 - Schnittmenge berechnen\n");
+                Console.WriteLine("\t4 - Witze Easter Egg\n");
+                Console.WriteLine("\t5 - Bandbreit berechnen\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -69,6 +70,18 @@ namespace ITMultiToolKlassenBibliothek
                     case "3":
                         Console.Clear();
                         Feature11.Feature11Funcion1();
+
+                        break;
+
+                    case "4":
+                        Console.Clear();
+                        Feature20.Feature20Funcion1();
+
+                        break;
+
+                    case "5":
+                        Console.Clear();
+                        Feature21.Feature21Funcion1();
 
                         break;
 
