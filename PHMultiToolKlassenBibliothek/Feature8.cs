@@ -98,11 +98,11 @@ namespace PHMultiToolKlassenBibliothek
             if (Exit)
                 Environment.Exit(0);
         }
-    
 
 
-    //              Oben nichts ändern
-    // ------------------------------------------------------------------------------------------------------------
+
+        //              Oben nichts ändern
+        // ------------------------------------------------------------------------------------------------------------
 
         //-------------------------------------------------------------------------------------------------
         //                                  Kugel
@@ -110,22 +110,25 @@ namespace PHMultiToolKlassenBibliothek
 
         public static void Kugel()
         {
+            double dou_radius = 0;
+            double volumen = 0;
+            bool parse_value;
             Console.WriteLine("Kugel");
-            Console.WriteLine("Bitte geben sie Radius ein");
+
             do
             {
-                string str_radius = Console.ReadLine();
-                double dou_radius = 0;
-                double volumen = 0;
-                bool parse_value;
+                Console.WriteLine("Bitte geben sie Radius ein");
+                string str_radius = Convert.ToString(Console.ReadLine());
 
                 do
                 {
                     parse_value = Double.TryParse(str_radius, out dou_radius);
                 }
-                while (parse_value==false);
-             
-                volumen=(4/3)*Math.PI *dou_radius Math.Pow));
+                while (parse_value == false);
+
+                volumen = (3.14 * dou_radius) Math.Pow;));
+
+                Console.WriteLine("Das Ergebnis lautet {0} 2^3 insgesamt");
 
             }
             while (true);
@@ -136,33 +139,36 @@ namespace PHMultiToolKlassenBibliothek
 
 
 
-    // -------------------------------------------------------------------------------------------------
-    //                          Pyramide
+        // -------------------------------------------------------------------------------------------------
+        //                          Pyramide
 
 
-    public static void Pyramide()
+        public static void Pyramide()
         {
             Console.WriteLine("Pyramide");
-            Console.WriteLine("Bitte geben sie Höhe ein");
+            double dou_höhe = 0;
+            double dou_grundfläche = 0;
+            double volumen = 0;
+            bool parse_value;
             do
             {
-                string str_höhe = Console.ReadLine();
-                double dou_höhe = 0;
-                double dou_grundfläche = 0;
-                double volumen = 0;
-                bool parse_value;
+                Console.WriteLine("Bitte geben sie Höhe ein");
+                string str_höhe = Convert.ToString(Console.ReadLine());
+
+                Console.WriteLine("Bitte geben die Grundfläche ein");
+                dou_grundfläche = Convert.ToDouble(Console.ReadLine());
                 do
                 {
-
-                    Console.WriteLine("Bitte geben die Grundfläche ein");
-                    dou_grundfläche = Convert.ToDouble(Console.ReadLine());
                     parse_value = Double.TryParse(str_höhe, out dou_grundfläche);
                 }
                 while (parse_value == false);
 
-                volumen = (1/3)*dou_grundfläche * dou_höhe = (1 / 3) * dou_höhe;
+                volumen = 1 / 3 * dou_grundfläche * dou_höhe;
 
-
+                Console.WriteLine("Das Ergebnis lautet {0} 2^3");
+            }
+            while (true);
+        }
 
 
 
@@ -173,10 +179,32 @@ namespace PHMultiToolKlassenBibliothek
 
         public static void Prisma()
         {
-         
+            Console.WriteLine("Prisma");
+            Console.WriteLine("Bitte geben sie Höhe ein");
+            do
+            {
+                string str_höhe = Console.ReadLine();
+                double Volumen = 0;
+                double dou_höhe = 0;
+                double dou_grundfläche = 0;
+                bool parse_value;
+                do
+                {
+                    Console.WriteLine("Bitte geben sie die Grundfläche ein");
+                    dou_grundfläche = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Bitte geben die Höhe ein");
+                    dou_höhe = Convert.ToDouble(Console.ReadLine());
+                    parse_value = Double.TryParse(str_höhe, out dou_grundfläche);
+                }
+                while (parse_value == false);
+
+                Volumen = dou_grundfläche * dou_höhe;
+                Console.WriteLine("Die Ausgabe lautet {0} 2^3 insgesamt", Volumen);
+
+
+            } while (true);
         }
-
-
-
     }
 }
+       
