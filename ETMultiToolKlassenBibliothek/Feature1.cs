@@ -34,7 +34,7 @@ namespace ETMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Einheitenbiliothek + Berechnungen SubSubmenü <<<\n" +
+                                  "                              >>> Berechnungen Ohm'sches & Leistungsgesetz SubSubmenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
@@ -60,12 +60,12 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "1":
                         Console.Clear();
-                        //SpannungalsEnergieaufteiling();
+                        OhmschesGesetzberechnen();
                         break;
 
                     case "2":
                         Console.Clear();
-                        StromausLadungjeZeit();
+                        ElektrischeLeistungBerechnen();
                         break;
                                           
                     case "submenü":
@@ -99,30 +99,74 @@ namespace ETMultiToolKlassenBibliothek
         #endregion
 
         #region Rechnungen
-        public static void SpannungalsEnergieaufteiling() 
-        { 
-               
-               
+        public static void OhmschesGesetzberechnen() 
+        {
+
+            double R;
+            double I;
+            double U;
+            string choose;
+
+            Console.WriteLine("Welchen Wert wollen sie berechenen:\n" + "(1) Die Spannung\n" + "(2) Die Stromstärke\n" + "(3) Den Widerstand");
+            choose = Convert.ToString(Console.ReadLine());
+
+            switch (choose)
+            {
+                case "1":
+                    Console.WriteLine("Geben Sie ihren Wert für den Widerstand (R) ein");
+                    R = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Geben Sie nun noch ihren Wert für die Stromstärke (I) ein");
+                    I = Convert.ToDouble(Console.ReadLine());
+
+                    U = R * I;
+
+                    Console.WriteLine("Ihr Wert für die Spannung beträgt {0} Volt!", U);
+                    break;
+                case "2":
+                    Console.WriteLine("Geben Sie ihren Wert für den Spannung (U) ein");
+                    U = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Geben sie nun noch Ihren Wert für den Widerstand (R) ein");
+                    R = Convert.ToDouble(Console.ReadLine());
+
+                    I = U / R;
+
+                    Console.WriteLine("Ihr Wert für Stromstärke beträgt {0} Ampere", I);
+                    break;
+                case 3:
+                    Console.WriteLine("Geben Sie ihren Wert für den Spannung (U) ein");
+                    U = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Geben Sie nun noch ihren Wert für die Stromstärke (I) ein");
+                    I = Convert.ToDouble(Console.ReadLine());
+
+                    R = U / I;
+
+                    Console.WriteLine("Ihr Wert für den Widerstand beträgt {0}", R);
+                    break;
+
+                default:
+                    Console.WriteLine("Ungültige Eingabe");
+                    break;
+
+
+
+
+
+
+            }
+
+
+
+
         }
 
-        public static void StromausLadungjeZeit()
+        public static void ElektrischeLeistungBerechnen()
         {
-            double time;
-            double charge;
-
-            Console.WriteLine("Geben sie die Zeit in Sekunden ein!");
-            time = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Geben sie nun noch ihren Wert für die elektrische Ladung in Ampere ein!");
-            charge = Convert.ToDouble(Console.ReadLine());
-
-            double stromstärke = charge / time;
-
-            Console.WriteLine("Die Strom stärke beträgt: " + stromstärke);
-            Console.ReadKey();
-            Console.Clear(); 
+            
                         
         }
-        #endregion
+        #endregion;
     }
 }
