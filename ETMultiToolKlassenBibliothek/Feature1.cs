@@ -120,7 +120,7 @@ namespace ETMultiToolKlassenBibliothek
 
             Console.WriteLine("Die Strom stärke beträgt: " + stromstärke);
             Console.ReadKey();
-            Console.Clear();
+            Console.Clear(); 
                         
         }
         #endregion
