@@ -10,21 +10,53 @@ namespace ITMultiToolKlassenBibliothek
     {
         public static void Feature9Funcion1()
         {
-            Console.WriteLine("Feature9 SubSubMenue");
 
-            Console.WriteLine("");
+            do
+            {
+                bool fehlermeldung;
 
-            Console.WriteLine(" Bitte Wählen Sie ein Zahlensystem\n");
-            Console.WriteLine("\t1 - Hexadezimal\n");
-            Console.WriteLine("\t2 - Dezimal\n");
-            Console.WriteLine("\t3 - Oktal\n");
-            Console.WriteLine("\t4 - Binar\n");
+                int auswahl1,auswahl2;
 
-            string Zahlensystem = Console.ReadLine();
+                do
+                {
+                    Console.WriteLine(" Bitte Wählen Sie Ihr Zahlensystem aus welchem Sie umwandeln möchten\n");
+                    Console.WriteLine("\t1 - Hexadezimal\n");
+                    Console.WriteLine("\t2 - Dezimal\n");
+                    Console.WriteLine("\t3 - Oktal\n");
+                    Console.WriteLine("\t4 - Binar\n");
 
-            Console.WriteLine("Bitte geben Sie den Wert ein");
-            double Wert = Convert.ToDouble(Console.ReadLine());
+                    auswahl1 = Convert.ToInt32(Console.ReadLine());
+                    if (auswahl1 <= 0 && auswahl1 > 4)
+                        Console.WriteLine("Fehleingabe!!");
 
+                } while (auswahl1<=0 && auswahl1 >4);
+
+
+
+                do
+                {
+                    Console.WriteLine(" Bitte Wählen Sie Ihr Zahlensystem aus welchem Sie umwandeln möchten\n");
+                    Console.WriteLine("\t1 - Hexadezimal\n");
+                    Console.WriteLine("\t2 - Dezimal\n");
+                    Console.WriteLine("\t3 - Oktal\n");
+                    Console.WriteLine("\t4 - Binar\n");
+
+                    auswahl2 = Convert.ToInt32(Console.ReadLine());
+                    if (auswahl1 <= 0 && auswahl1 > 4 && auswahl2 == auswahl1)
+                        Console.WriteLine("Fehleingabe!!");
+
+                } while (auswahl1 <= 0 && auswahl1 > 4 && auswahl2 == auswahl1);
+
+
+                string zahlensystem1 = Console.ReadLine();
+
+                
+
+
+
+            } while ();
+
+          
 
 
 
