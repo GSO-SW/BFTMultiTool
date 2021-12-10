@@ -152,16 +152,30 @@ namespace MAMultiToolKlassenBibliothek
 
         static void Quadratberechnen()
         {
-
+            
             bool wiederholen = true;
             do
             {
-
+               
 
                 Double a = 0;
+                string s_a;
+                bool tryparseout;
+
+
                 Console.WriteLine("Quadrat berechnen");
-                Console.WriteLine("Geben sie den Wert von a ein");
-                a = Convert.ToDouble(Console.ReadLine());
+
+                do
+                {
+                    Console.WriteLine("Geben sie den Wert von a ein");
+                    s_a = Console.ReadLine();
+
+
+                    tryparseout = double.TryParse(s_a, out a);
+                } while (tryparseout == false);
+
+
+
 
                 if (a < 0)
                 {
@@ -172,7 +186,7 @@ namespace MAMultiToolKlassenBibliothek
                 else if (a > 0)
                 {
                     Double A = a * a;
-                    Console.WriteLine("Der flächeninhalt des Quadrats beträgt {0}",A);
+                    Console.WriteLine("Der flächeninhalt des Quadrats beträgt {0}", A);
                     Console.WriteLine("Wiederholen?(true/false)");
                     wiederholen = Convert.ToBoolean(Console.ReadLine());
 
@@ -182,25 +196,40 @@ namespace MAMultiToolKlassenBibliothek
 
 
                 Console.Clear();
-
+            
+           
+              
+               
             } while (wiederholen==true);
-
                 
+
+
         }
 
         static void Rechteckberechen()
         {
+           
             bool wiederholen = true;
             do
             {
-
+                
 
                 Double a = 0, b = 0;
-                Console.WriteLine("Rechteck berechnen");
-                Console.WriteLine("Geben sie den Wert von a ein");
-                a = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Geben sie den Wert von b ein");
-                b = Convert.ToDouble(Console.ReadLine());
+                string s_a, s_b;
+                bool tryparseout;
+
+                do
+                {
+                    Console.WriteLine("Rechteck berechnen");
+                    Console.WriteLine("Geben sie den Wert von a ein");
+                    s_a = Console.ReadLine();
+                    Console.WriteLine("Geben sie den Wert von b ein");
+                    s_b =Console.ReadLine();
+
+
+                    tryparseout = double.TryParse(s_a, out a);
+                    tryparseout = double.TryParse(s_b, out b);
+                } while (tryparseout == false);
 
                 if (a < 0 && b < 0)
                 {
@@ -227,17 +256,29 @@ namespace MAMultiToolKlassenBibliothek
 
         static void AllgemeinesDreieck()
         {
+           
+            Double g = 0, h = 0;
+            string s_g, s_h;
+            bool tryparseout;
             bool wiederholen = true;
             do
-            { 
-                Double g = 0, h = 0;
-            Console.WriteLine("Allg. Dreieck berechnen");
-            Console.WriteLine("Geben sie den Wert von g ein");
-            g = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Geben sie den Wert von h ein");
-            h = Convert.ToDouble(Console.ReadLine());
+            {
+               
+                do
+                {
+                    
+                    Console.WriteLine("Rechteck berechnen");
+                    Console.WriteLine("Geben sie den Wert von a ein");
+                    s_g = Console.ReadLine();
+                    Console.WriteLine("Geben sie den Wert von b ein");
+                    s_h = Console.ReadLine();
 
-            if (g < 0 && h < 0)
+
+                    tryparseout = double.TryParse(s_h, out h);
+                    tryparseout = double.TryParse(s_g, out g);
+                } while (tryparseout == false);
+
+                if (g < 0 && h < 0)
             {
                 Console.WriteLine("Falsche Eingabe");
                 Console.ReadLine();
@@ -262,15 +303,25 @@ namespace MAMultiToolKlassenBibliothek
 
         static void rechtwinkligesDreieck()
         {
+            Double a = 0, b = 0;
+            string s_a, s_b;
+            bool tryparseout;
             bool wiederholen = true;
             do
             {
-                Double a = 0, b = 0;
-                Console.WriteLine("Rechtwinkliges Dreieck berechnen");
-                Console.WriteLine("Geben sie den Wert von a ein");
-                a = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Geben sie den Wert von b ein");
-                b = Convert.ToDouble(Console.ReadLine());
+               
+                do
+                {
+                    Console.WriteLine("Rechteck berechnen");
+                    Console.WriteLine("Geben sie den Wert von a ein");
+                    s_a = Console.ReadLine();
+                    Console.WriteLine("Geben sie den Wert von b ein");
+                    s_b = Console.ReadLine();
+
+
+                    tryparseout = double.TryParse(s_a, out a);
+                    tryparseout = double.TryParse(s_b, out b);
+                } while (tryparseout == false);
 
                 if (a < 0 && b < 0)
                 {
@@ -297,15 +348,26 @@ namespace MAMultiToolKlassenBibliothek
 
         static void gleichwinkligesDreieck()
         {
+            
+            Double c = 0, h = 0;
+            string s_c, s_h;
+            bool tryparseout;
             bool wiederholen = true;
             do
             {
-                Double c = 0, h = 0;
-                Console.WriteLine("Gleichschenkliges Dreieck berechnen");
-                Console.WriteLine("Geben sie den Wert von c ein");
-                c = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Geben sie den Wert von h ein");
-                h = Convert.ToDouble(Console.ReadLine());
+               
+                do
+                {
+                    Console.WriteLine("Rechteck berechnen");
+                    Console.WriteLine("Geben sie den Wert von a ein");
+                    s_c = Console.ReadLine();
+                    Console.WriteLine("Geben sie den Wert von b ein");
+                    s_h = Console.ReadLine();
+
+
+                    tryparseout = double.TryParse(s_c, out c);
+                    tryparseout = double.TryParse(s_h, out h);
+                } while (tryparseout == false);
 
                 if (c < 0 && h < 0)
                 {
@@ -332,14 +394,26 @@ namespace MAMultiToolKlassenBibliothek
 
         static void gleichseitigesDreieck()
         {
+           
+            Double a = 0;
+            string s_a;
+            bool tryparseout;
             bool wiederholen = true;
             do
             {
-                Double a = 0;
-                Console.WriteLine("Gleichseitiges Dreieck  berechnen");
-                Console.WriteLine("Geben sie den Wert von g ein");
-                a = Convert.ToDouble(Console.ReadLine());
                 
+                do
+                {
+                    Console.WriteLine("Rechteck berechnen");
+                    Console.WriteLine("Geben sie den Wert von a ein");
+                    s_a = Console.ReadLine();
+                   
+
+
+                    tryparseout = double.TryParse(s_a, out a);
+                   
+                } while (tryparseout == false);
+
                 if (a < 0 )
                 {
                     Console.WriteLine("Falsche Eingabe");
@@ -365,17 +439,28 @@ namespace MAMultiToolKlassenBibliothek
 
         static void Trapez()
         {
+            
+            Double a = 0, c = 0, h = 0;
+            string s_a, s_c, s_h;
+            bool tryparseout;
             bool wiederholen = true;
             do
             {
-                Double a = 0, c = 0, h = 0;
-                Console.WriteLine("Trapez berechnen");
-                Console.WriteLine("Geben sie den Wert von a ein");
-                a = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Geben sie den Wert von c ein");
-                c = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Geben sie den Wert von h ein");
-                h = Convert.ToDouble(Console.ReadLine());
+                do
+                {
+                    Console.WriteLine("Rechteck berechnen");
+                    Console.WriteLine("Geben sie den Wert von a ein");
+                    s_a = Console.ReadLine();
+                    Console.WriteLine("Geben sie den Wert von c ein");
+                    s_c = Console.ReadLine();
+                    Console.WriteLine("Geben sie den Wert von h ein");
+                    s_h = Console.ReadLine();
+
+
+                    tryparseout = double.TryParse(s_a, out a);
+                    tryparseout = double.TryParse(s_c, out c);
+                    tryparseout = double.TryParse(s_h, out h);
+                } while (tryparseout == false);
 
                 if (a < 0 && c < 0 && h < 0)
                 {
@@ -402,15 +487,27 @@ namespace MAMultiToolKlassenBibliothek
 
         static void Parallelogramm()
         {
+           
+            Double a = 0, h = 0;
+            string s_a, s_h;
+            bool tryparseout;
             bool wiederholen = true;
             do
             {
-                Double a = 0, h = 0;
-                Console.WriteLine("Parallelogramm berechnen");
-                Console.WriteLine("Geben sie den Wert von a ein");
-                a = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Geben sie den Wert von h ein");
-                h = Convert.ToDouble(Console.ReadLine());
+               
+
+                do
+                {
+                    Console.WriteLine("Rechteck berechnen");
+                    Console.WriteLine("Geben sie den Wert von a ein");
+                    s_a = Console.ReadLine();
+                    Console.WriteLine("Geben sie den Wert von b ein");
+                    s_h = Console.ReadLine();
+
+
+                    tryparseout = double.TryParse(s_a, out a);
+                    tryparseout = double.TryParse(s_h, out h);
+                } while (tryparseout == false);
 
                 if (a < 0 && h < 0)
                 {
@@ -437,15 +534,26 @@ namespace MAMultiToolKlassenBibliothek
 
         static void Raute()
         {
+            
+            Double e = 0, f = 0;
+            string s_e, s_f;
+            bool tryparseout;
             bool wiederholen = true;
             do
             {
-                Double e = 0, f = 0;
-                Console.WriteLine("Raute berechnen");
-                Console.WriteLine("Geben sie den Wert von e ein");
-                e = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Geben sie den Wert von f ein");
-                f = Convert.ToDouble(Console.ReadLine());
+                
+                do
+                {
+                    Console.WriteLine("Rechteck berechnen");
+                    Console.WriteLine("Geben sie den Wert von a ein");
+                    s_e = Console.ReadLine();
+                    Console.WriteLine("Geben sie den Wert von b ein");
+                    s_f = Console.ReadLine();
+
+
+                    tryparseout = double.TryParse(s_e, out e);
+                    tryparseout = double.TryParse(s_f, out f);
+                } while (tryparseout == false);
 
                 if (e < 0 && f < 0)
                 {
@@ -472,14 +580,22 @@ namespace MAMultiToolKlassenBibliothek
 
         static void Kreis()
         {
+            
+            Double r = 0;
+            string s_r;
+            bool tryparseout;
             bool wiederholen = true;
             do
             {
-                Double r = 0;
-                Console.WriteLine("Kreis berechnen");
-                Console.WriteLine("Geben sie den Wert von r ein");
-                r = Convert.ToDouble(Console.ReadLine());
-               
+                do
+                {
+                    Console.WriteLine("Rechteck berechnen");
+                    Console.WriteLine("Geben sie den Wert von a ein");
+                    s_r = Console.ReadLine();
+                   
+                    tryparseout = double.TryParse(s_r, out r);
+                } while (tryparseout == false);
+
 
                 if (r < 0)
                 {
