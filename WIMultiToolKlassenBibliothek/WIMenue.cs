@@ -46,7 +46,8 @@ namespace WIMultiToolKlassenBibliothek
                 Console.WriteLine("\t1 - Immobilienrechner");
                 Console.WriteLine("\t2 - Zins und Zinseszins Rechner ");
                 Console.WriteLine("\t3 - Amortization");
-                Console.WriteLine("\t4 - Lohnsteuerberechnung\n");
+                Console.WriteLine("\t4 - Lohnsteuerberechnung");
+                Console.WriteLine("\t5 - Fix- und Variablekosten\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -75,7 +76,7 @@ namespace WIMultiToolKlassenBibliothek
 
                     case "5":
                         Console.Clear();
-                        //
+                        Feature22.Feature22Funcion1();
                         break;
                     case "hauptmenü":
                         Console.Clear();
