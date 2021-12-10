@@ -23,8 +23,9 @@ namespace WIMultiToolKlassenBibliothek
 
             bool tryparseout;
 
-            bool str_wiederholen =true;
-          
+            string str_wiederholen;
+            bool bool_wiederholen;
+
             do
             {
                 Console.WriteLine("Fix- und Variablekosten");
@@ -70,8 +71,8 @@ namespace WIMultiToolKlassenBibliothek
                 {
 
                     Console.WriteLine("Wiederholen?(true/false)");
-                    str_wiederholen = Convert.ToBoolean(Console.ReadLine());
-                    tryparseout = double.TryParse(str_wiederholen, out);
+                    str_wiederholen = Console.ReadLine();
+                    tryparseout = bool.TryParse(str_wiederholen, out);
 
                 } while (tryparseout == false);
 
@@ -81,7 +82,7 @@ namespace WIMultiToolKlassenBibliothek
 
 
 
-            } while (str_wiederholen);
+            } while (bool_wiederholen==true);
 
 
 
