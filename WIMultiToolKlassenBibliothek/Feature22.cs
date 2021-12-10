@@ -14,9 +14,17 @@ namespace WIMultiToolKlassenBibliothek
             string str_fixkosten;
             double doub_fixkosten;
 
+            string str_Variablekosten;
+            double doub_Variablekosten;
+
+            string str_PpP;
+            double doub_PpP;
+
+
             bool tryparseout;
 
-            bool widerholen =true;
+            bool str_wiederholen =true;
+          
             do
             {
                 Console.WriteLine("Fix- und Variablekosten");
@@ -30,24 +38,50 @@ namespace WIMultiToolKlassenBibliothek
 
                 } while (tryparseout == false);
 
-                Console.WriteLine("Geben sie Ihre Variable Kosten ein");
-                double VK = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Geben sie bitte Preis pro Stück ein");
-                double PpP = Convert.ToDouble(Console.ReadLine());
-                double GpS = PpP - VK;
+                do
+                {
+
+                    Console.WriteLine("Geben sie Ihre Variable Kosten ein");
+                    str_Variablekosten = Console.ReadLine();
+                    tryparseout = double.TryParse(str_Variablekosten, out doub_Variablekosten);
+
+                } while (tryparseout == false);
+
+                do
+                {
+
+                    Console.WriteLine("Geben sie bitte Preis pro Stück ein");
+                    str_PpP = Console.ReadLine();
+                    tryparseout = double.TryParse(str_PpP, out doub_PpP);
+
+                } while (tryparseout == false);
+
+                
+
+                double GpS = doub_PpP - doub_Variablekosten;
                 Console.WriteLine("{0,-20}{1,20:F2}EUR", "Gewin pro Stück", GpS);
-                double Vz = Fk / GpS;
+                double Vz = doub_fixkosten / GpS;
                 Console.WriteLine("{0,-20}{1,20:F2}", "Verkaufszahl", Vz);
 
                 Console.ReadKey();
-                Console.WriteLine("Wiederholen?(true/false)");
-                widerholen = Convert.ToBoolean(Console.ReadLine());
+
+
+                do
+                {
+
+                    Console.WriteLine("Wiederholen?(true/false)");
+                    str_wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    tryparseout = double.TryParse(str_wiederholen, out);
+
+                } while (tryparseout == false);
+
+
 
                 Console.Clear();
 
 
 
-            } while (widerholen);
+            } while (str_wiederholen);
 
 
 
