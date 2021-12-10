@@ -137,7 +137,7 @@ namespace PHMultiToolKlassenBibliothek
                 Console.WriteLine("Geben Sie ein, welche Einheit Sie umrechnen wollen:\n");
                 Console.WriteLine("\t1 - Meter in Kilometer");
                 Console.WriteLine("\t2 - Gramm in Kilogramm");
-                Console.WriteLine("\t3 - Sekunden in Stunden");
+                Console.WriteLine("\t3 - Minuten in Stunden");
                 Console.WriteLine("\t4 - Ampere und Volt in Watt");
                 Console.WriteLine("\t5 - Kelvin in Grad\n");
                 Console.Write("Eingabe:");
@@ -151,6 +151,26 @@ namespace PHMultiToolKlassenBibliothek
                     case "1":
                         Console.Clear();
                         SiEinheit.Kilometer();
+                        break;
+
+                    case "2":
+                        Console.Clear();
+                        SiEinheit.Kilogramm();
+                        break;
+
+                    case "3":
+                        Console.Clear();
+                        SiEinheit.Stunden();
+                        break;
+
+                    case "4":
+                        Console.Clear();
+                        SiEinheit.Watt();
+                        break;
+
+                    case "5":
+                        Console.Clear();
+                        SiEinheit.Kelvin();
                         break;
 
 
@@ -256,32 +276,272 @@ namespace PHMultiToolKlassenBibliothek
         }
         public static void Kilometer()
         {
-            string Eingabe;
-
-            bool Exit = false;
-            bool Hmenue;
-
+            bool Subexit = false;
+            bool Errorcode = false;
             do
             {
-                (int, int) cPosBM = Console.GetCursorPosition();
+                Console.WriteLine
+                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Umrechnung Meter in Kilometer <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
 
-                Hmenue = false;
+                Console.WriteLine("Willkommen zum Bereich `Umrechnung von Maßeinheiten`. Hier kann man ganz einfach seine Einheiten umrechnen.\n" +
+                    "Ganz ohne große Kopfrechnungen oder googlen zu müssen. Wählen Sie ihren gewünschten Bereich und wir rechnen dies für Sie.\n\n" +
+                    "Geben Sie nun ihre Einheit in Meter ein. Andernfalls kannst du `Subexit` eingeben und Sie gelangen sofort zum Physik Menü.\n\n");
+                Console.WriteLine("Geben Sie nun Ihre Volt Meter an:");
+                string str_Eingabe = Console.ReadLine();
 
-                Console.WriteLine("Willkommen zur Berechnung von Meter in Kilometer.\n");
-                Console.WriteLine("Geben Sie bitte Ihre Daten in Meter an. Um zum Hauptmenü zu gelangen oder um das Programm zu beenden,\nmüssen Sie die Rechnung beenden.");
-                double Meter = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine($"Ihr gewünschte Zahl: {Meter} - beträgt {Meter / 1000} Kilometer.");
-                Console.WriteLine("Wenn Sie nun `exit` eingeben, schließt sich das Programm. Bei `hauptmenü` gelangen Sie zum Hauptmenü des Programms.");
-                Eingabe = Console.ReadLine();
+                if (str_Eingabe == "Subexit")
+                {
+                    Subexit = true;
+                }
+                else
+                {
+                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+
+
+                    Errorcode = false;
+                    if (doub_Eingabe >= 0)
+                    {
+                        Console.WriteLine("Berechnung:\n\n");
+                        double Kilometer = doub_Eingabe / 1000;
+                        Console.WriteLine("Wir rechnen ihre eingegebenen Meter diviert durch 1000. Ein Beispiel für Sie: 100 Meter / 1000 = 0,1 Kilometer.");
+                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Meter: {doub_Eingabe} einen Kilometerstand von: {Kilometer} Kilometer.\n");
+                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Errorcode = true;
+                        Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
+                        Console.ReadKey();
+                    }
+
+
+                }
+
+
+                Console.Clear();
 
             }
-            while (!Exit & !Hmenue);
-            if (Exit)
-            Environment.Exit(0);
+            while (Subexit == false & Errorcode == true);
+        }
+        public static void Kilogramm()
+        {
+            bool Subexit = false;
+            bool Errorcode = false;
+            do
+            {
+                Console.WriteLine
+                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Umrechnung  in Kilogramm <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Willkommen zum Bereich `Umrechnung von Maßeinheiten`. Hier kann man ganz einfach seine Einheiten umrechnen.\n" +
+                    "Ganz ohne große Kopfrechnungen oder googlen zu müssen. Wählen Sie ihren gewünschten Bereich und wir rechnen dies für Sie.\n\n" +
+                    "Geben Sie nun ihre Einheit in Gramm ein. Andernfalls kannst du `Subexit` eingeben und Sie gelangen sofort zum Physik Menü.\n\n");
+                Console.WriteLine("Geben Sie nun Ihre Volt Gramm an:");
+                string str_Eingabe = Console.ReadLine();
+
+                if (str_Eingabe == "Subexit")
+                {
+                    Subexit = true;
+                }
+                else
+                {
+                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+
+
+                    Errorcode = false;
+                    if (doub_Eingabe >= 0)
+                    {
+                        Console.WriteLine("Berechnung:\n\n");   
+                        double Kilometer = doub_Eingabe / 1000;
+                        Console.WriteLine("Wir rechnen ihre eingegebenen Gramm diviert durch 1000. Ein Beispiel für Sie: 100 Gramm / 1000 = 0,1 Kilogramm.");
+                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Meter: {doub_Eingabe} einen Kilogrammstand von: {Kilometer} Kilogramm.\n");
+                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Errorcode = true;
+                        Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
+                        Console.ReadKey();
+                    }
+
+
+                }
+
+
+                Console.Clear();
+
+            }
+            while (Subexit == false & Errorcode == true);
+        }
+        public static void Stunden()
+        {
+            bool Subexit = false;
+            bool Errorcode = false;
+            do
+            {
+                Console.WriteLine
+                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Umrechnung Minuten in Stunden <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Willkommen zum Bereich `Umrechnung von Maßeinheiten`. Hier kann man ganz einfach seine Einheiten umrechnen.\n" +
+                    "Ganz ohne große Kopfrechnungen oder googlen zu müssen. Wählen Sie ihren gewünschten Bereich und wir rechnen dies für Sie.\n\n" +
+                    "Geben Sie nun ihre Einheit in Minuten ein. Andernfalls kannst du `Subexit` eingeben und Sie gelangen sofort zum Physik Menü.\n\n");
+                Console.WriteLine("Geben Sie nun Ihre Volt Minuten an:");
+                string str_Eingabe = Console.ReadLine();
+
+                if (str_Eingabe == "Subexit")
+                {
+                    Subexit = true;
+                }
+                else
+                {
+                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+
+
+                    Errorcode = false;
+                    if (doub_Eingabe >= 0)
+                    {
+                        Console.WriteLine("Berechnung:\n\n");
+                        double Kilometer = doub_Eingabe / 60;
+                        Console.WriteLine("Wir rechnen ihre eingegebenen Minuten diviert durch 60. Ein Beispiel für Sie: 60 min / 60 = 1 Stunde.");
+                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Minuten: {doub_Eingabe} einen Stundenstand von: {Kilometer} Stunden.\n");
+                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Errorcode = true;
+                        Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
+                        Console.ReadKey();
+                    }
+
+
+                }
+
+
+                Console.Clear();
+
+            }
+            while (Subexit == false & Errorcode == true);
+        }
+        public static void Watt()
+        {
+            bool Subexit = false;
+            bool Errorcode = false;
+            do
+            {
+                Console.WriteLine
+                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Umrechnung Volt und Ampere in Watt <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Willkommen zum Bereich `Umrechnung von Maßeinheiten`. Hier kann man ganz einfach seine Einheiten umrechnen.\n" +
+                    "Ganz ohne große Kopfrechnungen oder googlen zu müssen. Wählen Sie ihren gewünschten Bereich und wir rechnen dies für Sie.\n\n" +
+                    "Geben Sie nun ihre Einheit in Ampere und Volt ein. Andernfalls kannst du `Subexit` eingeben und Sie gelangen sofort zum Physik Menü.\n\n");
+                Console.WriteLine("Geben Sie nun Ihre Volt Angaben an:");
+                string str_Eingabe = Console.ReadLine();
+                Console.WriteLine("Nun geben Sie Ihre Ampere Angaben ein:");
+                string Ampere = Console.ReadLine();
+
+
+                if (str_Eingabe == "Subexit")
+                {
+                    Subexit = true;
+                }
+                else
+                {
+                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+                    double doub_Ampere = Convert.ToDouble(Ampere);
+
+                    Errorcode = false;
+                    if (doub_Eingabe >= 0)
+                    {
+                        Console.WriteLine("Berechnung:\n\n");
+                        double Kilometer = doub_Eingabe * doub_Ampere;
+                        Console.WriteLine("Wir rechnen ihre eingegebenen Volt mal Ampere. Ein Beispiel für Sie: 20 Volt * 10 Ampere = 200 Watt, kurz 200 W.");
+                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Volt: {doub_Eingabe} und Ampere: {doub_Ampere} einen Wattstand von: {Kilometer} Watt.\n");
+                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Errorcode = true;
+                        Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
+                        Console.ReadKey();
+                    }
+
+
+                }
+
+
+                Console.Clear();
+
+            }
+            while (Subexit == false & Errorcode == true);
+        }
+        public static void Kelvin()
+        {
+            bool Subexit = false;
+            bool Errorcode = false;
+            do
+            {
+                Console.WriteLine
+                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Umrechnung Kelvin in Grad <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Willkommen zum Bereich `Umrechnung von Maßeinheiten`. Hier kann man ganz einfach seine Einheiten umrechnen.\n" +
+                    "Ganz ohne große Kopfrechnungen oder googlen zu müssen. Wählen Sie ihren gewünschten Bereich und wir rechnen dies für Sie.\n\n" +
+                    "Geben Sie nun ihre Einheit Kelvin ein. Andernfalls kannst du `Subexit` eingeben und Sie gelangen sofort zum Physik Menü.\n\n");
+                Console.WriteLine("Geben Sie nun Ihre Volt Kelvin an:");
+                string str_Eingabe = Console.ReadLine();
+                
+
+
+                if (str_Eingabe == "Subexit")
+                {
+                    Subexit = true;
+                }
+                else
+                {
+                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+
+                    Errorcode = false;
+                    if (doub_Eingabe >= 0)
+                    {
+                        Console.WriteLine("Berechnung:\n\n");
+                        double Kilometer = doub_Eingabe - 273.15;
+                        Console.WriteLine("Wir rechnen ihre eingegebenen Kelvin - 273.15. Ein Beispiel für Sie: 300 Kelvin - 273.15 = 26.25 Grad.");
+                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Kelvin: {doub_Eingabe} einen Gradstand von: {Kilometer} Grad.\n");
+                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Errorcode = true;
+                        Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
+                        Console.ReadKey();
+                    }
+
+
+                }
+
+
+                Console.Clear();
+
+            }
+            while (Subexit == false & Errorcode == true);
         }
     }
 }
-//Console.WriteLine("Willkommen zur Berechnung von Meter in Kilometer.\n");
-//Console.WriteLine("Geben Sie bitte Ihre Daten in Meter an oder schreiben Sie `Exit` um das Programm zu schließen.\nMit `hauptmenü` kommen Sie zum Hauptmenü");
-//double Meter = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine($"Ihr gewünschte Zahl: {Meter} - beträgt {Meter / 1000} Kilometer.");
