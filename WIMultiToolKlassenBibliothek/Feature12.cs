@@ -11,7 +11,7 @@ namespace WIMultiToolKlassenBibliothek
         public static void Feature12Funcion1()
         {
             Console.WriteLine("Feature12 SubSubMenue");
-            Console.Clear();
+            // Feature von Florian Reuter (Klasse: BFT11)
         }
 
     }
