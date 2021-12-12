@@ -74,9 +74,13 @@ namespace ITMultiToolKlassenBibliothek
 
         private static void ZahlensystemBackend(int a1,int a2)
         {
+            //Ein Array um die Kürzel dynamisch anzusteuern
             string[] z_systeme = { "HEX", "DEZ", "OKT", "BIN" };
+
+            //Ein Indikator für eine nicht erfolgreiche Umwandlung
             bool trypassout;
 
+            //Die Eingabe des Umwandlungswertes
             string s_eingabe1;
 
 
@@ -86,17 +90,17 @@ namespace ITMultiToolKlassenBibliothek
             do
             {
 
-
+                
                 Console.WriteLine("{0}->{1}", z_systeme[a1-1], z_systeme[a2-1]);
                 Console.WriteLine("Verwenden Sie keine Trennzeichen");
                 Console.Write("Geben Sie den {0} Wert ein:", z_systeme[a1-1]);
                 s_eingabe1=Console.ReadLine();
 
-
+                //Es gibt hier keinen Rückgabewert da in der Methode das Ergebnis ausgegeben wird
                 BedingungPrüfen(a1, a2, s_eingabe1, out trypassout);
 
 
-
+                //Wenn die Umwandlung nicht funktioniert, wird die schleife wiederholt
             } while (trypassout == false);
 
 
@@ -112,25 +116,30 @@ namespace ITMultiToolKlassenBibliothek
             {
                 case 1:
 
+                    //Dieser Teil wird versucht.
                     try
                     {
+                        //Die Eingabe(string) wird in ein Integer umgewandelt.
                         int val_dec = int.Parse(s_eingabe, NumberStyles.HexNumber);
                         int val_okt = ToOctal(val_dec);
 
 
 
-
+                        //Gibt HEX->DEC aus wenn die zweite Auswahl 2 ist
                         if (a2 == 2)
                             Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], val_dec, z_systeme[a2 - 1]);
+                        //Gibt HEX->OKT aus wenn die zweite Auswahl 3 ist
                         if (a2 == 3)
                             Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], val_okt, z_systeme[a2 - 1]);
+                        //Gibt HEX->BIN aus wenn die zweite Auswahl 4 ist
                         if (a2 == 4)
                             Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], Convert.ToString(val_dec, 2), z_systeme[a2 - 1]);
 
 
                         Console.ReadKey();
                     }
-                    catch (Exception )
+                    //Wenn 'try' einen Error verursacht, wird 'catch' ausgeführt
+                    catch (Exception) //Gibt an welche Errortypen abgefangen werden
                     {
                         Console.WriteLine("Eingabe im falschen Format.");
                         Console.ReadKey();
@@ -155,7 +164,7 @@ namespace ITMultiToolKlassenBibliothek
             }
             Console.Clear();
         }
-
+        //Diese Methode nimmt einen 'int' Wert(Dezimal) auf und gibt einen 'int' Wert(Oktal) zurück
         public static int ToOctal(int x)
         {
             if (x == 0)
