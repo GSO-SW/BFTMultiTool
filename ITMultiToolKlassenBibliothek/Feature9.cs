@@ -15,7 +15,7 @@ namespace ITMultiToolKlassenBibliothek
             {
                 bool fehlermeldung;
 
-                int auswahl1,auswahl2;
+                int auswahl1, auswahl2;
 
                 do
                 {
@@ -29,7 +29,7 @@ namespace ITMultiToolKlassenBibliothek
                     if (auswahl1 <= 0 && auswahl1 > 4)
                         Console.WriteLine("Fehleingabe!!");
 
-                } while (auswahl1<=0 && auswahl1 >4);
+                } while (auswahl1 <= 0 && auswahl1 > 4);
 
 
 
@@ -50,7 +50,30 @@ namespace ITMultiToolKlassenBibliothek
 
                 string zahlensystem1 = Console.ReadLine();
 
-                
+
+                if (auswahl2 == 1);
+                    int dezimal = hexadezimal;
+                    string dezimal = string.Empty;
+
+                while (dezimal > 0)
+                {
+                    hexadezimal = dezimal % 16;
+
+                    if (hexadezimal < 10)
+                        hexadezimal = hexadezimal.Insert(0, Convert.ToChar(hexadezimal + 48).ToString());
+                    else
+                        hexadezimal = hexadezimal.Insert(0, Convert.ToChar(hexadezimal + 55).ToString());
+
+                    dezimal /= 16;
+                }
+
+
+
+
+
+
+
+
 
 
 
