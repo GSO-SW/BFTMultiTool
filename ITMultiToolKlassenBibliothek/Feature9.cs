@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace ITMultiToolKlassenBibliothek
 {
@@ -10,10 +11,10 @@ namespace ITMultiToolKlassenBibliothek
     {
         public static void Feature9Funcion1()
         {
-
+            string wiederholen;
             do
             {
-                bool fehlermeldung;
+
 
                 int auswahl1, auswahl2;
 
@@ -26,63 +27,144 @@ namespace ITMultiToolKlassenBibliothek
                     Console.WriteLine("\t4 - Binar\n");
 
                     auswahl1 = Convert.ToInt32(Console.ReadLine());
-                    if (auswahl1 <= 0 && auswahl1 > 4)
+                    if (auswahl1 <= 0 || auswahl1 > 4)
                         Console.WriteLine("Fehleingabe!!");
 
-                } while (auswahl1 <= 0 && auswahl1 > 4);
+                } while (auswahl1 <= 0 || auswahl1 > 4);                                    //Hab das UND zu Oder gemacht da ja nicht beide Bedingungen erfüllt sein müssen damit die Schleife wiederholt wird.
 
 
 
                 do
                 {
-                    Console.WriteLine(" Bitte Wählen Sie Ihr Zahlensystem aus welchem Sie umwandeln möchten\n");
+                    Console.WriteLine(" Bitte Wählen Sie Ihr Zahlensystem aus, in das umgewandelt werden soll\n");
                     Console.WriteLine("\t1 - Hexadezimal\n");
                     Console.WriteLine("\t2 - Dezimal\n");
                     Console.WriteLine("\t3 - Oktal\n");
                     Console.WriteLine("\t4 - Binar\n");
 
                     auswahl2 = Convert.ToInt32(Console.ReadLine());
-                    if (auswahl1 <= 0 && auswahl1 > 4 && auswahl2 == auswahl1)
+                    if (auswahl2 <= 0 || auswahl2 > 4 || auswahl2 == auswahl1)              //Hier muss 'auswahl2' geprüft werden.
                         Console.WriteLine("Fehleingabe!!");
 
-                } while (auswahl1 <= 0 && auswahl1 > 4 && auswahl2 == auswahl1);
+                } while (auswahl2 <= 0 || auswahl2 > 4 || auswahl2 == auswahl1);
 
-
-                string zahlensystem1 = Console.ReadLine();
-
-
-                if (auswahl2 == 1);
-                    int dezimal = hexadezimal;
-                    string dezimal = string.Empty;
-
-                while (dezimal > 0)
-                {
-                    hexadezimal = dezimal % 16;
-
-                    if (hexadezimal < 10)
-                        hexadezimal = hexadezimal.Insert(0, Convert.ToChar(hexadezimal + 48).ToString());
-                    else
-                        hexadezimal = hexadezimal.Insert(0, Convert.ToChar(hexadezimal + 55).ToString());
-
-                    dezimal /= 16;
-                }
+                //Gesamte Konsole
+                Console.Clear();
 
 
 
 
+                //Aufruf einer Funktion die in die unterschiedlichen Zahlensysteme umrechnet
+                ZahlensystemBackend(auswahl1,auswahl2);
+
+                
+
+
+                //Frage ob wiederholt werden soll
+                Console.WriteLine("Mächten Sie das Programm wiederholen?(j/n)");
+                wiederholen=Console.ReadLine().ToLower();
+
+            } while (wiederholen=="j");
+        }
+
+
+
+        #region Backend
+
+
+        private static void ZahlensystemBackend(int a1,int a2)
+        {
+            string[] z_systeme = { "HEX", "DEZ", "OKT", "BIN" };
+            bool trypassout;
+
+            string s_eingabe1;
 
 
 
 
 
+            do
+            {
 
 
-            } while ();
+                Console.WriteLine("{0}->{1}", z_systeme[a1-1], z_systeme[a2-1]);
+                Console.WriteLine("Verwenden Sie keine Trennzeichen");
+                Console.Write("Geben Sie den {0} Wert ein:", z_systeme[a1-1]);
+                s_eingabe1=Console.ReadLine();
 
-          
 
+                BedingungPrüfen(a1, a2, s_eingabe1, out trypassout);
+
+
+
+            } while (trypassout == false);
 
 
         }
+
+        
+        private static void BedingungPrüfen(int a1,int a2,string s_eingabe, out bool trypassout)
+        {
+            string[] z_systeme = { "HEX", "DEZ", "OKT", "BIN" };
+            trypassout = true;
+
+            switch (a1)
+            {
+                case 1:
+
+                    try
+                    {
+                        int val_dec = int.Parse(s_eingabe, NumberStyles.HexNumber);
+                        int val_okt = ToOctal(val_dec);
+
+
+
+
+                        if (a2 == 2)
+                            Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], val_dec, z_systeme[a2 - 1]);
+                        if (a2 == 3)
+                            Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], val_okt, z_systeme[a2 - 1]);
+                        if (a2 == 4)
+                            Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], Convert.ToString(val_dec, 2), z_systeme[a2 - 1]);
+
+
+                        Console.ReadKey();
+                    }
+                    catch (Exception )
+                    {
+                        Console.WriteLine("Eingabe im falschen Format.");
+                        Console.ReadKey();
+                        
+                        trypassout = false;
+                    }
+
+                    break;
+
+                case 2:
+
+                    break;
+
+                case 3:
+
+                    break;
+
+                case 4:
+
+                    break;
+                    
+            }
+            Console.Clear();
+        }
+
+        public static int ToOctal(int x)
+        {
+            if (x == 0)
+            {
+                return 0;
+            }
+            return x % 8 + 10 * ToOctal(x / 8);
+        }
+        #endregion
+
     }
 }
