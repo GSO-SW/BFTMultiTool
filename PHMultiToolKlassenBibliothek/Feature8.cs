@@ -116,23 +116,24 @@ namespace PHMultiToolKlassenBibliothek
             double dou_volumen = 0;
             bool parse_value;
 
-            string str_höhe, str_volumen;
+            string str_radius;
 
             do
             {
                 do
                 {
                     Console.WriteLine("Bitte geben sie Radius ein");
-                    string str_radius = Console.ReadLine();
+                    str_radius = Console.ReadLine();
 
                     parse_value = Double.TryParse(str_radius, out dou_radius);
                 }   while (parse_value == false);
 
 
 
-                dou_volumen = 3.14 * dou_radius;
-
-                Console.WriteLine("Das Ergebnis lautet {0} insgesamt");
+                dou_volumen = (4/3) * Math.PI *Math.Pow (dou_radius,3);
+                // V= (4/3) * PI * (radius)^3
+                
+                Console.WriteLine("Das Ergebnis lautet {0} insgesamt", dou_volumen);
 
             } while (true);
         }
