@@ -38,14 +38,13 @@ namespace MAMultiToolKlassenBibliothek
                 Console.WriteLine("Eingabe: submenü\t->\tzurück zum MatheSubMenü");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\nHier können zwischen den Rechenwegen Scheitelpunktform in Normalform, oder Normalform in Scheitelpunktform wählen. \n");
+                Console.WriteLine("\n\nHier können sie ihre Scheitelpunktform in Normalform umwandeln.\n");
 
                 submenü = false;
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie einen der folgenden Rechenwege:\n");
-                Console.WriteLine("\t1 - Scheitelpunktform in Normalform");
-                Console.WriteLine("\t2 - Normalform in Scheitelpunktform");
+                Console.WriteLine("\t1 - Scheitelpunktform in Normalform"); 
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -55,13 +54,6 @@ namespace MAMultiToolKlassenBibliothek
                     case "1":
                         Console.Clear();
                         ScheitelpunktformNormalform();
-
-                        break;
-
-                    case "2":
-                        Console.Clear();
-                        NormalformScheitelpunktform();
-
                         break;
 
                     case "submenü":
@@ -94,19 +86,12 @@ namespace MAMultiToolKlassenBibliothek
 
         static void ScheitelpunktformNormalform()
         {
-            Console.WriteLine("Scheitelpunktform");
+            Console.WriteLine("ScheitelpunktformNormalForm");
             //Meine Erste Zeile
 
 
         }
 
-        static void NormalformScheitelpunktform()
-        {
-            Console.WriteLine("NormalformScheitelpunktdorm");
-
-
-
-        }
     }
 }
 
