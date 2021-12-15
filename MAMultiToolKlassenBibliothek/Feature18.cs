@@ -95,7 +95,7 @@ namespace MAMultiToolKlassenBibliothek
         static void ScheitelpunktformNormalform()
         {
             Console.WriteLine("Scheitelpunktform");
-
+            //Meine Erste Zeile
 
 
         }
