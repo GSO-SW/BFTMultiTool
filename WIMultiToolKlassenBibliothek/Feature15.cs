@@ -22,7 +22,7 @@ namespace WIMultiToolKlassenBibliothek
 
 
 
-                    Console.WriteLine("Wilkommen Zur Lohnsteuerberechnung.");                                                      //Begrüßung
+                Console.WriteLine("Wilkommen Zur Lohnsteuerberechnung.");                                                      //Begrüßung
 
                 do
                 {
@@ -30,8 +30,10 @@ namespace WIMultiToolKlassenBibliothek
 
                     str_num1 = Console.ReadLine();                                                                           //Das ist halt da für ungültige zeichen
 
-                    tryparseout = int.TryParse(str_num1, out num1);                                                         //Das ist halt da für ungültige zeichen  
-                } while (tryparseout==false);                                                                             //Das ist halt da für ungültige zeichen         
+                    tryparseout = int.TryParse(str_num1, out num1);                                                         //Das ist    halt da für ungültige zeichen  
+                    Console.Clear();                                                                                    //macht die anderen zeichen da weg
+
+                } while (tryparseout == false);                                                                             //Das ist halt da für ungültige zeichen         
 
                 if (num1 >= 1 & num1 < 11000)                                                                             //wenn kleiner als 110000
                 {
@@ -44,56 +46,57 @@ namespace WIMultiToolKlassenBibliothek
 
                     Console.WriteLine($"Ihre Lohnsteuer Beträgt:" + (num1 / 100 * 25 + "Euro"));                      //ausrechnen und Lohnsteuer ausgeben
                     Console.WriteLine("Wir Bedanken uns das sie unseren Programm verwenden");                     //Bedanken auf ganz süß
-                    Console.ReadLine();                                                                   
+                    Console.ReadLine();
                 }
                 else if (num1 > 18000 & num1 <= 31000)                                                           //wenn größer als 18000 und kleiner gleich 31000 ist
                 {
                     Console.WriteLine($"Ihre Lohnsteuer Beträgt:" + (num1 / 100 * 35 + " Euro"));                    //ausrechnen und Lohnsteuer ausgeben
                     Console.WriteLine("Wir Bedanken uns das sie unseren Programm verwenden");                      //Bedanken auf ganz süß
-                    Console.ReadLine();                                                                           
+                    Console.ReadLine();
                 }
                 else if (num1 > 31000 & num1 <= 60000)                                                           //wenn größer als 31000 und kleiner gleich 60000 ist
                 {
                     Console.WriteLine($"Ihre Lohnsteuer Beträgt:" + (num1 / 100 * 42 + " Euro"));                  //ausrechnen und Lohnsteuer ausgeben
                     Console.WriteLine("Wir Bedanken uns das sie unseren Programm verwenden");                   //Bedanken auf ganz süß
-                    Console.ReadLine();                                                                            
+                    Console.ReadLine();
                 }
                 else if (num1 > 60000 & num1 <= 90000)                                                           //wenn größer als 60000 und kleiner gleich 90000 ist
                 {
                     Console.WriteLine($"Ihre Lohnsteuer Beträgt:" + (num1 / 100 * 48 + " Euro"));                  //ausrechnen und Lohnsteuer ausgeben
                     Console.WriteLine("Wir Bedanken uns das sie unseren Programm verwenden");                    //Bedanken auf ganz süß
-                    Console.ReadLine();                                                                        
+                    Console.ReadLine();
                 }
                 else if (num1 > 90000 & num1 <= 100000)                                                           //wenn größer als 90000 und kleiner gleich 100000 ist 
                 {
 
                     Console.WriteLine($"Ihre Lohnsteuer Beträgt:" + (num1 / 100 * 50 + " Euro"));                  //ausrechnen und Lohnsteuer ausgeben
                     Console.WriteLine("Wir Bedanken uns das sie unseren Programm verwenden");                    //Bedanken auf ganz süß
-                    Console.ReadLine();                                                                         
+                    Console.ReadLine();
                 }
                 else if (num1 > 100000)                                                                           //wenn größer als 100000
                 {
                     Console.WriteLine($"Ihre Lohnsteuer Beträgt:" + (num1 / 100 * 55 + " Euro"));                  //ausrechnen und Lohnsteuer ausgeben
                     Console.WriteLine("Wir Bedanken uns das sie unseren Programm verwenden");                    //Bedanken auf ganz süß
-                    Console.ReadLine();                                                                         
+                    Console.ReadLine();
                 }
-                
+
                 do
                 {
-                    Console.ReadKey();                                                                               
+                    Console.ReadKey();
                     Console.WriteLine("Möchten sie das Proggramm Wiederholen?(Ja/Nein)");                           //fragt nach ob du es nochmal verwenden willst
                     Wort = Console.ReadLine().ToLower();
-                } while (Wort != "ja" && Wort != "nein");
+                } while (Wort != "ja" && Wort != "nein");                                                           //solange wort nicht ja /nicht nein ist
 
-                if (Wort == "Ja")
+                if (Wort == "Ja")                                                                                   //bei ja wiederholen
+                {
                     wiederholen = true;
-
-                else if (Wort == "Nein")
+                }
+                else if (Wort == "nein")                                                                            //bei nein zurück ins menu
+                { 
                     wiederholen = false;
+                }
                     Console.Clear();                                                                                    //macht die anderen zeichen da weg
             } while (wiederholen);
-
-
 
 
         }
