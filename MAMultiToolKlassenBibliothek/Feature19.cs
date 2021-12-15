@@ -152,7 +152,7 @@ namespace MAMultiToolKlassenBibliothek
 
         static void Quadratberechnen()
         {
-            
+            bool subexit = false;
             bool wiederholen = true;
             do
             {
@@ -163,16 +163,24 @@ namespace MAMultiToolKlassenBibliothek
                 bool tryparseout;
 
 
+
                 Console.WriteLine("Quadrat berechnen");
 
                 do
                 {
                     Console.WriteLine("Geben sie den Wert von a ein");
                     s_a = Console.ReadLine();
-
+                    if(s_a=="exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    else if(s_a=="subexit")
+                    {
+                        subexit = true;
+                    }
 
                     tryparseout = double.TryParse(s_a, out a);
-                } while (tryparseout == false);
+                } while (tryparseout == false && subexit==false);
 
 
 
@@ -200,7 +208,7 @@ namespace MAMultiToolKlassenBibliothek
            
               
                
-            } while (wiederholen==true);
+            } while (wiederholen==true && subexit==false);
                 
 
 
