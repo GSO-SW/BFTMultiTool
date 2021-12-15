@@ -106,11 +106,11 @@ namespace ETMultiToolKlassenBibliothek
             bool exit = false;
             bool subsubmenü = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Sie haben insgesamt 3 Auswahlen zur Verfügung.\n" +
                 "Für die Formel, geben Sie bitte (1) ein.\n" +
@@ -168,11 +168,11 @@ namespace ETMultiToolKlassenBibliothek
             bool subsubmenü = false;
             bool exit = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Sie haben folgende möglichkeiten:\n" +
                 "" + "Induktivität Spule(1)\n" +
@@ -249,11 +249,13 @@ namespace ETMultiToolKlassenBibliothek
             bool exit = false;
             bool subsubmenü = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+
 
             do
             {
+
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Eine Spule ist ein elektrisches Bauelement, bei dem ein langer dünner Leiter spiralförmig um einen meist zylindrischen Körper gewickelt wird.\n" +
                 "Spulen werden in vielen Bereichen eingesetzt, u. a. sind sie die Grundbausteine von Elektromagneten und Elektromotoren.\n" +
@@ -288,11 +290,11 @@ namespace ETMultiToolKlassenBibliothek
             bool exit = false;
             bool subsubmenü = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+
                 Console.WriteLine("n der Elektrotechnik sind Spulen wichtige Bestandteile elektrischer Baugruppen oder Geräte. Spulen fallen unter die sogenannten passiven elektrischen Bauelemente.\n" +
                 "Sie werden oft auch als Induktivitäten oder Drosseln bezeichnet. Eine Spule ist ein Leiter(Draht, meist Kupferlackdraht oder Hochfrequenzlitze),\n" +
                 "der zu einer oder mehreren Windungen geformt ist. Die Windungsanordnung, ihr Durchmesser und das Kernmaterial legen die Induktivität und weitere Eigenschaften der Spule fest.");
@@ -325,11 +327,11 @@ namespace ETMultiToolKlassenBibliothek
             bool exit = false;
             bool subsubmenü = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+
                 Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +
                 "Für die Formel, geben Sie bitte (1) ein.\n" +
                 "Für den Nutze des Kondensators, bitte (2) eingeben.\n" +
@@ -368,16 +370,11 @@ namespace ETMultiToolKlassenBibliothek
                         break;
                 }
 
-
-
-
             } while (!exit & !subsubmenü);
 
                 if (exit)
                     Environment.Exit(0);
         }
-
-                
 
         static void KondensatorFormel()
         {
@@ -387,11 +384,11 @@ namespace ETMultiToolKlassenBibliothek
             bool subsubmenü = false;
             bool exit = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+
 
                 Console.WriteLine("Sie haben Folgende möglichkeiten zu wählen:\nLadung(1)" +
                 "\nKapazität(2)\n" +
@@ -467,11 +464,11 @@ namespace ETMultiToolKlassenBibliothek
             bool exit = false;
             bool subsubmenü = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Ein Kondensator (von lateinisch condensare ‚verdichten‘) ist ein passives elektrisches Bauelement mit der Fähigkeit,\n" +
                 "in einem Gleichstromkreis elektrische Ladung und die damit zusammenhängende Energie statisch in einem elektrischen Feld zu speichern.\n" +
@@ -504,11 +501,12 @@ namespace ETMultiToolKlassenBibliothek
             bool exit = false;
             bool subsubmenü = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+
+
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Ein Kondensator ist ein passives elektrisches Bauelement mit der Fähigkeit,\n" +
                 "in einem Gleichstromkreis elektrische Ladung und die damit zusammenhängende Energie statisch in einem elektrischen Feld zu speichern.\n" +
@@ -542,11 +540,11 @@ namespace ETMultiToolKlassenBibliothek
             bool exit = false;
             bool subsubmenü = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +
                 "Für die Formel, geben Sie bitte (1) ein.\n" +
@@ -586,9 +584,6 @@ namespace ETMultiToolKlassenBibliothek
                         break;
                 }
 
-
-
-
             } while (!exit & !subsubmenü);
 
             if (exit)
@@ -604,11 +599,12 @@ namespace ETMultiToolKlassenBibliothek
             bool subsubmenü = false;
             bool exit = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+
+
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Sie haben Folgende möglichkeiten zu wählen:\nWiderstand und Leitwert(1)\n" +
                 "Einheitswiderstand und Einheitsleitwert(2)\n" +
@@ -699,11 +695,12 @@ namespace ETMultiToolKlassenBibliothek
             bool exit = false;
             bool subsubmenü = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+
+
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Ein Widerstand ist ein zweipoliges passives elektrisches Bauelement.\n" +
                 "Es realisiert einen ohmschen Widerstand in elektrischen und elektronischen Schaltungen.\n" +
@@ -740,11 +737,10 @@ namespace ETMultiToolKlassenBibliothek
             bool exit = false;
             bool subsubmenü = false;
 
-            Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-            "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
             do
             {
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Der elektrische Widerstand ist in der Elektrotechnik ein Maß dafür, welche elektrische Spannung erforderlich ist,\n" +
                 "um eine bestimmte elektrische Stromstärke durch einen elektrischen Leiter (Bauelement, Stromkreis) fließen zu lassen.\n" +
@@ -768,8 +764,6 @@ namespace ETMultiToolKlassenBibliothek
             if (exit)
                 Environment.Exit(0);
         }
-
-
                     
     }
 
