@@ -126,13 +126,13 @@ namespace PHMultiToolKlassenBibliothek
                     str_radius = Console.ReadLine();
 
                     parse_value = Double.TryParse(str_radius, out dou_radius);
-                }   while (parse_value == false);
+                } while (parse_value == false);
 
 
 
-                dou_volumen = (4/3) * Math.PI *Math.Pow (dou_radius,3);
+                dou_volumen = (4 / 3) * Math.PI * Math.Pow(dou_radius, 3);
                 // V= (4/3) * PI * (radius)^3
-                
+
                 Console.WriteLine("Das Ergebnis lautet {0} insgesamt", dou_volumen);
 
             } while (true);
@@ -154,7 +154,7 @@ namespace PHMultiToolKlassenBibliothek
             double dou_höhe = 0;
             double dou_grundfläche = 0;
 
-            string str_höhe , str_grundfläche;
+            string str_höhe, str_grundfläche;
 
             double volumen = 0;
             bool parse_value;
@@ -167,7 +167,7 @@ namespace PHMultiToolKlassenBibliothek
                     str_höhe = Console.ReadLine();
 
                     parse_value = double.TryParse(str_höhe, out dou_höhe);
-                }   while (parse_value == false);
+                } while (parse_value == false);
 
 
 
@@ -176,18 +176,18 @@ namespace PHMultiToolKlassenBibliothek
 
                 do
                 {
-                    parse_value = Double.TryParse(str_höhe, out str_grundfläche);
+                    //parse_value = Double.TryParse(str_höhe, out str_grundfläche);
                 }
                 while (parse_value == false);
 
-                volumen = 1 / 3 * str_grundfläche * dou_höhe;
+                //volumen = 1 / 3 * str_grundfläche * dou_höhe;
 
                 Console.WriteLine("Das Ergebnis lautet {0} 2^3");
 
                 // Bildschirm löschen
                 Console.WriteLine("Konsole wurde geloescht!");
                 Console.Read();
-            }   while (true);
+            } while (true);
         }
 
 
@@ -201,15 +201,15 @@ namespace PHMultiToolKlassenBibliothek
         {
             Console.WriteLine("Prisma");
             do
-            {             
+            {
                 double Volumen = 0;
                 double dou_höhe = 0;
                 double dou_grundfläche = 0;
-    
+
                 string str_grundfläche, str_höhe;
 
                 double volumen = 0;
-                bool parse_value;
+                bool parse_value=false;
 
                 do
                 {
@@ -219,8 +219,8 @@ namespace PHMultiToolKlassenBibliothek
                     Console.WriteLine("Bitte geben die Höhe ein");
                     dou_höhe = Convert.ToDouble(Console.ReadLine());
 
-                    parse_value = Double.TryParse(str_höhe, out str_grundfläche);
-                }   while (parse_value == false);
+                    //parse_value = Double.TryParse(str_höhe, out str_grundfläche);
+                } while (parse_value == false);
 
                 Volumen = dou_grundfläche * dou_höhe;
                 Console.WriteLine("Die Ergebnis lautet {0} 2^3", Volumen);
@@ -230,6 +230,10 @@ namespace PHMultiToolKlassenBibliothek
                 Console.Read();
 
             } while (true);
+
+        }
+    }
+}
       
 
        
