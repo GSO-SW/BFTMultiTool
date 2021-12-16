@@ -164,8 +164,58 @@ namespace ETMultiToolKlassenBibliothek
 
         public static void ElektrischeLeistungBerechnen()
         {
-            
-                        
+
+            double P;
+            double U;
+            double I;
+            string choose;
+
+            Console.WriteLine("Welchen Wert wollen sie berechenen:\n" + "(1) Die elektrische Spannung \n" + "(2) Der elektrischem Strom\n" + "(3) Die Elektrische Leistung");
+            choose = Convert.ToString(Console.ReadLine());
+
+            switch (choose)
+            {
+                case "1":
+                    Console.WriteLine("Geben Sie ihren Wert für die Elektische Leistung (P) ein");
+                    P = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischem Strom (I) ein");
+                    I = Convert.ToDouble(Console.ReadLine());
+
+                    U = P / I;
+
+                    Console.WriteLine("Ihr Wert für die elektrische Spannung beträgt {0} Volt!", U);
+                    break;
+                case "2":
+                    Console.WriteLine("Geben Sie ihren Wert für die elektrische Leistung (P) ein");
+                    P = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Geben sie nun noch Ihren Wert für den Widerstand (R) ein");
+                    R = Convert.ToDouble(Console.ReadLine());
+
+                    I = P / U;
+
+                    Console.WriteLine("Ihr Wert für Stromstärke beträgt {0} Ampere", I);
+                    break;
+                case 3:
+                    Console.WriteLine("Geben Sie ihren Wert für den Spannung (U) ein");
+                    U = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Geben Sie nun noch ihren Wert für die Stromstärke (I) ein");
+                    I = Convert.ToDouble(Console.ReadLine());
+
+                    R = U / I;
+
+                    Console.WriteLine("Ihr Wert für den Widerstand beträgt {0}", R);
+                    break;
+
+                default:
+                    Console.WriteLine("Ungültige Eingabe");
+                    break;
+
+            }
+
+
         }
         #endregion;
     }
