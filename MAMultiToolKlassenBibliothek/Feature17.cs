@@ -102,13 +102,14 @@ namespace MAMultiToolKlassenBibliothek
 
             }
 
+        }
+
 
 
 
             static void Wertetabelle()
             {
                 Console.WriteLine("Wertetabelle");
-            }
 
 
         }
