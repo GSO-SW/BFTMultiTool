@@ -153,10 +153,21 @@ namespace MAMultiToolKlassenBibliothek
         static void Quadratberechnen()
         {
             bool subexit = false;
-            bool wiederholen = true;
+           
             do
             {
-               
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                 "                              >>> Quadrat berechnen <<<\n" +
+                                 "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+                Console.WriteLine("Eingabe: subexit\t->\tzurück zum Submenü");
+
+
+
+
+
 
                 Double a = 0;
                 string s_a;
@@ -164,7 +175,7 @@ namespace MAMultiToolKlassenBibliothek
 
 
 
-                Console.WriteLine("Quadrat berechnen");
+                
 
                 do
                 {
@@ -189,14 +200,13 @@ namespace MAMultiToolKlassenBibliothek
                 {
                     Console.WriteLine("Falsche Eingabe");
                     Console.ReadLine();
-                    wiederholen = true;
+                   
                 }
                 else if (a > 0)
                 {
                     Double A = a * a;
                     Console.WriteLine("Der flächeninhalt des Quadrats beträgt {0}", A);
-                    Console.WriteLine("Wiederholen?(true/false)");
-                    wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    Console.ReadKey();
 
                 }
 
@@ -208,7 +218,7 @@ namespace MAMultiToolKlassenBibliothek
            
               
                
-            } while (wiederholen==true && subexit==false);
+            } while (subexit==false);
                 
 
 
@@ -216,11 +226,23 @@ namespace MAMultiToolKlassenBibliothek
 
         static void Rechteckberechen()
         {
-           
-            bool wiederholen = true;
+            bool subexit = false;
+            
             do
             {
-                
+
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Rechteck berechnen <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+                Console.WriteLine("Eingabe: subexit\t->\tzurück zum Submenü");
+
+
+
+
+
 
                 Double a = 0, b = 0;
                 string s_a, s_b;
@@ -228,29 +250,62 @@ namespace MAMultiToolKlassenBibliothek
 
                 do
                 {
-                    Console.WriteLine("Rechteck berechnen");
+                    
                     Console.WriteLine("Geben sie den Wert von a ein");
                     s_a = Console.ReadLine();
-                    Console.WriteLine("Geben sie den Wert von b ein");
-                    s_b =Console.ReadLine();
 
+
+                    if (s_a == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    else if (s_a =="subexit")
+                    {
+                        subexit = true;
+                    }
 
                     tryparseout = double.TryParse(s_a, out a);
-                    tryparseout = double.TryParse(s_b, out b);
-                } while (tryparseout == false);
+
+                } while (tryparseout == false && subexit == false);
+
+                if(subexit==false)
+                {
+                    do
+                    {
+
+
+                        Console.WriteLine("Geben sie den Wert von b ein");
+                        s_b = Console.ReadLine();
+
+
+                        if (s_b == "exit")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else if (s_b == "subexit")
+                        {
+                            subexit = true;
+                        }
+
+
+
+                        tryparseout = double.TryParse(s_b, out b);
+                    } while (tryparseout == false && subexit == false);
+                }
+               
+
 
                 if (a < 0 && b < 0)
                 {
                     Console.WriteLine("Falsche Eingabe");
                     Console.ReadLine();
-                    wiederholen = true;
+                    
                 }
                 else if (a > 0 && b > 0)
                 {
                     Double A = a * b;
                     Console.WriteLine("Der flächeninhalt des Rechtecks beträgt {0}", A);
-                    Console.WriteLine("Wiederholen?(true/false)");
-                    wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    Console.ReadKey();
 
                 }
 
@@ -259,45 +314,93 @@ namespace MAMultiToolKlassenBibliothek
 
                 Console.Clear();
 
-            } while (wiederholen == true);
+            } while (subexit==false);
         }
 
         static void AllgemeinesDreieck()
         {
-           
-            Double g = 0, h = 0;
-            string s_g, s_h;
-            bool tryparseout;
-            bool wiederholen = true;
+
+            bool subexit = false;
+          
             do
             {
-               
+                Double g = 0, h = 0;
+            string s_g, s_h;
+            bool tryparseout;
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                 "                           >>> Allg. Dreieck berechnen <<<\n" +
+                                 "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+                Console.WriteLine("Eingabe: subexit\t->\tzurück zum Submenü");
+
                 do
                 {
                     
-                    Console.WriteLine("Rechteck berechnen");
-                    Console.WriteLine("Geben sie den Wert von a ein");
+                    
+                    Console.WriteLine("Geben sie den Wert von g ein");
                     s_g = Console.ReadLine();
-                    Console.WriteLine("Geben sie den Wert von b ein");
-                    s_h = Console.ReadLine();
+
+                   if (s_g == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                   else if (s_g == "subexit")
+                    {
+                        subexit = true;
+                    }
 
 
-                    tryparseout = double.TryParse(s_h, out h);
+
+
+                   
                     tryparseout = double.TryParse(s_g, out g);
-                } while (tryparseout == false);
+                } while (tryparseout == false && subexit == false);
+
+                if (subexit == false)
+                {
+                    do
+                    {
+
+
+                        Console.WriteLine("Geben sie den Wert von h ein");
+                        s_h = Console.ReadLine();
+
+
+                        if (s_h == "exit")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else if (s_h == "subexit")
+                        {
+                            subexit = true;
+                        }
+
+
+
+                        tryparseout = double.TryParse(s_h, out h);
+                    } while (tryparseout == false && subexit == false);
+                }
+
+
+
+
+
+
 
                 if (g < 0 && h < 0)
             {
                 Console.WriteLine("Falsche Eingabe");
                 Console.ReadLine();
-                wiederholen = true;
+               
             }
             else if (g > 0 && h > 0)
             {
                 Double A = g * h / 2 ;
                 Console.WriteLine("Der flächeninhalt des Allg. Dreiecks beträgt {0}", A);
-                Console.WriteLine("Wiederholen?(true/false)");
-                wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    Console.ReadKey();
+               
 
             }
 
@@ -306,43 +409,89 @@ namespace MAMultiToolKlassenBibliothek
 
             Console.Clear();
 
-        } while (wiederholen == true);
+        } while (subexit == false);
         }
 
         static void rechtwinkligesDreieck()
         {
-            Double a = 0, b = 0;
-            string s_a, s_b;
-            bool tryparseout;
-            bool wiederholen = true;
+            bool subexit = false;
+
             do
             {
-               
+
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                     >>> Rechtwinkliges Dreieck berechnen <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+                Console.WriteLine("Eingabe: subexit\t->\tzurück zum Submenü");
+
+
+
+
+
+
+                Double a = 0, b = 0;
+                string s_a, s_b;
+                bool tryparseout;
+
                 do
                 {
-                    Console.WriteLine("Rechteck berechnen");
+
                     Console.WriteLine("Geben sie den Wert von a ein");
                     s_a = Console.ReadLine();
-                    Console.WriteLine("Geben sie den Wert von b ein");
-                    s_b = Console.ReadLine();
 
+
+                    if (s_a == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    else if (s_a == "subexit")
+                    {
+                        subexit = true;
+                    }
 
                     tryparseout = double.TryParse(s_a, out a);
-                    tryparseout = double.TryParse(s_b, out b);
-                } while (tryparseout == false);
+
+                } while (tryparseout == false && subexit == false);
+
+                if (subexit == false)
+                {
+                    do
+                    {
+
+
+                        Console.WriteLine("Geben sie den Wert von b ein");
+                        s_b = Console.ReadLine();
+
+
+                        if (s_b == "exit")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else if (s_b == "subexit")
+                        {
+                            subexit = true;
+                        }
+
+
+
+                        tryparseout = double.TryParse(s_b, out b);
+                    } while (tryparseout == false && subexit == false);
+                }
 
                 if (a < 0 && b < 0)
                 {
                     Console.WriteLine("Falsche Eingabe");
                     Console.ReadLine();
-                    wiederholen = true;
+                    
                 }
                 else if (a > 0 && b > 0)
                 {
                     Double A = (a * b) / 2;
                     Console.WriteLine("Der flächeninhalt des RechtWinkligen Dreiecks beträgt {0}", A);
-                    Console.WriteLine("Wiederholen?(true/false)");
-                    wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    Console.ReadKey();
 
                 }
 
@@ -351,44 +500,91 @@ namespace MAMultiToolKlassenBibliothek
 
                 Console.Clear();
 
-            } while (wiederholen == true);
+            } while (subexit == false);
         }
 
         static void gleichwinkligesDreieck()
         {
-            
-            Double c = 0, h = 0;
-            string s_c, s_h;
-            bool tryparseout;
-            bool wiederholen = true;
+
+            bool subexit = false;
+
             do
             {
-               
+
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                      >>> Gleichwinkliges Dreieck berechnen <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+                Console.WriteLine("Eingabe: subexit\t->\tzurück zum Submenü");
+
+
+
+
+
+
+                Double c = 0, h = 0;
+                string s_c, s_h;
+                bool tryparseout;
+
                 do
                 {
-                    Console.WriteLine("Rechteck berechnen");
-                    Console.WriteLine("Geben sie den Wert von a ein");
-                    s_c = Console.ReadLine();
-                    Console.WriteLine("Geben sie den Wert von b ein");
-                    s_h = Console.ReadLine();
 
+                    Console.WriteLine("Geben sie den Wert von c ein");
+                    s_c = Console.ReadLine();
+
+
+                    if (s_c == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    else if (s_c == "subexit")
+                    {
+                        subexit = true;
+                    }
 
                     tryparseout = double.TryParse(s_c, out c);
-                    tryparseout = double.TryParse(s_h, out h);
-                } while (tryparseout == false);
+
+                } while (tryparseout == false && subexit == false);
+
+                if (subexit == false)
+                {
+                    do
+                    {
+
+
+                        Console.WriteLine("Geben sie den Wert von h ein");
+                        s_h = Console.ReadLine();
+
+
+                        if (s_h == "exit")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else if (s_h == "subexit")
+                        {
+                            subexit = true;
+                        }
+
+
+
+                        tryparseout = double.TryParse(s_h, out h);
+                    } while (tryparseout == false && subexit == false);
+                }
 
                 if (c < 0 && h < 0)
                 {
                     Console.WriteLine("Falsche Eingabe");
                     Console.ReadLine();
-                    wiederholen = true;
+                   
                 }
                 else if (c > 0 && h > 0)
                 {
                     Double A = 0.5 * c * h;
                     Console.WriteLine("Der flächeninhalt des Rechtwinkligem Dreieck beträgt {0}", A);
-                    Console.WriteLine("Wiederholen?(true/false)");
-                    wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    Console.ReadKey();
+                   
 
                 }
 
@@ -397,43 +593,63 @@ namespace MAMultiToolKlassenBibliothek
 
                 Console.Clear();
 
-            } while (wiederholen == true);
+            } while (subexit == false);
         }
 
         static void gleichseitigesDreieck()
         {
-           
-            Double a = 0;
-            string s_a;
-            bool tryparseout;
-            bool wiederholen = true;
+
+            bool subexit = false;
+            
             do
             {
-                
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                 "                      >>> Gleichseitiges Dreieck berechnen <<<\n" +
+                                 "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+                Console.WriteLine("Eingabe: subexit\t->\tzurück zum Submenü");
+
+
+
+
+
+
+                Double a = 0;
+                string s_a;
+                bool tryparseout;
+
+
+
+
+
                 do
                 {
-                    Console.WriteLine("Rechteck berechnen");
                     Console.WriteLine("Geben sie den Wert von a ein");
                     s_a = Console.ReadLine();
-                   
-
+                    if (s_a == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    else if (s_a == "subexit")
+                    {
+                        subexit = true;
+                    }
 
                     tryparseout = double.TryParse(s_a, out a);
-                   
-                } while (tryparseout == false);
+                } while (tryparseout == false && subexit == false);
 
-                if (a < 0 )
+                if (a < 0)
                 {
                     Console.WriteLine("Falsche Eingabe");
                     Console.ReadLine();
-                    wiederholen = true;
                 }
                 else if (a > 0)
                 {
-                    Double A = ((a * a) /4) * Math.Sqrt(3);
+                    Double A = ((a * a) / 4) * Math.Sqrt(3);
                     Console.WriteLine("Der flächeninhalt des Gleichseitigem Dreiecks beträgt {0}", A);
-                    Console.WriteLine("Wiederholen?(true/false)");
-                    wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    Console.ReadKey();
 
                 }
 
@@ -442,46 +658,113 @@ namespace MAMultiToolKlassenBibliothek
 
                 Console.Clear();
 
-            } while (wiederholen == true);
+            } while (subexit == false);
         }
 
         static void Trapez()
         {
-            
-            Double a = 0, c = 0, h = 0;
-            string s_a, s_c, s_h;
-            bool tryparseout;
-            bool wiederholen = true;
+
+            bool subexit = false;
+
             do
             {
+                Double a = 0, c = 0, h = 0;
+                string s_a, s_c, s_h;
+                bool tryparseout;
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                 "                           >>> Trapez berechnen <<<\n" +
+                                 "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+                Console.WriteLine("Eingabe: subexit\t->\tzurück zum Submenü");
+
                 do
                 {
-                    Console.WriteLine("Rechteck berechnen");
+
+
                     Console.WriteLine("Geben sie den Wert von a ein");
                     s_a = Console.ReadLine();
-                    Console.WriteLine("Geben sie den Wert von c ein");
-                    s_c = Console.ReadLine();
-                    Console.WriteLine("Geben sie den Wert von h ein");
-                    s_h = Console.ReadLine();
+
+                    if (s_a == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    else if (s_a == "subexit")
+                    {
+                        subexit = true;
+                    }
+
+
+
 
 
                     tryparseout = double.TryParse(s_a, out a);
-                    tryparseout = double.TryParse(s_c, out c);
-                    tryparseout = double.TryParse(s_h, out h);
-                } while (tryparseout == false);
+                } while (tryparseout == false && subexit == false);
+
+                if (subexit == false)
+                {
+                    do
+                    {
+
+
+                        Console.WriteLine("Geben sie den Wert von c ein");
+                        s_c = Console.ReadLine();
+
+
+                        if (s_c == "exit")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else if (s_c == "subexit")
+                        {
+                            subexit = true;
+                        }
+
+
+
+                        tryparseout = double.TryParse(s_c, out c);
+                    } while (tryparseout == false && subexit == false);
+
+
+                    if (subexit == false)
+                        do
+                        {
+
+                            Console.WriteLine("Geben sie den Wert von h ein");
+                            s_h = Console.ReadLine();
+
+                            if (s_h == "exit")
+                            {
+                                Environment.Exit(0);
+                            }
+                            else if (s_h == "subexit")
+                            {
+                                subexit = true;
+                            }
+
+                            tryparseout = double.TryParse(s_h, out h);
+
+                        } while (tryparseout == false && subexit == false);
+
+
+
+
+
+                }
 
                 if (a < 0 && c < 0 && h < 0)
                 {
                     Console.WriteLine("Falsche Eingabe");
                     Console.ReadLine();
-                    wiederholen = true;
+                   
                 }
                 else if (a > 0 && c > 0 && h > 0)
                 {
                     Double A = (a + c / 2) * h;
                     Console.WriteLine("Der flächeninhalt des Trapez beträgt {0}", A);
-                    Console.WriteLine("Wiederholen?(true/false)");
-                    wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    Console.ReadKey();
+                    
 
                 }
 
@@ -490,45 +773,86 @@ namespace MAMultiToolKlassenBibliothek
 
                 Console.Clear();
 
-            } while (wiederholen == true);
+            } while (subexit == false);
         }
 
         static void Parallelogramm()
         {
-           
-            Double a = 0, h = 0;
-            string s_a, s_h;
-            bool tryparseout;
-            bool wiederholen = true;
+
+            bool subexit = false;
+
             do
             {
-               
+                Double a = 0, h = 0;
+                string s_a, s_h;
+                bool tryparseout;
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                 "                           >>> Parallelogramm berechnen <<<\n" +
+                                 "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+                Console.WriteLine("Eingabe: subexit\t->\tzurück zum Submenü");
 
                 do
                 {
-                    Console.WriteLine("Rechteck berechnen");
+
+
                     Console.WriteLine("Geben sie den Wert von a ein");
                     s_a = Console.ReadLine();
-                    Console.WriteLine("Geben sie den Wert von b ein");
-                    s_h = Console.ReadLine();
+
+                    if (s_a == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    else if (s_a == "subexit")
+                    {
+                        subexit = true;
+                    }
+
+
+
 
 
                     tryparseout = double.TryParse(s_a, out a);
-                    tryparseout = double.TryParse(s_h, out h);
-                } while (tryparseout == false);
+                } while (tryparseout == false && subexit == false);
+
+                if (subexit == false)
+                {
+                    do
+                    {
+
+
+                        Console.WriteLine("Geben sie den Wert von h ein");
+                        s_h = Console.ReadLine();
+
+
+                        if (s_h == "exit")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else if (s_h == "subexit")
+                        {
+                            subexit = true;
+                        }
+
+
+
+                        tryparseout = double.TryParse(s_h, out h);
+                    } while (tryparseout == false && subexit == false);
+                }
 
                 if (a < 0 && h < 0)
                 {
                     Console.WriteLine("Falsche Eingabe");
                     Console.ReadLine();
-                    wiederholen = true;
+                    
                 }
                 else if (a > 0 && h > 0)
                 {
                     Double A = a * (h * h) ;
                     Console.WriteLine("Der flächeninhalt des Parallelogramm beträgt {0}", A);
-                    Console.WriteLine("Wiederholen?(true/false)");
-                    wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    Console.ReadKey();
 
                 }
 
@@ -537,44 +861,86 @@ namespace MAMultiToolKlassenBibliothek
 
                 Console.Clear();
 
-            } while (wiederholen == true);
+            } while (subexit == false);
         }
 
         static void Raute()
         {
-            
-            Double e = 0, f = 0;
-            string s_e, s_f;
-            bool tryparseout;
-            bool wiederholen = true;
+
+            bool subexit = false;
+
             do
             {
-                
+                Double e = 0, f = 0;
+                string s_e, s_f;
+                bool tryparseout;
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                 "                           >>> Raute berechnen <<<\n" +
+                                 "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+                Console.WriteLine("Eingabe: subexit\t->\tzurück zum Submenü");
+
                 do
                 {
-                    Console.WriteLine("Rechteck berechnen");
-                    Console.WriteLine("Geben sie den Wert von a ein");
+
+
+                    Console.WriteLine("Geben sie den Wert von e ein");
                     s_e = Console.ReadLine();
-                    Console.WriteLine("Geben sie den Wert von b ein");
-                    s_f = Console.ReadLine();
+
+                    if (s_e == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    else if (s_e == "subexit")
+                    {
+                        subexit = true;
+                    }
+
+
+
 
 
                     tryparseout = double.TryParse(s_e, out e);
-                    tryparseout = double.TryParse(s_f, out f);
-                } while (tryparseout == false);
+                } while (tryparseout == false && subexit == false);
+
+                if (subexit == false)
+                {
+                    do
+                    {
+
+
+                        Console.WriteLine("Geben sie den Wert von f ein");
+                        s_f = Console.ReadLine();
+
+
+                        if (s_f == "exit")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else if (s_f == "subexit")
+                        {
+                            subexit = true;
+                        }
+
+
+
+                        tryparseout = double.TryParse(s_f, out f);
+                    } while (tryparseout == false && subexit == false);
+                }
 
                 if (e < 0 && f < 0)
                 {
                     Console.WriteLine("Falsche Eingabe");
                     Console.ReadLine();
-                    wiederholen = true;
+                   
                 }
                 else if (e > 0 && f > 0)
                 {
-                    Double A = (1 / 2) * e * f;
+                    Double A =e * f / 2;
                     Console.WriteLine("Der flächeninhalt der Raute beträgt {0}", A);
-                    Console.WriteLine("Wiederholen?(true/false)");
-                    wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    Console.ReadKey();
 
                 }
 
@@ -583,40 +949,65 @@ namespace MAMultiToolKlassenBibliothek
 
                 Console.Clear();
 
-            } while (wiederholen == true);
+            } while (subexit == false);
         }
 
         static void Kreis()
         {
-            
-            Double r = 0;
-            string s_r;
-            bool tryparseout;
-            bool wiederholen = true;
+
+            bool subexit = false;
+
             do
             {
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                 "                              >>>Kreis berechnen <<<\n" +
+                                 "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
+                Console.WriteLine("Eingabe: subexit\t->\tzurück zum Submenü");
+
+
+
+
+
+
+                Double r = 0;
+                string s_r;
+                bool tryparseout;
+
+
+
+
+
                 do
                 {
-                    Console.WriteLine("Rechteck berechnen");
-                    Console.WriteLine("Geben sie den Wert von a ein");
+                    Console.WriteLine("Geben sie den Wert von r ein");
                     s_r = Console.ReadLine();
-                   
+                    if (s_r == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    else if (s_r == "subexit")
+                    {
+                        subexit = true;
+                    }
+
                     tryparseout = double.TryParse(s_r, out r);
-                } while (tryparseout == false);
+                } while (tryparseout == false && subexit == false);
 
 
                 if (r < 0)
                 {
                     Console.WriteLine("Falsche Eingabe");
                     Console.ReadLine();
-                    wiederholen = true;
+                   
                 }
                 else if (r > 0)
                 {
-                    Double A = 3.14 * (r * r);
+                    Double A = 3.14159265359 * Math.Pow(r, 2);
                     Console.WriteLine("Der flächeninhalt des Kreises beträgt {0}", A);
-                    Console.WriteLine("Wiederholen?(true/false)");
-                    wiederholen = Convert.ToBoolean(Console.ReadLine());
+                    Console.ReadKey();
 
                 }
 
@@ -625,7 +1016,7 @@ namespace MAMultiToolKlassenBibliothek
 
                 Console.Clear();
 
-            } while (wiederholen == true);
+            } while (subexit == false);
         }
     }
 
