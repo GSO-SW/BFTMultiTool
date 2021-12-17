@@ -59,9 +59,7 @@ namespace MAMultiToolKlassenBibliothek
 
                         break;
 
-                    case "2":
-                        Console.Clear();
-                        Wertetabelle();
+
 
                         break;
 
@@ -98,7 +96,8 @@ namespace MAMultiToolKlassenBibliothek
                 int m;
                 int b;
                 float x;
-                
+                int num1 = 0; int num2 = 0;
+
 
 
                 Console.WriteLine("Geben sie eine Steigung m ein:");         // Fordert den Nutzer auf eine Steigung einzugeben
@@ -109,7 +108,7 @@ namespace MAMultiToolKlassenBibliothek
                 b = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("=> f(x) = " + m + "*" + "x + " + b);              // Allgemine Funktionsgleichung
-                Console.ReadLine();
+               
 
                 // Nullstellen Berechnen
                 /*
@@ -125,27 +124,46 @@ namespace MAMultiToolKlassenBibliothek
                 Console.WriteLine("Die Nullstelle ist: " + x);              //Ausgabe der Nullstellen
                 Console.ReadLine();
 
-                int num1 = 0; int num2 = 0;
 
-                Console.WriteLine($"Für -3 ist Das Ergebnis: {x} * {-3} = " + (x * -3));   // Ausgabe der Wertetabelle
-                Console.ReadLine();
+                double sweite = 0.001;
+                double von = -10;
+                double bis = 10;
 
-                Console.WriteLine($"Für -2 ist Das Ergebnis: {x} * {-2} = " + (x * -2));
-                Console.ReadLine();
 
-                Console.WriteLine($"Für -1 ist Das Ergebnis: {x} * {-1} = " + (x * -1));
-                Console.ReadLine();
 
-                Console.WriteLine($"Für 0 ist Das Ergebnis: {x} * {0} = " + (x * 0));
-                Console.ReadLine();
+                Console.WriteLine("|{0,10}|{1,10}|","x","y");
+                Console.WriteLine("--------------------|");
 
-                Console.WriteLine($"Für 1 ist Das Ergebnis: {x} * {1} = " + (x * 1));
-                Console.ReadLine();
 
-                Console.WriteLine($"Für 2 ist Das Ergebnis: {x} * {2} = " + (x * 2));
-                Console.ReadLine();
+                for (double l_x=von; l_x<=bis;l_x+=sweite)
+                {
+                    Console.WriteLine("|{0,10:F2}|{1,10:F2}|",l_x,(l_x*m+b));
+                }
 
-                Console.WriteLine($"Für 3 ist Das Ergebnis: {x} * {3} = " + (x * 3));
+                //Console.WriteLine($"| {x} * {-3} = " + (x * -3))
+
+                //Console.WriteLine($"Für -3 ist Das Ergebnis: {x} * {-3} = " + (x * -3));   // Ausgabe der Wertetabelle
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für -2 ist Das Ergebnis: {x} * {-2} = " + (x * -2));
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für -1 ist Das Ergebnis: {x} * {-1} = " + (x * -1));
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für 0 ist Das Ergebnis: {x} * {0} = " + (x * 0));
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für 1 ist Das Ergebnis: {x} * {1} = " + (x * 1));
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für 2 ist Das Ergebnis: {x} * {2} = " + (x * 2));
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für 3 ist Das Ergebnis: {x} * {3} = " + (x * 3));
+                //Console.ReadLine();
+
+                //Console.WriteLine("Mit diesen Zahlen können sie einen Graphen Zeichnen. Viel Erfolg!");
                 Console.ReadLine();
 
 
