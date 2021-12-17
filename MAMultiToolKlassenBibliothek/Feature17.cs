@@ -95,29 +95,54 @@ namespace MAMultiToolKlassenBibliothek
 
             static void Nullstellen()
             {
-                Console.WriteLine("Nullstellen");
+                int m;
+                int b;
+                float x;
 
-              
+
+                Console.WriteLine("Geben sie eine Steigung m ein:");         // Fordert den Nutzer auf eine Steigung einzugeben
+                m = Convert.ToInt32(Console.ReadLine());
+
+
+                Console.WriteLine("Geben sie den y-Achsenschnittpunkt b ein:");     // Fordert den Nutzer auf ein Y-achsenabschnitt einzugeben   
+                b = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("=> f(x) = " + m + "*" + "x + " + b);              // Der Nutzer kriegt hier die Zahlen ausgegeben
+
+
+                // Nullstellen Berechnen
+                /*
+                 * 
+                 * y = mx + b
+                 * => 0 = mx+b   |-b
+                 * => -b =mx
+                 * => x = -b/m
+                 * 
+                 */
+
+                x = -1.0f * b / m;
+                Console.WriteLine("Die Nullstelle ist: " + x);                     //Ausgabe der Nullstellen
+
+                Console.Clear();
+
+
 
 
             }
 
         }
 
+        static void Wertetabelle()
+        {
 
-
-
-            static void Wertetabelle()
-            {
-                Console.WriteLine("Wertetabelle");
 
 
         }
 
-        }
-        
+
     }
 
+}
 
 
 
