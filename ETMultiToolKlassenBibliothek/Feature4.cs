@@ -14,7 +14,7 @@ namespace ETMultiToolKlassenBibliothek
             Console.Clear();
             string HauptAusw;
 
-            bool Exit = false;
+            bool exit = false;
             bool Submenü;
 
             do
@@ -50,7 +50,8 @@ namespace ETMultiToolKlassenBibliothek
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
-                switch (HauptAusw)
+                // Cases öffnen andere Methoden bei Eingabe
+                switch (HauptAusw)                               
                 {
 
                     case "1":
@@ -74,9 +75,9 @@ namespace ETMultiToolKlassenBibliothek
                         break;
 
                     case "exit":
-                        Exit = true;
+                        exit = true;
                         break;
-
+                    //Cases falls er anschließend weitere Eingaben tätigen möchte
                     default:
 
                         Console.WriteLine("Fehleingabe!");
@@ -91,9 +92,9 @@ namespace ETMultiToolKlassenBibliothek
                 }
 
 
-            } while (!Exit & !Submenü);
+            } while (!exit & !Submenü);
 
-            if (Exit)
+            if (exit)
                 Environment.Exit(0);
         
         }
@@ -101,25 +102,27 @@ namespace ETMultiToolKlassenBibliothek
 
         public static void Spule()
         {
-            string intro = "Spulenmenü";
-            Console.WriteLine(intro.ToUpper());
-            bool exit = false;
-            bool subsubmenü = false;
+            string intro = "Spulenmenü";            // Initialisierung der string Variable
+            Console.WriteLine(intro.ToUpper());    //der Menüname wird groß ausgegeben
+            Console.WriteLine("\n");              //einfacher Sprung
+            bool exit = false;                   //exit wird false initialisiert
+            bool subsubmenü = false;            //ebenfalls mit dem subsubmenü
 
             do
             {
+                //Dem Nutzer werden alle Möglichen Auswahlmöglichkeiten ausgegeben
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +     
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
-                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
-                Console.WriteLine("Sie haben insgesamt 3 Auswahlen zur Verfügung.\n" +
+                Console.WriteLine("Sie haben folgende Möglichkeiten:\n" +      
                 "Für die Formel, geben Sie bitte (1) ein.\n" +
                 "Für den Nutze der Spule, bitte (2) eingeben.\n" +
                 "Für die Definition der Spule, bitte (3) eingeben.\n");
 
                 string auswahlspule = Convert.ToString(Console.ReadLine());
 
-                switch (auswahlspule)
+                //Jede Case hat eine eigene Funktion bzw wird in eine Methode geschickt bei bestimmter Eingabe
+                switch (auswahlspule)                                    
                 {
                     case "1":
                         Console.Clear();
@@ -136,6 +139,7 @@ namespace ETMultiToolKlassenBibliothek
                         Spuledefinition();
                         break;
 
+                    //Cases falls er anschließend weitere Eingaben tätigen möchte
                     case "submenü":
                         Console.Clear();
                         subsubmenü = true;
@@ -163,18 +167,19 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Spuleformel()
         {
-            string intro = "Spulenformel";
-            Console.WriteLine(intro.ToUpper());
-            bool subsubmenü = false;
-            bool exit = false;
+            string intro = "Spulenformel";           //Initialisierung der Variable
+            Console.WriteLine(intro.ToUpper());     //der Menüname wird groß ausgegeben
+            Console.WriteLine("\n");               //einfacher Sprung
+            bool subsubmenü = false;              //subsubmenü wird false initialisiert
+            bool exit = false;                   // "
 
             do
             {
-
+                //Dem Nutzer werden alle Möglichen Auswahlmöglichkeiten ausgegeben
                 Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
-                Console.WriteLine("Sie haben folgende möglichkeiten:\n" +
+                Console.WriteLine("Sie haben folgende möglichkeiten:\n" +                   
                 "" + "Induktivität Spule(1)\n" +
                 "" + "Reihenschaltung Spule(2)\n" +
                 "" + "Parallelschaltung Spule(3)\n" +
@@ -183,7 +188,8 @@ namespace ETMultiToolKlassenBibliothek
 
                 string auswahl = Convert.ToString(Console.ReadLine());
 
-                switch (auswahl)
+                //Cases geben die Informationen aus bzw erfüllen Ihre Funktion
+                switch (auswahl)                                            
                 {
                     case "1":
                         Console.Clear();
@@ -218,6 +224,7 @@ namespace ETMultiToolKlassenBibliothek
                         "Die Formel lautet: Wmagn = 1/2*L*I^2");
                         break;
 
+                    //Cases falls er anschließend weitere Eingaben tätigen möchte
                     case "subsubmenü":
                         Console.Clear();
                         subsubmenü = true;
@@ -244,18 +251,19 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Spulenutze()
         {
-            string intro = "nutze der Spule";
-            Console.WriteLine(intro.ToUpper());
-            bool exit = false;
-            bool subsubmenü = false;
+            string intro = "nutze der Spule";           //Initialisierung der Variable 
+            Console.WriteLine(intro.ToUpper());        //Ausgabe der Variable wird groß ausgegeben
+            Console.WriteLine("\n");                  //einfacher Sprung
+            bool exit = false;                       //exit wird als false initialisiert
+            bool subsubmenü = false;                //subsubmenü wird als false initialisiert
 
 
 
             do
             {
-
+                //Dem Nutzer werden alle Möglichen Auswahlmöglichkeiten ausgegeben
                 Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Eine Spule ist ein elektrisches Bauelement, bei dem ein langer dünner Leiter spiralförmig um einen meist zylindrischen Körper gewickelt wird.\n" +
                 "Spulen werden in vielen Bereichen eingesetzt, u. a. sind sie die Grundbausteine von Elektromagneten und Elektromotoren.\n" +
@@ -263,43 +271,8 @@ namespace ETMultiToolKlassenBibliothek
                 "daher ergibt sich bei den vielen hintereinanderliegenden Schlaufen einer Spule in deren Innerem ein annähernd homogenes Magnetfeld in Längsrichtung der Spule.");
 
                 string auswahl = Convert.ToString(Console.ReadLine());
-                switch(auswahl)
-                {
-                    case "exit":
-                        Console.Clear();
-                        exit = true;
-                        break;
 
-                    case "subsubmenü":
-                        Console.Clear();
-                        subsubmenü = true;
-                        break;
-                }
-
-            }while (!exit & !subsubmenü);
-            if (exit)
-                Environment.Exit(0);
-            
-
-        }
-
-        static void Spuledefinition()
-        {
-            string intro = "Spuledefinition";
-            Console.WriteLine(intro.ToUpper());
-            bool exit = false;
-            bool subsubmenü = false;
-
-            do
-            {
-                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
-
-                Console.WriteLine("n der Elektrotechnik sind Spulen wichtige Bestandteile elektrischer Baugruppen oder Geräte. Spulen fallen unter die sogenannten passiven elektrischen Bauelemente.\n" +
-                "Sie werden oft auch als Induktivitäten oder Drosseln bezeichnet. Eine Spule ist ein Leiter(Draht, meist Kupferlackdraht oder Hochfrequenzlitze),\n" +
-                "der zu einer oder mehreren Windungen geformt ist. Die Windungsanordnung, ihr Durchmesser und das Kernmaterial legen die Induktivität und weitere Eigenschaften der Spule fest.");
-
-                string auswahl = Convert.ToString(Console.ReadLine());
+                //Cases falls er anschließend weitere Eingaben tätigen möchte
                 switch (auswahl)
                 {
                     case "exit":
@@ -311,6 +284,56 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Clear();
                         subsubmenü = true;
                         break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Fehlermeldung");
+                        break;
+                }
+
+            }while (!exit & !subsubmenü);
+            if (exit)
+                Environment.Exit(0);  
+
+        }
+
+        static void Spuledefinition()
+        {
+            string intro = "Definition Spule";         //Initialisierung der Variable
+            Console.WriteLine(intro.ToUpper());      //die Variable wird groß ausgegeben
+            Console.WriteLine("\n");                //einfacher sprung
+            bool exit = false;                     //exit wird false initialisiert
+            bool subsubmenü = false;              //"
+
+            do
+            {
+                //Dem Nutzer werden alle Möglichen Auswahlmöglichkeiten ausgegeben
+                Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
+
+                Console.WriteLine("n der Elektrotechnik sind Spulen wichtige Bestandteile elektrischer Baugruppen oder Geräte. Spulen fallen unter die sogenannten passiven elektrischen Bauelemente.\n" +
+                "Sie werden oft auch als Induktivitäten oder Drosseln bezeichnet. Eine Spule ist ein Leiter(Draht, meist Kupferlackdraht oder Hochfrequenzlitze),\n" +
+                "der zu einer oder mehreren Windungen geformt ist. Die Windungsanordnung, ihr Durchmesser und das Kernmaterial legen die Induktivität und weitere Eigenschaften der Spule fest.");
+
+                string auswahl = Convert.ToString(Console.ReadLine());
+
+                //Cases falls er anschließend weitere Eingaben tätigen möchte
+                switch (auswahl)
+                {
+                    case "exit":
+                        Console.Clear();
+                        exit = true;
+                        break;
+
+                    case "subsubmenü":
+                        Console.Clear();
+                        subsubmenü = true;
+                        break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Fehlermeldung");
+                        break;
                 }
 
             } while (!exit & !subsubmenü);
@@ -321,25 +344,29 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Kondensator()
         {
-            string intro = "Kondensatormenü";
-            Console.WriteLine(intro.ToUpper());
-            Console.WriteLine("\n");
-            bool exit = false;
-            bool subsubmenü = false;
+            string intro = "Kondensatormenü";           //Die Variable String wird Initialisiert
+            Console.WriteLine(intro.ToUpper());        //Die Variable wird groß ausgegeben
+            Console.WriteLine("\n");                  //einfacher Sprung
+            bool exit = false;                       //exit wird false initialisiert
+            bool subsubmenü = false;                //"
 
             do
             {
+                //Dem Nutzer werden alle Möglichen Auswahlmöglichkeiten ausgegeben
                 Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
-                Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +
-                "Für die Formel, geben Sie bitte (1) ein.\n" +
+                Console.WriteLine("Sie haben folgende Möglichkeiten:\n" +
+                "Für die Formel des Kondensators, geben Sie bitte (1) ein.\n" +
                 "Für den Nutze des Kondensators, bitte (2) eingeben.\n" +
                 "Für die Definition des Kondensators, bitte (3) eingeben.\n");
                 string auswahlmöglichkeiten = Convert.ToString(Console.ReadLine());
 
+
+                //Cases für verschiedene Methoden oder Funktionen 
                 switch (auswahlmöglichkeiten)
                 {
+                    //Cases um eine andere Methode aufzurufen
                     case "1":
                         Console.Clear();
                         KondensatorFormel();
@@ -355,6 +382,7 @@ namespace ETMultiToolKlassenBibliothek
                         Kondensatordefinition();
                         break;
 
+                    //Cases falls er anschließend weitere Eingaben tätigen möchte
                     case "subsubmenü":
                         Console.Clear();
                         subsubmenü = true;
@@ -378,27 +406,33 @@ namespace ETMultiToolKlassenBibliothek
 
         static void KondensatorFormel()
         {
-            string auswahl;
-            string Intro = "Kondensator Menü";
-            Console.WriteLine(Intro.ToUpper());
-            bool subsubmenü = false;
-            bool exit = false;
+            string auswahl;                         //Auswahl wurde deklariert, aber keinem Wert zugewiesen
+            string Intro = "KondensatorMenü";     //string Variable wird initialisiert
+            Console.WriteLine(Intro.ToUpper());   //Variable wird groß ausgegeben
+            Console.WriteLine("\n");             //einfacher Sprung
+            bool subsubmenü = false;            //subsubmenü wird false initialisiert
+            bool exit = false;                 //exit wird false initialisiert
 
             do
             {
+                //Dem Nutzer werden alle Möglichen Auswahlmöglichkeiten ausgegeben
                 Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
-
-                Console.WriteLine("Sie haben Folgende möglichkeiten zu wählen:\nLadung(1)" +
-                "\nKapazität(2)\n" +
+               
+                Console.WriteLine("Sie haben Folgende möglichkeiten zu wählen:\n" +
+                "Ladung(1)\n" +
+                "Kapazität(2)\n" +
                 "Reihenschaltung(3)\n" +
                 "Parallelschaltung(4)\n" +
                 "Energieinhalt(5)\n");
-                auswahl = Convert.ToString(Console.ReadLine());
+                auswahl = Convert.ToString(Console.ReadLine());   
 
+
+                //Cases für verschiedene Funktionen
                 switch (auswahl)
                 {
+                    //Cases für verschiedene Ausgaben 
                     case "1":
                         Console.Clear();
                         Console.WriteLine("Ladung des Kondensators berechnen: \n" +
@@ -435,6 +469,8 @@ namespace ETMultiToolKlassenBibliothek
                         "Formel heißt: Welektr= 1/2*C*U^2");
                         break;
 
+
+                    //Cases falls er anschließend weitere Eingaben tätigen möchte
                     case "subsubmenü":
                         Console.Clear();
                         subsubmenü = true;
@@ -459,23 +495,28 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Kondensatornutze()
         {
-            string intro = "nutze des Kondensators";
-            Console.WriteLine(intro.ToUpper());
-            bool exit = false;
-            bool subsubmenü = false;
-
+            string intro = "nutze des Kondensators";      //string Variable wird Initialisiert
+            Console.WriteLine(intro.ToUpper());          //Variable wird groß ausgegeben
+            Console.WriteLine("\n");                    //einfacher sprung
+            bool exit = false;                         //exit wird false initialisiert 
+            bool subsubmenü = false;                  //"
+             
             do
             {
-
+                //Dem Nutzer werden alle Möglichen Auswahlmöglichkeiten ausgegeben
                 Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
+
+                
                 Console.WriteLine("Ein Kondensator (von lateinisch condensare ‚verdichten‘) ist ein passives elektrisches Bauelement mit der Fähigkeit,\n" +
                 "in einem Gleichstromkreis elektrische Ladung und die damit zusammenhängende Energie statisch in einem elektrischen Feld zu speichern.\n" +
-                " Die gespeicherte Ladung pro Spannung wird als elektrische Kapazität bezeichnet und in der Einheit Farad gemessen.\n" +
-                "In einem Wechselstromkreis wirkt ein Kondensator als Wechselstromwiderstand mit einem frequenzabhängigen Impedanzwert.");
+                "Die gespeicherte Ladung pro Spannung wird als elektrische Kapazität bezeichnet und in der Einheit Farad gemessen.\n" +
+                "In einem Wechselstromkreis wirkt ein Kondensator als Wechselstromwiderstand mit einem frequenzabhängigen Impedanzwert.\n");
 
                 string auswahl = Convert.ToString(Console.ReadLine());
+                
+                //Cases falls er anschließend weitere Eingaben tätigen möchte
                 switch (auswahl)
                 {
                     case "exit":
@@ -487,6 +528,12 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Clear();
                         subsubmenü = true;
                         break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Fehlermeldung");
+                        break;
+
                 }
 
             } while (!exit & !subsubmenü);
@@ -496,17 +543,18 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Kondensatordefinition()
         {
-            string intro = "Definition des Kondensators";
-            Console.WriteLine(intro.ToUpper());
-            bool exit = false;
-            bool subsubmenü = false;
+            string intro = "Definition des Kondensators";   //string Variable wird Initialisiert 
+            Console.WriteLine(intro.ToUpper());            //die Variable wird groß ausgegeben
+            Console.WriteLine("\n");                      //einfacher Sprung
+            bool exit = false;                           //exit wird false initialisiert
+            bool subsubmenü = false;                    //"
 
             do
             {
 
-
+                //Dem Nutzer werden alle Möglichen Auswahlmöglichkeiten ausgegeben
                 Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Ein Kondensator ist ein passives elektrisches Bauelement mit der Fähigkeit,\n" +
                 "in einem Gleichstromkreis elektrische Ladung und die damit zusammenhängende Energie statisch in einem elektrischen Feld zu speichern.\n" +
@@ -514,6 +562,7 @@ namespace ETMultiToolKlassenBibliothek
                 "In einem Wechselstromkreis wirkt ein Kondensator als Wechselstromwiderstand mit einem frequenzabhängigen Impedanzwert");
 
                 string auswahl = Convert.ToString(Console.ReadLine());
+                //Cases falls er anschließend weitere Eingaben tätigen möchte
                 switch (auswahl)
                 {
                     case "exit":
@@ -525,6 +574,12 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Clear();
                         subsubmenü = true;
                         break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Fehlermeldung");
+                        break;
+
                 }
 
             } while (!exit & !subsubmenü);
@@ -534,17 +589,17 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Widerstand()
         {
-            string intro = "Widerstandmenü";
-            Console.WriteLine(intro.ToUpper());
-            Console.WriteLine("\n");
+            string intro = "Widerstandmenü";        //string Variable wird Initialisiert
+            Console.WriteLine(intro.ToUpper());    //Variable wird groß ausgegeben
+            Console.WriteLine("\n");              //einfacher Sprung
             bool exit = false;
             bool subsubmenü = false;
 
             do
             {
-
+                //Dem Nutzer werden alle Möglichen Auswahlmöglichkeiten ausgegeben
                 Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Sie haben insgesamt 4 Auswahlen zur Verfügung.\n" +
                 "Für die Formel, geben Sie bitte (1) ein.\n" +
@@ -569,6 +624,7 @@ namespace ETMultiToolKlassenBibliothek
                         Widerstanddefinition();
                         break;
 
+                    //Cases falls er anschließend weitere Eingaben tätigen möchte
                     case "subsubmenü":
                         Console.Clear();
                         subsubmenü = true;
@@ -593,26 +649,28 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Widerstandformel()
         {
-            string auswahl;
-            string Intro = "Formel des Widerstandes";
-            Console.WriteLine(Intro.ToUpper());
-            bool subsubmenü = false;
-            bool exit = false;
+            string auswahl;                                    //Variable wird deklariert aber keinem Wert zugewiesen
+            string Intro = "Formel des Widerstandes";         //Variable wird initialisiert
+            Console.WriteLine(Intro.ToUpper());              //string Variable wird groß ausgegeben
+            bool subsubmenü = false;                        //subsubmenü wird false initialisiert
+            bool exit = false;                             //"
 
             do
             {
 
-
+                //Alle Auswahlmöglichkeiten werden dem Nutzer ausgegeben
                 Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
-                Console.WriteLine("Sie haben Folgende möglichkeiten zu wählen:\nWiderstand und Leitwert(1)\n" +
+                Console.WriteLine("Sie haben Folgende möglichkeiten zu wählen:\n" +
+                "Widerstand und Leitwert(1)\n" +
                 "Einheitswiderstand und Einheitsleitwert(2)\n" +
                 "Leiterwiderstand(3)\n" +
                 "Reihenschaltung von Widerständen(4)\n" +
                 "Parallelschaltungen von Widerständen(5)\n");
                 auswahl = Convert.ToString(Console.ReadLine());
 
+                //Cases für verschiedene Funktionen oder ausgaben
                 switch (auswahl)
                 {
                     case "1":
@@ -666,6 +724,7 @@ namespace ETMultiToolKlassenBibliothek
                         "Formel für die Gesamtspannung: 1/Uges = 1/U1 + 1/U2 + 1/U3(...)");
                         break;
 
+                    //Cases falls er anschließend weitere Eingaben tätigen möchte
                     case "subsubmenü":
                         Console.Clear();
                         subsubmenü = true;
@@ -690,17 +749,18 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Widerstandnutze()
         {
-            string intro = "nutze des Widerstandes";
-            Console.WriteLine(intro.ToUpper());
-            bool exit = false;
-            bool subsubmenü = false;
+            string intro = "nutze des Widerstandes";    //string Variable wird initialisiert 
+            Console.WriteLine(intro.ToUpper());        //Variable wird groß ausgegeben
+            Console.WriteLine("\n");                  //einfacher Sprung
+            bool exit = false;                       //exit wird false initialisiert
+            bool subsubmenü = false;                //"
 
             do
             {
 
-
+                //Dem Nutzer werden alle Auswahlmöglichkeiten ausgegeben
                 Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Ein Widerstand ist ein zweipoliges passives elektrisches Bauelement.\n" +
                 "Es realisiert einen ohmschen Widerstand in elektrischen und elektronischen Schaltungen.\n" +
@@ -712,6 +772,8 @@ namespace ETMultiToolKlassenBibliothek
                 "elektrische Energie in Wärmeenergie umzuwandeln\n");
 
                 string auswahl = Convert.ToString(Console.ReadLine());
+
+                //Cases falls er anschließend weitere Eingaben tätigen möchte
                 switch (auswahl)
                 {
                     case "exit":
@@ -723,6 +785,12 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Clear();
                         subsubmenü = true;
                         break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Fehlermeldung");
+                        break;
+
                 }
 
             } while (!exit & !subsubmenü);
@@ -732,21 +800,25 @@ namespace ETMultiToolKlassenBibliothek
 
         static void Widerstanddefinition()
         {
-            string intro = "Definition des Widertstandes";
-            Console.WriteLine(intro.ToUpper());
-            bool exit = false;
-            bool subsubmenü = false;
-
+            string intro = "Definition des Widertstandes";     //string Variable wird initialisiert
+            Console.WriteLine(intro.ToUpper());               //Variable wird groß ausgegeben
+            Console.WriteLine("\n");                         //einfacher Sprung
+            bool exit = false;                              //exit wird false initialisiert
+            bool subsubmenü = false;                       //"
+              
             do
             {
+                //Alle Auswahlmöglichkleiten werden dem Nutzer genannt
                 Console.WriteLine("\nUm das Programm zu schließen, bitte 'exit' eingeben!\n" +
-                "Um ins vorherige Menü zu gelanden, bitte 'subsubmenü' eingeben!\n");
+                "Um ins vorherige Menü zu gelangen, bitte 'subsubmenü' eingeben!\n");
 
                 Console.WriteLine("Der elektrische Widerstand ist in der Elektrotechnik ein Maß dafür, welche elektrische Spannung erforderlich ist,\n" +
                 "um eine bestimmte elektrische Stromstärke durch einen elektrischen Leiter (Bauelement, Stromkreis) fließen zu lassen.\n" +
                 "Dabei sind Gleichgrößen zu verwenden oder Augenblickswerte bei mit der Zeit veränderlichen Größen.");
-
+ 
                 string auswahl = Convert.ToString(Console.ReadLine());
+                
+                //Cases falls er anschließend weitere Eingaben tätigen möchte
                 switch (auswahl)
                 {
                     case "exit":
@@ -758,6 +830,12 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Clear();
                         subsubmenü = true;
                         break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Fehlermeldung");
+                        break;
+
                 }
 
             } while (!exit & !subsubmenü);
