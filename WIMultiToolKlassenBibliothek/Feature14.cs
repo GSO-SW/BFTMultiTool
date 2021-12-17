@@ -134,7 +134,7 @@ namespace WIMultiToolKlassenBibliothek
                     tryparseout = bool.TryParse(str_wiederholen, out wiederholen) ;
                 } while (tryparseout == false);
                 Console.Clear(); 
-            } while (wiederholen);
+            } while (wiederholen);  
         }
     }
 }
