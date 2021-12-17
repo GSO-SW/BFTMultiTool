@@ -102,7 +102,7 @@ namespace ETMultiToolKlassenBibliothek
         public static void OhmschesGesetzberechnen() 
         {
 
-            double R;
+            double P;
             double I;
             double U;
             string choose;
@@ -113,47 +113,47 @@ namespace ETMultiToolKlassenBibliothek
             switch (choose)
             {
                 case "1":
-                    Console.WriteLine("Geben Sie ihren Wert für den Widerstand (R) ein");
-                    R = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Geben Sie ihren Wert für die Elektische Leistung (P) ein");
+                    P = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("Geben Sie nun noch ihren Wert für die Stromstärke (I) ein");
+                    Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischem Strom (I) ein");
                     I = Convert.ToDouble(Console.ReadLine());
 
-                    U = R * I;
+                    U = P / I;
 
-                    Console.WriteLine("Ihr Wert für die Spannung beträgt {0} Volt!", U);
+                    Console.WriteLine("Ihr Wert für die elektrische Spannung beträgt {0} Volt!", U);
                     break;
                 case "2":
-                    Console.WriteLine("Geben Sie ihren Wert für den Spannung (U) ein");
+                    Console.WriteLine("Geben Sie ihren Wert für die elektrische Leistung (P) ein");
+                    P = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Geben sie nun noch Ihren Wert für die elektrische Spannung (U) ein");
                     U = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("Geben sie nun noch Ihren Wert für den Widerstand (R) ein");
-                    R = Convert.ToDouble(Console.ReadLine());
-
-                    I = U / R;
+                    I = P / U;
 
                     Console.WriteLine("Ihr Wert für Stromstärke beträgt {0} Ampere", I);
+                    Console.Clear();
                     break;
-                case 3:
-                    Console.WriteLine("Geben Sie ihren Wert für den Spannung (U) ein");
+                case "3":
+                    Console.WriteLine("Geben Sie ihren Wert für die elektrische Spannung (U) ein");
                     U = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("Geben Sie nun noch ihren Wert für die Stromstärke (I) ein");
+                    Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischen Strom (I) ein");
                     I = Convert.ToDouble(Console.ReadLine());
 
-                    R = U / I;
+                    P = U * I;
 
-                    Console.WriteLine("Ihr Wert für den Widerstand beträgt {0}", R);
+                    Console.WriteLine("Ihr Wert für die elektrische Leistung beträgt {0}", P);
+                    Console.Clear();
                     break;
 
                 default:
                     Console.WriteLine("Ungültige Eingabe");
+                    Console.Clear();
                     break;
 
-
-
-
-
+                
 
             }
 
@@ -185,32 +185,36 @@ namespace ETMultiToolKlassenBibliothek
                     U = P / I;
 
                     Console.WriteLine("Ihr Wert für die elektrische Spannung beträgt {0} Volt!", U);
+                    Console.Clear();
                     break;
                 case "2":
                     Console.WriteLine("Geben Sie ihren Wert für die elektrische Leistung (P) ein");
                     P = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("Geben sie nun noch Ihren Wert für den Widerstand (R) ein");
-                    R = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Geben sie nun noch Ihren Wert für die elektrische Spannung (U) ein");
+                    U = Convert.ToDouble(Console.ReadLine());
 
                     I = P / U;
 
                     Console.WriteLine("Ihr Wert für Stromstärke beträgt {0} Ampere", I);
+                    Console.Clear();
                     break;
-                case 3:
-                    Console.WriteLine("Geben Sie ihren Wert für den Spannung (U) ein");
+                case "3":
+                    Console.WriteLine("Geben Sie ihren Wert für die elektrische Spannung (U) ein");
                     U = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("Geben Sie nun noch ihren Wert für die Stromstärke (I) ein");
-                    I = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischen Strom (I) ein");
+                    I = Convert.ToDouble(Console.ReadLine()); 
 
-                    R = U / I;
+                    P  = U * I;
 
-                    Console.WriteLine("Ihr Wert für den Widerstand beträgt {0}", R);
+                    Console.WriteLine("Ihr Wert für die elektrische Leistung beträgt {0} Watt", P);
+                    Console.Clear();
                     break;
 
                 default:
                     Console.WriteLine("Ungültige Eingabe");
+                    Console.Clear();
                     break;
 
             }
