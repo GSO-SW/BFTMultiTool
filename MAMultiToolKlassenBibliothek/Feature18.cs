@@ -92,33 +92,69 @@ namespace MAMultiToolKlassenBibliothek
 
             bool Exit = false;
             bool submenü;
+            bool xserror = false;
 
             Console.WriteLine("ScheitelpunktformNormalForm");
             //Meine Erste Zeile
 
-            Console.WriteLine("Geben sie ihren xs Wert ein");
-            int x = Convert.ToInt32(Console.ReadLine());
+          do 
+          {
 
-            switch(Console.ReadLine())
-            {
-                case"x == ":
-                    Console.Clear();
-                    ScheitelpunktformNormalform();
-                    break;
+           Console.WriteLine("Geben sie ihren xs Wert ein");
+            
+               string x = Console.ReadLine();
 
-                case "x == submenü":
-                    Console.Clear();
-                    submenü = true;
-                    break;
-                case "x == Exit":
-                    Exit = true;
-                    break;
 
-            }
+                switch (Console.ReadLine())
+                {
+                    case "x == ":
+                        Console.Clear();
+                        ScheitelpunktformNormalform();
+                        break;
+
+                    case "x == submenü":
+                        Console.Clear();
+                        submenü = true;
+                        break;
+                    case "x == Exit":
+                        Exit = true;
+                        break;
+
+
+                    default:
+
+
+
+
+
+                        if (int.TryParse(x, out int zahl))
+                        {
+                            Console.WriteLine("Erfolg! Die Eingabe war {0}.", zahl);
+                            xserror = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Misserfolg geben sie Erneut etwas für xs ein!");
+                            xserror = true;
+
+                        }
+                        break;
+                }
+            
+            } while (xserror == true);
+
+                    xserror = false;
+
+
+                     Console.ReadKey();
+                                       
+                    
+                     
+        }
             
 
-        }
-
     }
+
 }
+
 
