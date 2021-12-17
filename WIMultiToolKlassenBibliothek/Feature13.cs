@@ -23,16 +23,22 @@ namespace WIMultiToolKlassenBibliothek
             kapital = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Bitte geben Sie Ihren Zinssatz ein");
-
+            zinssatz = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Bitte geben Sie die Anlagedauer ein");
             jahre = Convert.ToInt32(Console.ReadKey());
 
 
             gewinn = kapital * zinssatz * jahre;
+
             kontostand = kapital + gewinn;
+            Console.WriteLine(" Ihr Gewinn ist:{0}", gewinn
+
+
+            Console.WriteLine("bitte geben sie mir Ihren Kontostand");
+            kontostand = Convert.ToInt32(Console.ReadKey());
+
 
 
         }
-    }
 }
