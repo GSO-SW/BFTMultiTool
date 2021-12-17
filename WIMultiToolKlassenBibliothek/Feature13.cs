@@ -32,11 +32,11 @@ namespace WIMultiToolKlassenBibliothek
             gewinn = kapital * zinssatz * jahre;
 
             kontostand = kapital + gewinn;
-            Console.WriteLine(" Ihr Gewinn ist:{0}", gewinn
+            Console.WriteLine(" Ihr Gewinn ist:{0}", gewinn);
 
 
-            Console.WriteLine("bitte geben sie mir Ihren Kontostand");
-            kontostand = Convert.ToInt32(Console.ReadKey());
+            Console.WriteLine(" Ihr Kontostand ist:{0}", kontostand);
+
 
 
 
