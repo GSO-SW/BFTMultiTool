@@ -98,6 +98,7 @@ namespace MAMultiToolKlassenBibliothek
                 int m;
                 int b;
                 float x;
+                
 
 
                 Console.WriteLine("Geben sie eine Steigung m ein:");         // Fordert den Nutzer auf eine Steigung einzugeben
@@ -107,8 +108,8 @@ namespace MAMultiToolKlassenBibliothek
                 Console.WriteLine("Geben sie den y-Achsenschnittpunkt b ein:");     // Fordert den Nutzer auf ein Y-achsenabschnitt einzugeben   
                 b = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("=> f(x) = " + m + "*" + "x + " + b);              // Der Nutzer kriegt hier die Zahlen ausgegeben
-
+                Console.WriteLine("=> f(x) = " + m + "*" + "x + " + b);              // Allgemine Funktionsgleichung
+                Console.ReadLine();
 
                 // Nullstellen Berechnen
                 /*
@@ -121,10 +122,31 @@ namespace MAMultiToolKlassenBibliothek
                  */
 
                 x = -1.0f * b / m;
-                Console.WriteLine("Die Nullstelle ist: " + x);                     //Ausgabe der Nullstellen
+                Console.WriteLine("Die Nullstelle ist: " + x);              //Ausgabe der Nullstellen
+                Console.ReadLine();
 
-                Console.Clear();
+                int num1 = 0; int num2 = 0;
 
+                Console.WriteLine($"Für -3 ist Das Ergebnis: {x} * {-3} = " + (x * -3));   // Ausgabe der Wertetabelle
+                Console.ReadLine();
+
+                Console.WriteLine($"Für -2 ist Das Ergebnis: {x} * {-2} = " + (x * -2));
+                Console.ReadLine();
+
+                Console.WriteLine($"Für -1 ist Das Ergebnis: {x} * {-1} = " + (x * -1));
+                Console.ReadLine();
+
+                Console.WriteLine($"Für 0 ist Das Ergebnis: {x} * {0} = " + (x * 0));
+                Console.ReadLine();
+
+                Console.WriteLine($"Für 1 ist Das Ergebnis: {x} * {1} = " + (x * 1));
+                Console.ReadLine();
+
+                Console.WriteLine($"Für 2 ist Das Ergebnis: {x} * {2} = " + (x * 2));
+                Console.ReadLine();
+
+                Console.WriteLine($"Für 3 ist Das Ergebnis: {x} * {3} = " + (x * 3));
+                Console.ReadLine();
 
 
 
@@ -132,12 +154,7 @@ namespace MAMultiToolKlassenBibliothek
 
         }
 
-        static void Wertetabelle()
-        {
-
-
-
-        }
+        
 
 
     }
