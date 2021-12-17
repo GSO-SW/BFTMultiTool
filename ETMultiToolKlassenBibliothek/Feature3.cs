@@ -106,7 +106,7 @@ namespace ETMultiToolKlassenBibliothek
 
             {
                 //Bedienungsanleitung und Eingabeaufforderung
-                Console.WriteLine("Ohmsches Gesetz\n");
+                Console.WriteLine("             ---Ohmsches Gesetz---\n");
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
                 Console.WriteLine("Eingabe: submenü\t->\tzurück zum Submenü\n");
                 Console.WriteLine("Über was genau möchten Sie Informationen erhalten?\n");
@@ -133,6 +133,8 @@ namespace ETMultiToolKlassenBibliothek
                                       " z.B. besonders bei Metallen mit konstanter Temperatur." +
                                       "Heute wird das Ohmsche Gesetz als Definiton für Ohmsche Widerstände angesehen.");
 
+                        Console.ReadLine();
+
 
                         break;
 
@@ -158,7 +160,7 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Write("Merkhilfe zum Ohmschen Gesetz:\n\n");
 
 
-                        Console.Write("Merdreieck:\n");
+                        Console.Write("Merkdreieck:\n");
 
                         Console.Write("Man zeichnet ein Dreieck mit drei feldern und einem Strich der das Dreieck horizontal halbiert," +
                                       "Die untere Hälfte des Dreiecks wird erneut Vertikal halbiert." +
@@ -168,7 +170,9 @@ namespace ETMultiToolKlassenBibliothek
                                       "das I und den Strich der zwischen den beiden Buchstaben steht." +
                                       "Dieser Strich ist als geteilt zu verstehen und daher wäre die Rechnung dann U/I.");
 
-                       
+                        Console.ReadLine();
+
+
                         break;
 
 
@@ -193,7 +197,7 @@ namespace ETMultiToolKlassenBibliothek
 
                         Console.Write("Beispiele:\n");
 
-
+                        Console.ReadLine();
 
 
                         break;
@@ -237,7 +241,7 @@ namespace ETMultiToolKlassenBibliothek
 
             {
                 //Bedienungsanleitung und Eingabeaufforderung
-                Console.WriteLine("Leistungsgesetz\n");
+                Console.WriteLine("             ---Leistungsgesetz---\n");
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
                 Console.WriteLine("Eingabe: submenü\t->\tzurück zum Submenü\n");
                 Console.WriteLine("Über was genau möchten Sie Informationen erhalten?\n");
@@ -251,7 +255,7 @@ namespace ETMultiToolKlassenBibliothek
                     case "1":   //Möglichkeit 1 (Definition und Bedeutung)
                         Console.Clear();
 
-                        Console.Write("Leistungsgesetz --- Definiton und Bedeutung\n");
+                        Console.Write("Elektrische Leistung --- Definiton und Bedeutung\n");
 
                         Console.Write("Die elektrische Leistung gibt an wieviel elektrische Energie in einer gewissen Zeit umgesetzt wird, sie beschreibt den Energieverbrauch.");
                         Console.Write("Die elektrische Leistung beschreibt auch wieviel elektrische Energie in einer gewissen Zeit in andere Formen von Energie umgewandelt werden.\n");
@@ -268,6 +272,8 @@ namespace ETMultiToolKlassenBibliothek
                                       "Kilowatt (kW = 1*10³W) und Megawatt (MW = 1*10⁶W)");
                         Console.Write("Die verschiedenen Größen entsprechen: 1W = 1000mW, 1mW = 1000µW und 1MW = 1000kW, 1kW = 1000W");
 
+                        Console.ReadLine();
+
 
                         break;
 
@@ -275,7 +281,7 @@ namespace ETMultiToolKlassenBibliothek
                     case "2":   //Möglichkeit 2 (Formel)
                         Console.Clear();
 
-                        Console.Write("Leistungsgesetz --- Formel\n");
+                        Console.Write("Elektrische Leistung --- Formel\n");
 
                         Console.Write("Die wichtigste Formel der elektrischen Leistung lautet:\n");
 
@@ -286,8 +292,7 @@ namespace ETMultiToolKlassenBibliothek
 
                         Console.Write("Mithilfe des Ohmschen Gesetzes können weitere Formeln aus dieser hergelitten werden.");
 
-
-
+                        Console.ReadLine();
 
 
                         break;
@@ -296,11 +301,22 @@ namespace ETMultiToolKlassenBibliothek
                     case "3":   //Möglichkeit 3 (Anwendungsgebiete und Beispiele)
                         Console.Clear();
 
-                        Console.Write("");
+                        Console.Write("Die elektrische Leistung benötigt man um angeben zu können wieviel elektrische Energie in einer gewissen Zeit umgesetzt wird." +
+                                      "So kann man ausdrücken wieviel Energie z.B. ein Toaster umsetzt.");
 
+                        Console.Write("Beispiel:");
 
+                        Console.Write("Frage:");
+                        Console.Write("Eine Glühbirne wird mit der Spannung 230 Volt und einer Stromstärke von 0,2 Ampere betrieben. Welche Leistung besitzt die Glühbirne?\n\n");
 
+                        Console.Write("Lösung:");
+                        Console.Write("Du hast sowohl die Spannung U gegeben als auch die Stromstärke I, deshalb kannst du direkt die Formel benutzen und die beiden Werte einsetzen:");
+                        Console.Write("P=U*I = 230V * 0,2A = 46 Watt\n\n");
 
+                        Console.Write("Antwort:");
+                        Console.Write("Die elektrische Leistung der Glühbirne beträgt 46 Watt");
+
+                        Console.ReadLine();
 
 
                         break;
@@ -320,9 +336,6 @@ namespace ETMultiToolKlassenBibliothek
 
                         Console.WriteLine("Ungültige Eingabe");   //Anmerkung zur ungültigen Eingabe
                         Console.ReadKey();                        //Einlesung von Tastendruck
-
-
-
 
                         break;
 
