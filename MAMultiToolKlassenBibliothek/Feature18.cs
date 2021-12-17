@@ -85,10 +85,37 @@ namespace MAMultiToolKlassenBibliothek
         }
 
         static void ScheitelpunktformNormalform()
+                       
+        
         {
+            string HauptAusw;
+
+            bool Exit = false;
+            bool submenü;
+
             Console.WriteLine("ScheitelpunktformNormalForm");
             //Meine Erste Zeile
 
+            Console.WriteLine("Geben sie ihren xs Wert ein");
+            int x = Convert.ToInt32(Console.ReadLine());
+
+            switch(Console.ReadLine())
+            {
+                case"x == ":
+                    Console.Clear();
+                    ScheitelpunktformNormalform();
+                    break;
+
+                case "x == submenü":
+                    Console.Clear();
+                    submenü = true;
+                    break;
+                case "x == Exit":
+                    Exit = true;
+                    break;
+
+            }
+            
 
         }
 
