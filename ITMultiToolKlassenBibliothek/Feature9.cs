@@ -16,10 +16,17 @@ namespace ITMultiToolKlassenBibliothek
             {
 
 
+
                 int auswahl1, auswahl2;
 
                 do
                 {
+                    Console.Title = "Bandbreitenrechner";
+
+                    Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                      "                              >>> Zahlensystemen Umrechner <<<\n" +
+                                      "------------------------------------------------------------------------------------\n\n");
+
                     Console.WriteLine(" Bitte Wählen Sie Ihr Zahlensystem aus welchem Sie umwandeln möchten\n");
                     Console.WriteLine("\t1 - Hexadezimal\n");
                     Console.WriteLine("\t2 - Dezimal\n");
