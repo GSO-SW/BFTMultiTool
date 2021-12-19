@@ -45,7 +45,8 @@ namespace MAMultiToolKlassenBibliothek
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\t1 - Lineare Funktionen");
                 Console.WriteLine("\t2 - Quadratische Funktionen");
-                Console.WriteLine("\t3 - Flächenberechnung\n");
+                Console.WriteLine("\t3 - Flächenberechnung");
+                Console.WriteLine("\t4 - Satz des Pythagoras\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -72,7 +73,7 @@ namespace MAMultiToolKlassenBibliothek
 
                     case "4":
                         Console.Clear();
-                        //
+                        Feature16.Feature16Funcion1();
                         break;
 
                     case "5":
