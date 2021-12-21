@@ -100,6 +100,17 @@ namespace MAMultiToolKlassenBibliothek
 
             static void Kathete()
             {
+                Console.WriteLine
+                   (FiggleFonts.Slant.Render("BFTMultiTool"));
+
+
+                Console.Title = "BFTMultiTool";
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Berechnung der Kathete: <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+
                 Console.WriteLine("Geben Sie die Länge der Hypotenuse an:");
                 Double c = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Geben Sie die Länge der Ankathete an:");
@@ -117,7 +128,18 @@ namespace MAMultiToolKlassenBibliothek
 
             static void Ankathete()
             {
-                
+                Console.WriteLine
+                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+
+
+                Console.Title = "BFTMultiTool";
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Berechnung der Ankathete: <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+
+
                 Console.WriteLine("Geben Sie die Länge der Hypotenuse an:");
                 Double c = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Geben Sie die Länge der Kathete an:");
@@ -126,7 +148,7 @@ namespace MAMultiToolKlassenBibliothek
                 Double A = (a * a);
                 Double B = (C - A);
                 Double b = Math.Sqrt(B);
-                Console.WriteLine($"Die Kathete hat die folgende länge: {b} ");
+                Console.WriteLine($"Die Ankathete hat die folgende länge: {b} ");
 
 
 
@@ -135,7 +157,18 @@ namespace MAMultiToolKlassenBibliothek
 
             static void Hypotenuse()
             {
-                
+                Console.WriteLine
+                   (FiggleFonts.Slant.Render("BFTMultiTool"));
+
+
+                Console.Title = "BFTMultiTool";
+
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Berechnung der Hypotenuse: <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+
+
                 Console.WriteLine("Geben Sie die Länge der Kathete an:");
                 Double a = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Geben Sie die Länge der Ankathete an:");
@@ -144,7 +177,7 @@ namespace MAMultiToolKlassenBibliothek
                 Double A = (a * a);
                 Double C = (A + B);
                 Double c = Math.Sqrt(C);
-                Console.WriteLine($"Die Kathete hat die folgende länge: {c} ");
+                Console.WriteLine($"Die Hypotenuse hat die folgende länge: {c} ");
 
 
 
