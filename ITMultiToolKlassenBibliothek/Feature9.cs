@@ -204,21 +204,26 @@ namespace ITMultiToolKlassenBibliothek
                     try
                     {
                         //Die Eingabe(string) wird in ein Integer umgewandelt.
-                        //int val_dec = int.Parse(s_eingabe, NumberStyles.OctNumber);
-                        //int val_okt = ToOctal(val_dec);
+
+                        int val_okt;
+                        trypassout = int.TryParse(s_eingabe, out val_okt);
+
+                        int val_dec = ToOctal(val_okt);
+                        string val_bin = Convert.ToString(val_okt, 2);
+                        string val_hex = val_dec.ToString("X");
+
 
 
 
                         //Gibt OCT -> HEX aus wenn die zweite Auswahl 1 ist
                         if (a2 == 1)
-                            //Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 3], val_dec, z_systeme[a2 - 3]);
+                            Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], val_hex, z_systeme[a2 - 1]);
                         //Gibt OCT -> DEZ aus wenn die zweite Auswahl 3 ist
                         if (a2 == 2)
-                            //Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 3], val_okt, z_systeme[a2 - 3]);
+                            Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], val_dec, z_systeme[a2 - 1]);
                         //Gibt OKT ->BIN aus wenn die zweite Auswahl 4 ist
                         if (a2 == 4)
-                           // Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 3], Convert.ToString(val_dec, 2), z_systeme[a2 - 3]);
-
+                            Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], val_bin, z_systeme[a2 - 1]);
 
                         Console.ReadKey();
                     }
@@ -237,23 +242,27 @@ namespace ITMultiToolKlassenBibliothek
                     try
                     {
                         ////Die Eingabe(string) wird in ein Integer umgewandelt.
-                        //int val_dec = int.Parse(s_eingabe, NumberStyles.Binar);
-                        //int val_okt = ToOctal(val_dec);
+                        int val_bin;
+                        trypassout = int.TryParse(s_eingabe, out val_bin);
+
+                        int val_dec = ToOctal(val_bin);
+                        string val_okt = Convert.ToString(val_bin, 2);
+                        string val_hex = val_dec.ToString("X");
+                        //int val_dec = Convert.ToInt32(val_bin);
 
 
 
-                        ////Gibt BIN-> HEX aus wenn die zweite Auswahl 1 ist
-                        //if (a2 == 1)
-                        //    Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 2], val_dec, z_systeme[a2 - 2]);
-                        ////Gibt BIN ->OKT aus wenn die zweite Auswahl 3 ist
-                        //if (a2 == 2)
-                        //    Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 2], val_okt, z_systeme[a2 - 2]);
-                        ////Gibt BIN ->DEC aus wenn die zweite Auswahl 4 ist
-                        //if (a2 == 3)
-                        //    Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 2], Convert.ToString(val_dec, 2), z_systeme[a2 - 2]);
+                        //Gibt BIN-> HEX aus wenn die zweite Auswahl 1 ist
+                        if (a2 == 1)
+                            Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], val_hex, z_systeme[a2 - 1]);
+                        //Gibt BIN ->OKT aus wenn die zweite Auswahl 3 ist
+                        if (a2 == 2)
+                            Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], val_dec, z_systeme[a2 - 1]);
+                        //Gibt BIN ->DEC aus wenn die zweite Auswahl 4 ist
+                        if (a2 == 3)
+                            Console.WriteLine("{0} in {1}  = {2} in {3}.", s_eingabe, z_systeme[a1 - 1], val_okt, z_systeme[a2 - 1]);
 
-
-                        //Console.ReadKey();
+                        Console.ReadKey();
                     }
                     //Wenn 'try' einen Error verursacht, wird 'catch' ausgeführt
                     catch (Exception) //Gibt an welche Errortypen abgefangen werden
