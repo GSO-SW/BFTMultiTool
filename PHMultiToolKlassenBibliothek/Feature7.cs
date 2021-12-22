@@ -128,7 +128,7 @@ namespace PHMultiToolKlassenBibliothek
                     Hmenue = false;
                     //Eingabeaufforderung 
                     Console.WriteLine("Welche Information zum Aufbau?:\n");
-                    Console.WriteLine("\t1 - Vier Grundfläche der Physik");
+                    Console.WriteLine("\t1 - Vier Grundkräfte der Physik");
                     Console.WriteLine("\t2 - Woher kommt die Masse?");
                     Console.Write("Eingabe:");
                     HauptAusw = Console.ReadLine();
@@ -192,7 +192,7 @@ namespace PHMultiToolKlassenBibliothek
             do
             {
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                  "                              >>> ´Vier Grundfläche der Physik <<<\n" +
+                  "                              >>> ´Vier Grundkräfte der Physik <<<\n" +
                   "------------------------------------------------------------------------------------\n\n");
                 Console.WriteLine("");
                 Console.WriteLine("");
