@@ -269,7 +269,7 @@ namespace PHMultiToolKlassenBibliothek
                     case "4":
                         Console.Clear();
                         SiEinheit.meter();
-                        break;
+                        break; 
 
                     case "hauptmenü":
                         Console.Clear();
@@ -321,27 +321,28 @@ namespace PHMultiToolKlassenBibliothek
                 }
                 else
                 {
-                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
-
-
-                    Errorcode = false;
-                    if (doub_Eingabe >= 0)
+                    try
                     {
-                        Console.WriteLine("Berechnung:\n\n");
-                        double Kilometer = doub_Eingabe / 1000;
-                        Console.WriteLine("Wir rechnen ihre eingegebenen Meter diviert durch 1000. Ein Beispiel für Sie: 100 Meter / 1000 = 0,1 Kilometer.");
-                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Meter: {doub_Eingabe} einen Kilometerstand von: {Kilometer} Kilometer.\n");
-                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
-                        Console.ReadKey();
+                        double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+
+
+                        Errorcode = false;
+                        if (doub_Eingabe >= 0)
+                        {
+                            Console.WriteLine("Berechnung:\n\n");
+                            double Kilometer = doub_Eingabe / 1000;
+                            Console.WriteLine("Wir rechnen ihre eingegebenen Meter diviert durch 1000. Ein Beispiel für Sie: 100 Meter / 1000 = 0,1 Kilometer.");
+                            Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Meter: {doub_Eingabe} einen Kilometerstand von: {Kilometer} Kilometer.\n");
+                            Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                            Console.ReadKey();
+                        }
                     }
-                    else
+                    catch (Exception e)
                     {
                         Errorcode = true;
                         Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
                         Console.ReadKey();
                     }
-
-
                 }
 
 
@@ -374,20 +375,23 @@ namespace PHMultiToolKlassenBibliothek
                 }
                 else
                 {
-                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
-
-
-                    Errorcode = false;
-                    if (doub_Eingabe >= 0)
+                    try
                     {
-                        Console.WriteLine("Berechnung:\n\n");   
-                        double Kilometer = doub_Eingabe / 1000;
-                        Console.WriteLine("Wir rechnen ihre eingegebenen Gramm diviert durch 1000. Ein Beispiel für Sie: 100 Gramm / 1000 = 0,1 Kilogramm.");
-                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Meter: {doub_Eingabe} einen Kilogrammstand von: {Kilometer} Kilogramm.\n");
-                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
-                        Console.ReadKey();
+                        double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+
+
+                        Errorcode = false;
+                        if (doub_Eingabe >= 0)
+                        {
+                            Console.WriteLine("Berechnung:\n\n");
+                            double Kilometer = doub_Eingabe / 1000;
+                            Console.WriteLine("Wir rechnen ihre eingegebenen Gramm diviert durch 1000. Ein Beispiel für Sie: 100 Gramm / 1000 = 0,1 Kilogramm.");
+                            Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Meter: {doub_Eingabe} einen Kilogrammstand von: {Kilometer} Kilogramm.\n");
+                            Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                            Console.ReadKey();
+                        }
                     }
-                    else
+                    catch (Exception e)
                     {
                         Errorcode = true;
                         Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
@@ -427,27 +431,28 @@ namespace PHMultiToolKlassenBibliothek
                 }
                 else
                 {
-                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
-
-
-                    Errorcode = false;
-                    if (doub_Eingabe >= 0)
+                    try
                     {
-                        Console.WriteLine("Berechnung:\n\n");
-                        double Kilometer = doub_Eingabe / 60;
-                        Console.WriteLine("Wir rechnen ihre eingegebenen Minuten diviert durch 60. Ein Beispiel für Sie: 60 min / 60 = 1 Stunde.");
-                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Minuten: {doub_Eingabe} einen Stundenstand von: {Kilometer} Stunden.\n");
-                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
-                        Console.ReadKey();
+                        double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+
+
+                        Errorcode = false;
+                        if (doub_Eingabe >= 0)
+                        {
+                            Console.WriteLine("Berechnung:\n\n");
+                            double Kilometer = doub_Eingabe / 60;
+                            Console.WriteLine("Wir rechnen ihre eingegebenen Minuten diviert durch 60. Ein Beispiel für Sie: 60 min / 60 = 1 Stunde.");
+                            Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Minuten: {doub_Eingabe} einen Stundenstand von: {Kilometer} Stunden.\n");
+                            Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                            Console.ReadKey();
+                        }
                     }
-                    else
+                    catch (Exception e)
                     {
                         Errorcode = true;
                         Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
                         Console.ReadKey();
                     }
-
-
                 }
 
 
@@ -483,20 +488,23 @@ namespace PHMultiToolKlassenBibliothek
                 }
                 else
                 {
-                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
-                    double doub_Ampere = Convert.ToDouble(Ampere);
-
-                    Errorcode = false;
-                    if (doub_Eingabe >= 0)
+                    try
                     {
-                        Console.WriteLine("Berechnung:\n\n");
-                        double Kilometer = doub_Eingabe * doub_Ampere;
-                        Console.WriteLine("Wir rechnen ihre eingegebenen Volt mal Ampere. Ein Beispiel für Sie: 20 Volt * 10 Ampere = 200 Watt, kurz 200 W.");
-                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Volt: {doub_Eingabe} und Ampere: {doub_Ampere} einen Wattstand von: {Kilometer} Watt.\n");
-                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
-                        Console.ReadKey();
+                        double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+                        double doub_Ampere = Convert.ToDouble(Ampere);
+
+                        Errorcode = false;
+                        if (doub_Eingabe >= 0)
+                        {
+                            Console.WriteLine("Berechnung:\n\n");
+                            double Kilometer = doub_Eingabe * doub_Ampere;
+                            Console.WriteLine("Wir rechnen ihre eingegebenen Volt mal Ampere. Ein Beispiel für Sie: 20 Volt * 10 Ampere = 200 Watt, kurz 200 W.");
+                            Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Volt: {doub_Eingabe} und Ampere: {doub_Ampere} einen Wattstand von: {Kilometer} Watt.\n");
+                            Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                            Console.ReadKey();
+                        }
                     }
-                    else
+                    catch (Exception e)
                     {
                         Errorcode = true;
                         Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
@@ -538,6 +546,8 @@ namespace PHMultiToolKlassenBibliothek
                 }
                 else
                 {
+                try
+                {
                     double doub_Eingabe = Convert.ToDouble(str_Eingabe);
 
                     Errorcode = false;
@@ -550,13 +560,13 @@ namespace PHMultiToolKlassenBibliothek
                         Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
                         Console.ReadKey();
                     }
-                    else
+                }
+                    catch (Exception e)
                     {
                         Errorcode = true;
                         Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
                         Console.ReadKey();
                     }
-
 
                 }
 
@@ -592,19 +602,22 @@ namespace PHMultiToolKlassenBibliothek
                 }
                 else
                 {
-                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+            try
+            {
+                double doub_Eingabe = Convert.ToDouble(str_Eingabe);
 
-                    Errorcode = false;
-                    if (doub_Eingabe >= 0)
-                    {
-                        Console.WriteLine("Berechnung:\n\n");
-                        double Kilometer = doub_Eingabe / 10;
-                        Console.WriteLine("Wir rechnen ihre eingegebenen Milimeter dividiert durch 10. Ein Beispiel für Sie: 1mm / 10 = 0,1cm.");
-                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Milimeter: {doub_Eingabe} einen Centimeterstand von: {Kilometer} cm.\n");
-                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
-                        Console.ReadKey();
-                    }
-                    else
+                Errorcode = false;
+                if (doub_Eingabe >= 0)
+                {
+                    Console.WriteLine("Berechnung:\n\n");
+                    double Kilometer = doub_Eingabe / 10;
+                    Console.WriteLine("Wir rechnen ihre eingegebenen Milimeter dividiert durch 10. Ein Beispiel für Sie: 1mm / 10 = 0,1cm.");
+                    Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Milimeter: {doub_Eingabe} einen Centimeterstand von: {Kilometer} cm.\n");
+                    Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                    Console.ReadKey();
+                }
+            }
+                    catch (Exception e)
                     {
                         Errorcode = true;
                         Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
@@ -620,6 +633,8 @@ namespace PHMultiToolKlassenBibliothek
             }
             while (Subexit == false & Errorcode == true); // dcentimeter
         }
+
+
         public static void dcentimeter()
         {
             bool Subexit = false;
@@ -646,19 +661,22 @@ namespace PHMultiToolKlassenBibliothek
                 }
                 else
                 {
-                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+        try
+        {
+            double doub_Eingabe = Convert.ToDouble(str_Eingabe);
 
-                    Errorcode = false;
-                    if (doub_Eingabe >= 0)
-                    {
-                        Console.WriteLine("Berechnung:\n\n");
-                        double Kilometer = doub_Eingabe / 10;
-                        Console.WriteLine("Wir rechnen ihre eingegebenen Centimeter dividiert durch 10. Ein Beispiel für Sie: 1cm / 10 = 0,1dm.");
-                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Centimeter: {doub_Eingabe} einen Dezimeterstand von: {Kilometer} dm.\n");
-                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
-                        Console.ReadKey();
-                    }
-                    else
+            Errorcode = false;
+            if (doub_Eingabe >= 0)
+            {
+                Console.WriteLine("Berechnung:\n\n");
+                double Kilometer = doub_Eingabe / 10;
+                Console.WriteLine("Wir rechnen ihre eingegebenen Centimeter dividiert durch 10. Ein Beispiel für Sie: 1cm / 10 = 0,1dm.");
+                Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Centimeter: {doub_Eingabe} einen Dezimeterstand von: {Kilometer} dm.\n");
+                Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                Console.ReadKey();
+            }
+        }
+                    catch (Exception e)
                     {
                         Errorcode = true;
                         Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
@@ -700,19 +718,23 @@ namespace PHMultiToolKlassenBibliothek
                 }
                 else
                 {
-                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+        try
+        {
 
-                    Errorcode = false;
-                    if (doub_Eingabe >= 0)
-                    {
-                        Console.WriteLine("Berechnung:\n\n");
-                        double Kilometer = doub_Eingabe / 100;
-                        Console.WriteLine("Wir rechnen ihre eingegebenen Meter dividiert durch 100. Ein Beispiel für Sie: 1cm / 100 = 0,01m.");
-                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Centimeter: {doub_Eingabe} einen Meterstand von: {Kilometer} m.\n");
-                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
-                        Console.ReadKey();
-                    }
-                    else
+            double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+
+            Errorcode = false;
+            if (doub_Eingabe >= 0)
+            {
+                Console.WriteLine("Berechnung:\n\n");
+                double Kilometer = doub_Eingabe / 100;
+                Console.WriteLine("Wir rechnen ihre eingegebenen Meter dividiert durch 100. Ein Beispiel für Sie: 1cm / 100 = 0,01m.");
+                Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Centimeter: {doub_Eingabe} einen Meterstand von: {Kilometer} m.\n");
+                Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                Console.ReadKey();
+            }
+        }
+                    catch (Exception e)
                     {
                         Errorcode = true;
                         Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
@@ -754,19 +776,22 @@ namespace PHMultiToolKlassenBibliothek
                 }
                 else
                 {
-                    double doub_Eingabe = Convert.ToDouble(str_Eingabe);
+        try
+        {
+            double doub_Eingabe = Convert.ToDouble(str_Eingabe);
 
-                    Errorcode = false;
-                    if (doub_Eingabe >= 0)
-                    {
-                        Console.WriteLine("Berechnung:\n\n");
-                        double Kilometer = doub_Eingabe / 1000;
-                        Console.WriteLine("Wir rechnen ihre eingegebenen Meter dividiert durch 1000. Ein Beispiel für Sie: 1m / 1000 = 0,001m.");
-                        Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Meter: {doub_Eingabe} einen Kilometerstand von: {Kilometer} km.\n");
-                        Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
-                        Console.ReadKey();
-                    }
-                    else
+            Errorcode = false;
+            if (doub_Eingabe >= 0)
+            {
+                Console.WriteLine("Berechnung:\n\n");
+                double Kilometer = doub_Eingabe / 1000;
+                Console.WriteLine("Wir rechnen ihre eingegebenen Meter dividiert durch 1000. Ein Beispiel für Sie: 1m / 1000 = 0,001m.");
+                Console.WriteLine($"Somit ergibt sich bei Ihren angegebenen Meter: {doub_Eingabe} einen Kilometerstand von: {Kilometer} km.\n");
+                Console.WriteLine("Wenn Sie fertig sind, drücken Sie eine beliebige Taste, um zurückzukehren.");
+                Console.ReadKey();
+            }
+        }
+                    catch (Exception e)
                     {
                         Errorcode = true;
                         Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
