@@ -54,12 +54,12 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "1":
                         Console.Clear();
-                        //Spannungsfallberechnen();
+                        Spannungsfallberechnen();
                         break;
 
                     case "2":
                         Console.Clear();
-                        //Leitungsquerschnittberechnen();
+                        Leitungsquerschnittberechnen();
                         break;
                                             
                     case "submenü":
@@ -91,7 +91,7 @@ namespace ETMultiToolKlassenBibliothek
                 Environment.Exit(0);
         }
 
-        public static void Spannungsfallbrechnen() 
+        public static void Spannungsfallberechnen() 
         { 
         
         }
