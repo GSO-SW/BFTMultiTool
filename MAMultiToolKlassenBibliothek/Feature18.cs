@@ -14,7 +14,7 @@ namespace MAMultiToolKlassenBibliothek
 
             string HauptAusw;
 
-            bool Exit = false;
+
             bool submenü;
 
             do
@@ -61,7 +61,7 @@ namespace MAMultiToolKlassenBibliothek
                         submenü = true;
                         break;
                     case "exit":
-                        Exit = true;
+                        Environment.Exit(0);
                         break;
 
                     default:
@@ -78,56 +78,52 @@ namespace MAMultiToolKlassenBibliothek
                 }
 
 
-            } while (!Exit & !submenü);
+            } while (!submenü);
 
-            if (Exit)
-                Environment.Exit(0);
         }
 
         static void ScheitelpunktformNormalform()
                        
         
         {
-            string HauptAusw;
-
-            bool Exit = false;
-            bool submenü;
+            string HauptAusw;;
+            bool submenü = false;
             bool xserror = false;
+            decimal zahl;
+            decimal xsave;
+            decimal ysave;
+            decimal asave;
 
             Console.WriteLine("ScheitelpunktformNormalForm");
             //Meine Erste Zeile
             string xnosave;
+            
             do 
             {
 
            Console.WriteLine("Geben sie ihren xs Wert ein");
             
-              xnosave = Console.ReadLine();
-
-
-                switch (Console.ReadLine())
+              xnosave = Convert.ToString(Console.ReadLine());
+               
+                switch(xnosave)
                 {
-                    case "xnosave == ":
-                        Console.Clear();
-                        ScheitelpunktformNormalform();
-                        break;
+                   
 
-                    case "xnosave == submenü":
+                    case "submenü":
                         Console.Clear();
                         submenü = true;
                         break;
-                    case "xnosave == Exit":
-                        Exit = true;
+                    case "Exit":
+                        Environment.Exit(0);
                         break;
 
 
                     default:
-
-                        if (int.TryParse(xnosave, out int zahl))
+                        if (decimal.TryParse(xnosave, out  zahl))
                         {
                             Console.WriteLine("Erfolg! Die Eingabe war {0}.", zahl);
                             xserror = false;
-                            decimal xsave = Decimal.Parse(xnosave);
+                            xsave = Decimal.Parse(xnosave);
                             Console.WriteLine(xsave);
                            
                         }
@@ -141,132 +137,134 @@ namespace MAMultiToolKlassenBibliothek
                         
                 }
             
-            } while (xserror == true);
+            } while (submenü==false && xserror==true);
 
-                    xserror = false;
-
-
-                     Console.ReadKey();
-            bool yserror = false;
-            string ynosave;
-            decimal ysave;
-            do
-            {
-
-                Console.WriteLine("Geben sie ihren ys Wert ein");
-
-                ynosave = Console.ReadLine();
-
-
-                switch (Console.ReadLine())
-                {
-                    case "ynosave == ":
-                        Console.Clear();
-                        ScheitelpunktformNormalform();
-                        break;
-
-                    case "ynosave == submenü":
-                        Console.Clear();
-                        submenü = true;
-                        break;
-                    case "ynosave == Exit":
-                        Exit = true;
-                        break;
-
-
-                    default:
-
-
-
-
-
-                        if (int.TryParse(ynosave, out int zahl))
-                        {
-                            Console.WriteLine("Erfolg! Die Eingabe war {0}.", zahl);
-                            yserror = false;
-                            ysave = Decimal.Parse(ynosave);
-                            
-                        }
-                        else
-                        {
-                            Console.WriteLine("Misserfolg geben sie Erneut etwas für ys ein!");
-                            yserror = true;
-
-                        }
-                        break;
-                }
-
-            } while (yserror == true);
-             ysave = Decimal.Parse(ynosave);
-            yserror = false;
-            
-
+            //xserror = false;
            
-            ;
-            Console.ReadKey();
-
-            string anosave;
-            bool aerror = false;
-            decimal asave;
-            do
+            string ynosave;
+            if (submenü==false)
             {
+                Console.ReadKey();
+                bool yserror = false;
+                
+                
 
-                Console.WriteLine("Geben sie ihren ys Wert ein");
-
-                anosave = Console.ReadLine();
-
-
-                switch (Console.ReadLine())
+                do
                 {
-                    case "anosave == ":
-                        Console.Clear();
-                        ScheitelpunktformNormalform();
-                        break;
 
-                    case "anosave == submenü":
-                        Console.Clear();
-                        submenü = true;
-                        break;
-                    case "anosave == Exit":
-                        Exit = true;
-                        break;
+                    Console.WriteLine("Geben sie ihren ys Wert ein");
+
+                    ynosave = Console.ReadLine();
 
 
-                    default:
+                    switch (ynosave)
+                    {
+
+
+                        case "submenü":
+                            Console.Clear();
+                            submenü = true;
+                            break;
+                        case "Exit":
+                            Environment.Exit(0);
+                            break;
+
+
+                        default:
 
 
 
 
 
-                        if (decimal.TryParse(anosave, out decimal zahl))
-                        {
-                            Console.WriteLine("Erfolg! Die Eingabe war {0}.", zahl);
-                            aerror = false;
-                            asave = Decimal.Parse(anosave);
-                            
-                        }
-                        else
-                        {
-                            Console.WriteLine("Misserfolg geben sie Erneut etwas für ys ein!");
-                            aerror = true;
+                            if (decimal.TryParse(ynosave, out zahl))
+                            {
+                                Console.WriteLine("Erfolg! Die Eingabe war {0}.", zahl);
+                                yserror = false;
+                                ysave = Decimal.Parse(ynosave);
 
-                        }
-                        break;
-                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Misserfolg geben sie Erneut etwas für ys ein!");
+                                yserror = true;
 
-            } while (aerror == true);
-            asave = Decimal.Parse(anosave);
-            aerror = false;
+                            }
+                            break;
+                    }
+
+                } while (yserror == true && submenü == false);
+                ysave = decimal.Parse(ynosave);
+                yserror = false;
+                
+                
+               
+            }
             
+            if (submenü==false)
+            {
+                Console.ReadKey();
+
+                string anosave;
+                bool aerror = false;
+               
+                do
+                {
+
+                    Console.WriteLine("Geben sie ihren a Wert ein");
+
+                    anosave = Console.ReadLine();
+
+
+                    switch (anosave)
+                    {
+
+
+                        case "submenü":
+                            Console.Clear();
+                            submenü = true;
+                            break;
+                        case "Exit":
+                            Environment.Exit(0);
+                            break;
+
+
+                        default:
 
 
 
 
 
+                            if (decimal.TryParse(anosave, out zahl))
+                            {
+                                Console.WriteLine("Erfolg! Die Eingabe war {0}.", zahl);
+                                aerror = false;
+                                asave = Decimal.Parse(anosave);
 
+                            }
+                            else
+                            {
+                                Console.WriteLine("Misserfolg geben sie Erneut etwas für ys ein!");
+                                aerror = true;
 
+                            }
+                            break;
+                    }
 
+                } while (aerror == true && submenü == false);
+                asave = Decimal.Parse(anosave);
+                aerror = false;
+                
 
+                Console.WriteLine(asave);
+                
+
+                
+
+                
+
+            }
+            
+            
 
         }
 
