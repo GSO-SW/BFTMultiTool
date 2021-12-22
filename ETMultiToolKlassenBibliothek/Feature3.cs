@@ -77,7 +77,7 @@ namespace ETMultiToolKlassenBibliothek
 
                     default:   //sonst
 
-                        Console.WriteLine("Ungültige Eingabe");   //Anmerkung zur ungültigen Eingabe
+                        Console.WriteLine("Ungültige Eingabe");   //Anmerkung zur ungültigen Eingabe                                               
                         Console.ReadKey();                        //Einlesung von Tastendruck
 
                         (int, int) cPosAM = Console.GetCursorPosition();
@@ -132,7 +132,9 @@ namespace ETMultiToolKlassenBibliothek
 
                         Console.Write("Jedoch gilt diese Annahme nur im engem Rahmen und auch nur für bestimmte Stoffe," +
                                       " z.B. besonders bei Metallen mit konstanter Temperatur." +
-                                      "Heute wird das Ohmsche Gesetz als Definiton für Ohmsche Widerstände angesehen.");
+                                      "Heute wird das Ohmsche Gesetz als Definiton für Ohmsche Widerstände angesehen.\n\n\n\n");
+
+                        Console.Write("---Drücken sie eine beliebige Taste um zurückzukehren---");
 
                         Console.ReadKey();
 
@@ -169,7 +171,9 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Write("Man deckt nun mit der Hand den Buchstaben ab, dessen Bedeutung man ausrechnen möchte\n" +
                                       "(z.B. Sie möchten den elektrischen Widerstand(R) ausrechnen und decken deshalb R ab.\n Sie sehen nurnoch das U," +
                                       "das I und den Strich der zwischen den beiden Buchstaben steht." +
-                                      "Dieser Strich ist als geteilt zu verstehen und daher wäre die Rechnung dann U/I.");
+                                      "Dieser Strich ist als geteilt zu verstehen und daher wäre die Rechnung dann U/I.\n\n\n\n");
+
+                        Console.Write("---Drücken sie eine beliebige Taste um zurückzukehren---");
 
                         Console.ReadKey();
 
@@ -196,7 +200,14 @@ namespace ETMultiToolKlassenBibliothek
                                       "dass die Bauteile innerhalb des Stromkreises bei einem Kurzschluss oder einer Überlastung beschädigt werden. " +
                                       "Mit dem ohmschen Gesetz kann berechnet werden,\nwas für eine Sicherung für den vorliegenden Stromkreis benötigt wird.\n\n");
 
-                        Console.Write("Beispiele:\n");
+                        Console.Write("Beispiel:\n\n");
+
+                        Console.Write("Eine Glühlampe wird an eine Gleichspannungsquelle mit 12V (Volt) angeschlossen, die Stromstärke beträgt 1A (Ampere).\n" +
+                                      "Gesucht ist der Widerstand der Glühlampe, dieser lässt sich wie folgt berechnen:\n\n" +
+                                      "R = U/I = 12V/1A = 12 Ohm\n\n" +
+                                      "Der Widerstand der Glühlampe beträgt 12 Ohm.\n\n\n\n");
+
+                        Console.Write("---Drücken sie eine beliebige Taste um zurückzukehren---");
 
                         Console.ReadKey();
 
@@ -218,12 +229,12 @@ namespace ETMultiToolKlassenBibliothek
 
                         Console.WriteLine("Ungültige Eingabe");   //Anmerkung zur ungültigen Eingabe
                         Console.ReadKey();                        //Einlesung von Tastendruck
-
+                        
                         break;
 
                 }
 
-                Console.Clear();
+                Console.Clear();            //Konsole leeren
             } while (!Exit & !submenue) ;   //Schleife (Ende)
 
             if (Exit)
@@ -269,9 +280,11 @@ namespace ETMultiToolKlassenBibliothek
 
                         Console.Write("Früher wurde die elektrische Leistung in Pferdestärken(PS) angegeben. (1PS = 735,5W)\n\n");
 
-                        Console.Write("In der Elektrotechnik tritt die elektrische Leistung in folgenden Größen auf:\nMikrowatt (µW = 1*10-6W)\nMilliwatt (mW = 1*10⁻³W)\n" +
-                                      "Kilowatt (kW = 1*10³W)\nMegawatt (MW = 1*10⁶W)\n");
-                        Console.Write("Die verschiedenen Größen entsprechen: 1W = 1000mW, 1mW = 1000µW und 1MW = 1000kW, 1kW = 1000W");
+                        Console.Write("In der Elektrotechnik tritt die elektrische Leistung in folgenden Größen auf:\n\nMikrowatt (µW = 1*10-6W)\nMilliwatt (mW = 1*10^-3W)\n" +
+                                      "Kilowatt (kW = 1*10^3W)\nMegawatt (MW = 1*10^6W)\n");
+                        Console.Write("Die verschiedenen Größen entsprechen: 1MW = 1000kW, 1kW = 1000W, 1W = 1000mW, 1mW = 1000µW\n\n\n\n");
+
+                        Console.Write("---Drücken sie eine beliebige Taste um zurückzukehren---");
 
                         Console.ReadKey();
 
@@ -291,7 +304,9 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Write("Die elektrische Leistung ist das Produkt aus elektrischer Spannung und elektrischem Strom, das bedeutet das die elektrische Leistung ebenfalls vergrößert wird,\n" +
                                       "jenachdem wie groß die elektrische Spannung und der elektrische Strom ist.\n");
 
-                        Console.Write("Mithilfe des Ohmschen Gesetzes können weitere Formeln aus dieser hergelitten werden.");
+                        Console.Write("Mithilfe des Ohmschen Gesetzes können weitere Formeln aus dieser hergelitten werden.\n\n\n\n");
+
+                        Console.Write("---Drücken sie eine beliebige Taste um zurückzukehren---");
 
                         Console.ReadKey();
 
@@ -313,11 +328,13 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Write("Eine Glühbirne wird mit der Spannung 230 Volt und einer Stromstärke von 0,2 Ampere betrieben. Welche Leistung besitzt die Glühbirne?\n\n");
 
                         Console.Write("Lösung:\n");
-                        Console.Write("Du hast sowohl die Spannung U gegeben als auch die Stromstärke I, deshalb kannst du direkt die Formel benutzen und die beiden Werte einsetzen:");
+                        Console.Write("Sowohl die Spannung U ist gegeben als auch die Stromstärke I, deshalb ist es möglich direkt die Formel zu benutzen und die beiden Werte einzusetzen:");
                         Console.Write("P=U*I = 230V * 0,2A = 46 Watt\n\n");
 
                         Console.Write("Antwort:\n");
-                        Console.Write("Die elektrische Leistung der Glühbirne beträgt 46 Watt");
+                        Console.Write("Die elektrische Leistung der Glühbirne beträgt 46 Watt.\n\n\n\n");
+
+                        Console.Write("---Drücken sie eine beliebige Taste um zurückzukehren---");
 
                         Console.ReadKey();
 
@@ -344,7 +361,7 @@ namespace ETMultiToolKlassenBibliothek
 
                 }
 
-                Console.Clear();
+                Console.Clear();            //Konsole leeren
             } while (!Exit & !submenue) ;   //Schleife (Ende)
 
             if (Exit)
