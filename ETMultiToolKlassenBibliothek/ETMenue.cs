@@ -43,10 +43,11 @@ namespace ETMultiToolKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Einheitenbibliothek + Berechnungen");
-                Console.WriteLine("\t2 - Strom AufbAU ");
+                Console.WriteLine("\t1 - Wiederstand/Leistungs Berechnung");
+                Console.WriteLine("\t2 - Strom Aufbau ");
                 Console.WriteLine("\t3 - Wiederstand/Leistungs Übersicht");
-                Console.WriteLine("\t4 - Elektronische Bauelemente\n");
+                Console.WriteLine("\t4 - Elektronische Bauelemente");
+                Console.WriteLine("\t5 - Elektronische Bauelemente Version 2 \n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -72,7 +73,12 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Clear();
                         Feature4.Feature4Funcion1();
                         break;
-                                            
+
+                    case "5":
+                        Console.Clear();
+                        Feature23.Feature23Funcion1();
+                        break;
+
                     case "hauptmenü":
                         Console.Clear();
                         Hmenue = true;
