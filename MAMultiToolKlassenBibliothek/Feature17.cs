@@ -59,9 +59,7 @@ namespace MAMultiToolKlassenBibliothek
 
                         break;
 
-                    case "2":
-                        Console.Clear();
-                        Wertetabelle();
+
 
                         break;
 
@@ -95,28 +93,92 @@ namespace MAMultiToolKlassenBibliothek
 
             static void Nullstellen()
             {
-                Console.WriteLine("Nullstellen");
+                int m;
+                int b;
+                float x;
+                int num1 = 0; int num2 = 0;
 
-              
+
+
+                Console.WriteLine("Geben sie eine Steigung m ein:");         // Fordert den Nutzer auf eine Steigung einzugeben
+                m = Convert.ToInt32(Console.ReadLine());
+
+
+                Console.WriteLine("Geben sie den y-Achsenschnittpunkt b ein:");     // Fordert den Nutzer auf ein Y-achsenabschnitt einzugeben   
+                b = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("=> f(x) = " + m + "*" + "x + " + b);              // Allgemine Funktionsgleichung
+               
+
+                // Nullstellen Berechnen
+                /*
+                 * 
+                 * y = mx + b
+                 * => 0 = mx+b   |-b
+                 * => -b =mx
+                 * => x = -b/m
+                 * 
+                 */
+
+                x = -1.0f * b / m;
+                Console.WriteLine("Die Nullstelle ist: " + x);              //Ausgabe der Nullstellen
+                Console.ReadLine();
+
+
+                double sweite = 1;
+                double von = -3;
+                double bis = 3;
+
+                
+
+
+                Console.WriteLine("|{0,10}|{1,10}|","x","y");
+                Console.WriteLine("--------------------|");
+
+
+                for (double l_x=von; l_x<=bis;l_x+=sweite)
+                {
+                    Console.WriteLine("|{0,10:F2}|{1,10:F2}|",l_x,(l_x*m+b));
+                }
+
+                //Console.WriteLine($"| {x} * {-3} = " + (x * -3))
+
+                //Console.WriteLine($"Für -3 ist Das Ergebnis: {x} * {-3} = " + (x * -3));   // Ausgabe der Wertetabelle
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für -2 ist Das Ergebnis: {x} * {-2} = " + (x * -2));
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für -1 ist Das Ergebnis: {x} * {-1} = " + (x * -1));
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für 0 ist Das Ergebnis: {x} * {0} = " + (x * 0));
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für 1 ist Das Ergebnis: {x} * {1} = " + (x * 1));
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für 2 ist Das Ergebnis: {x} * {2} = " + (x * 2));
+                //Console.ReadLine();
+
+                //Console.WriteLine($"Für 3 ist Das Ergebnis: {x} * {3} = " + (x * 3));
+                //Console.ReadLine();
+
+                //Console.WriteLine("Mit diesen Zahlen können sie einen Graphen Zeichnen. Viel Erfolg!");
+                Console.ReadLine();
+
 
 
             }
 
-
-
-
-            static void Wertetabelle()
-            {
-                Console.WriteLine("Wertetabelle");
-            }
-
-
         }
 
-        }
         
+
+
     }
 
+}
 
 
 
