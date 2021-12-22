@@ -8,7 +8,7 @@ namespace ETMultiToolKlassenBibliothek
 {
     public class Feature23
     {
-        public static void Feature23Funcion4()
+        public static void Feature23Funcion1()
         {
             Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                    "                              >>> Berechnung von Wiederstand <<<\n" +

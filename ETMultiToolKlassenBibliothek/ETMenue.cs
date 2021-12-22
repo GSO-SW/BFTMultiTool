@@ -76,7 +76,7 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "5":
                         Console.Clear();
-
+                        Feature23.Feature23Funcion1();
                         break;
 
                     case "hauptmenü":
