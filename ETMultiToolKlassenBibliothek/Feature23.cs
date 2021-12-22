@@ -46,7 +46,9 @@ namespace ETMultiToolKlassenBibliothek
 
         }
         public static void Widerstand()
+        
         {
+            int Widerstand1, Widerstand2;
             Console.WriteLine("Wiederstandsberechnung eines Leiters");
 
             Console.WriteLine("Formel des Wiederstands:   R=p*l/A");
@@ -67,16 +69,17 @@ namespace ETMultiToolKlassenBibliothek
 
             do
             {
-                Console.WriteLine("Bitte geben sie ihr Material ein");
+                Console.WriteLine("Bitte wählen sie ihr Material");
                 Console.ReadLine();
-
+                _ = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Bitte geben sie ihre Länge an");
                 Console.ReadLine();
+                Double Wiederstand1 = Convert.ToDouble(Console.ReadLine());
 
                 Console.WriteLine("Geben sie die Querschnittfläche an");
                 Console.ReadLine();
 
-
+                Double Wiederstand2 = Convert.ToDouble(Console.ReadLine());
 
 
             } while (default);
