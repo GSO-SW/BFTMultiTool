@@ -107,16 +107,16 @@ namespace MAMultiToolKlassenBibliothek
 
                 switch (Console.ReadLine())
                 {
-                    case "x == ":
+                    case "xnosave == ":
                         Console.Clear();
                         ScheitelpunktformNormalform();
                         break;
 
-                    case "x == submenü":
+                    case "xnosave == submenü":
                         Console.Clear();
                         submenü = true;
                         break;
-                    case "x == Exit":
+                    case "xnosave == Exit":
                         Exit = true;
                         break;
 
@@ -149,6 +149,7 @@ namespace MAMultiToolKlassenBibliothek
                      Console.ReadKey();
             bool yserror = false;
             string ynosave;
+            decimal ysave;
             do
             {
 
@@ -159,16 +160,16 @@ namespace MAMultiToolKlassenBibliothek
 
                 switch (Console.ReadLine())
                 {
-                    case "y == ":
+                    case "ynosave == ":
                         Console.Clear();
                         ScheitelpunktformNormalform();
                         break;
 
-                    case "y == submenü":
+                    case "ynosave == submenü":
                         Console.Clear();
                         submenü = true;
                         break;
-                    case "y == Exit":
+                    case "ynosave == Exit":
                         Exit = true;
                         break;
 
@@ -183,7 +184,7 @@ namespace MAMultiToolKlassenBibliothek
                         {
                             Console.WriteLine("Erfolg! Die Eingabe war {0}.", zahl);
                             yserror = false;
-                            decimal ysave = Decimal.Parse(ynosave)
+                            ysave = Decimal.Parse(ynosave);
                             
                         }
                         else
@@ -196,13 +197,69 @@ namespace MAMultiToolKlassenBibliothek
                 }
 
             } while (yserror == true);
-            decimal ysave = Decimal.Parse(ynosave);
+             ysave = Decimal.Parse(ynosave);
             yserror = false;
             
 
            
             ;
             Console.ReadKey();
+
+            string anosave;
+            bool aerror = false;
+            decimal asave;
+            do
+            {
+
+                Console.WriteLine("Geben sie ihren ys Wert ein");
+
+                anosave = Console.ReadLine();
+
+
+                switch (Console.ReadLine())
+                {
+                    case "anosave == ":
+                        Console.Clear();
+                        ScheitelpunktformNormalform();
+                        break;
+
+                    case "anosave == submenü":
+                        Console.Clear();
+                        submenü = true;
+                        break;
+                    case "anosave == Exit":
+                        Exit = true;
+                        break;
+
+
+                    default:
+
+
+
+
+
+                        if (decimal.TryParse(anosave, out decimal zahl))
+                        {
+                            Console.WriteLine("Erfolg! Die Eingabe war {0}.", zahl);
+                            aerror = false;
+                            asave = Decimal.Parse(anosave);
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("Misserfolg geben sie Erneut etwas für ys ein!");
+                            aerror = true;
+
+                        }
+                        break;
+                }
+
+            } while (aerror == true);
+            asave = Decimal.Parse(anosave);
+            aerror = false;
+            
+
+
 
 
 
