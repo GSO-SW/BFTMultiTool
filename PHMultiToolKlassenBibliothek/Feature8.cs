@@ -151,6 +151,8 @@ namespace PHMultiToolKlassenBibliothek
                         // V= (4/3) * PI * (radius)^3
 
                         Console.WriteLine("Das Ergebnis lautet {0,10} insgesamt", dou_volumen);
+                        Console.WriteLine("Drücken Sie eine beliebige Taste, um ins Hauptmenü zu gelanden.");
+                        Console.ReadKey();
                     }
                     else
                     {
@@ -253,13 +255,11 @@ namespace PHMultiToolKlassenBibliothek
                             Console.WriteLine("Konsole wird geloescht !");
                             Console.Read();
                         }
-
                     }
                 }
 
                 Console.Clear();
             } while (parse_value == false && submenü == false);
-
         }
 
 
