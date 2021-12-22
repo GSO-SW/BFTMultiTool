@@ -116,7 +116,7 @@ namespace WIMultiToolKlassenBibliothek
                     Console.WriteLine("Wir Bedanken uns das sie unseren Programm verwenden");                            //Bedanken auf ganz süß
                     Console.ReadLine();                                                                                  //Programm schließen
                 }
-                else if (num1 > 11000 & num1 <= 18000)                                                                  //wenn größer als 11000 und kleiner gleich 18000 ist
+                else if (num1 >= 11000 & num1 <= 18000)                                                                  //wenn größer als 11000 und kleiner gleich 18000 ist
                 {
 
                     Console.WriteLine($"Ihre Lohnsteuer Beträgt:" + (num1 / 100 * 25 + "Euro"));                      //ausrechnen und Lohnsteuer ausgeben
