@@ -45,7 +45,7 @@ namespace PHMultiToolKlassenBibliothek
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\t1 - Maßeinheiten umrechnen"); // Objekt Volumen berechnen     Schwerkraft berechnen      Maßeinheiten umrechnen      Feature8 (Noch nicht verfügbar)
                 Console.WriteLine("\t2 - Schwerkraft berechnen");
-                Console.WriteLine("\t3 - Feature8 (Noch nicht verfügbar)");
+                Console.WriteLine("\t3 - Infos - Aufbau und Struktur der Materie");
                 Console.WriteLine("\t4 - Objekt Volumen berechnen\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
