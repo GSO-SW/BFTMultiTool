@@ -14,6 +14,9 @@ namespace PHMultiToolKlassenBibliothek
         {
             bool Subexit = false;
             bool Errorcode=false;
+ 
+            
+
             do
             {
                 Console.WriteLine
@@ -36,40 +39,46 @@ namespace PHMultiToolKlassenBibliothek
                 Console.WriteLine("\nGeben Sie nun Ihr Gewicht ein. Wenn Sie ins Submenü zurück wollen, geben Sie Subexit in die Eingabe ein.");
                 string str_Gewicht = Console.ReadLine();
 
-                if(str_Gewicht=="Subexit")
+                if (str_Gewicht == "Subexit")
                 {
-                    Subexit = true;
+               
                 }
                 else
                 {
-                    double doub_Gewicht = Convert.ToDouble(str_Gewicht);
-
-
-                    Errorcode = false;
-                    if (doub_Gewicht >= 0) 
+                    try
                     {
-                        Console.WriteLine("Berechnung:\n");
-                        double ausgabe;
-                        double ausgabe2;
-                        ausgabe = doub_Gewicht * 9.81;
-                        ausgabe2 = doub_Gewicht * 1.62;
-                        Console.WriteLine($"Ihre Berechnung auf der Erde lautet: {doub_Gewicht} * 9.81.");  
-                        Console.WriteLine($"Somit ist ihre Schwerkraft auf der Erde {ausgabe}.\n");
-                        Console.WriteLine($"Ihre Berechnung auf dem Mond lautet: {doub_Gewicht} * 1.62");
-                        Console.WriteLine($"Somit ist ihre Schwerkraft auf dem Mond {ausgabe2}.\n");
-                        Console.WriteLine($"Ihr Körpergewicht auf dem Mond beträgt {doub_Gewicht / 6} Kg.\n\n");
-                        Console.WriteLine("Sobald Sie fertig sind, drücken Sie eine beliebige Taste um ins Hauptmenü zu gelangen.");
-                        Console.ReadKey();
+                        double doub_Gewicht = Convert.ToDouble(str_Gewicht);
+
+
+                        Errorcode = false;
+                        if (doub_Gewicht >= 0)
+                        {
+                            Console.WriteLine("Berechnung:\n");
+                            double ausgabe1;
+                            double ausgabe2;
+                            ausgabe1 = doub_Gewicht * 9.81;
+                            ausgabe2 = doub_Gewicht * 1.62;
+                            Console.WriteLine($"Ihre Berechnung auf der Erde lautet: {doub_Gewicht} * 9.81.");
+                            Console.WriteLine($"Somit ist ihre Schwerkraft auf der Erde {ausgabe1}.\n");
+                            Console.WriteLine($"Ihre Berechnung auf dem Mond lautet: {doub_Gewicht} * 1.62");
+                            Console.WriteLine($"Somit ist ihre Schwerkraft auf dem Mond {ausgabe2}.\n");
+                            Console.WriteLine($"Ihr Körpergewicht auf dem Mond beträgt {doub_Gewicht / 6} Kg.\n\n");
+                            Console.WriteLine("Sobald Sie fertig sind, drücken Sie eine beliebige Taste um ins Hauptmenü zu gelangen.");
+                            Console.ReadKey();
+                        }
                     }
-                    else
+                    catch (Exception e)
                     {
                         Errorcode = true;
-                        Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein");
+                        Console.WriteLine("Fehler, geben Sie eine Zahl größer als 0 ein. Drücken Sie eine beliebige Taste, um die Rechnung erneut einzugeben!");
                         Console.ReadKey();
                     }
 
 
                 }
+
+
+
 
 
                 Console.Clear();
