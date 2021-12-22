@@ -125,10 +125,11 @@ namespace MAMultiToolKlassenBibliothek
                 Console.ReadLine();
 
 
-                double sweite = 0.001;
-                double von = -10;
-                double bis = 10;
+                double sweite = 1;
+                double von = -3;
+                double bis = 3;
 
+                
 
 
                 Console.WriteLine("|{0,10}|{1,10}|","x","y");
