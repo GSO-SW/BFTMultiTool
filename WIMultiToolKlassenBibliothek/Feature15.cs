@@ -167,10 +167,10 @@ namespace WIMultiToolKlassenBibliothek
                     wiederholen = true;
                 }
                 else if (Wort == "nein")                                                                            //bei nein zurück ins menu
-                { 
+                {
                     wiederholen = false;
                 }
-                    Console.Clear();                                                                                    //macht die anderen zeichen da weg
+                Console.Clear();                                                                                    //macht die anderen zeichen da weg
             } while (wiederholen);
 
 
