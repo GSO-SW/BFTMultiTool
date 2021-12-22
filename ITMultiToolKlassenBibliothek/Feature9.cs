@@ -208,7 +208,7 @@ namespace ITMultiToolKlassenBibliothek
                         int val_okt;
                         trypassout = int.TryParse(s_eingabe, out val_okt);
 
-                        int val_dec = ToOctal(val_okt);
+                        int val_dec = OktalToDecimal(val_okt);
                         string val_bin = Convert.ToString(val_okt, 2);
                         string val_hex = val_dec.ToString("X");
 
@@ -245,10 +245,13 @@ namespace ITMultiToolKlassenBibliothek
                         int val_bin;
                         trypassout = int.TryParse(s_eingabe, out val_bin);
 
-                        int val_dec = ToOctal(val_bin);
-                        string val_okt = Convert.ToString(val_bin, 2);
+                        int val_dec = BinToDecimal(val_bin);
+
+
+                        int val_okt = ToOctal(val_dec);
+
                         string val_hex = val_dec.ToString("X");
-                        //int val_dec = Convert.ToInt32(val_bin);
+
 
 
 
@@ -288,6 +291,38 @@ namespace ITMultiToolKlassenBibliothek
                 return 0;
             }
             return x % 8 + 10 * ToOctal(x / 8);
+        }
+
+
+        public static int OktalToDecimal(int temp)
+        {
+            int Decimal_Number = 0;
+            int BASE = 1;
+
+            while (temp > 0)
+            {
+                int last_digit = temp % 10;
+                temp /= 10;
+                Decimal_Number += last_digit * BASE;
+                BASE *= 8;
+            }
+
+            return Decimal_Number;
+        }
+
+        public static int BinToDecimal(int binaryNumber)
+        {
+            int decimalValue=0;
+            int base1 = 1;
+            while (binaryNumber > 0)
+            {
+                int reminder = binaryNumber % 10;
+                binaryNumber = binaryNumber / 10;
+                decimalValue += reminder * base1;
+                base1 = base1 * 2;
+            }
+
+            return decimalValue;
         }
         #endregion
 
