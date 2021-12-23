@@ -44,7 +44,7 @@ namespace ETMultiToolKlassenBibliothek
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\t1 - Einheitenbibliothek + Berechnungen");
-                Console.WriteLine("\t2 - Strom Aufbau ");
+                Console.WriteLine("\t2 - Strom AufbAU ");
                 Console.WriteLine("\t3 - Wiederstand/Leistungs Übersicht");
                 Console.WriteLine("\t4 - Elektronische Bauelemente\n");
                 Console.Write("Eingabe:");
