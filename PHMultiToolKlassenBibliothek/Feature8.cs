@@ -220,10 +220,6 @@ namespace PHMultiToolKlassenBibliothek
 
                     }
 
-                }
-
-                if (submenü == true)
-                {
                     Console.WriteLine("Bitte geben sie die grundfläche ein ein");
                     str_grundfläche = Console.ReadLine();
 
@@ -252,11 +248,13 @@ namespace PHMultiToolKlassenBibliothek
                             Console.WriteLine("Das Ergebnis lautet: {0,10}", dou_volumen);
 
                             // Bildschirm löschen
-                            Console.WriteLine("Konsole wird geloescht !");
+                            Console.WriteLine("Konsole wird gelöscht, bitte eine beliebige Taste drücken!");
                             Console.Read();
                         }
                     }
+
                 }
+
 
                 Console.Clear();
             } while (parse_value == false && submenü == false);
@@ -314,10 +312,6 @@ namespace PHMultiToolKlassenBibliothek
 
                     }
 
-                }
-
-                if (submenü == true)
-                {
                     Console.WriteLine("Bitte geben sie die höhe ein ein");
                     str_höhe = Console.ReadLine();
 
@@ -346,11 +340,12 @@ namespace PHMultiToolKlassenBibliothek
                             Console.WriteLine("Das Ergebnis lautet: {0,10}", dou_volumen);
 
                             // Bildschirm löschen
-                            Console.WriteLine("Konsole wird geloescht !");
+                            Console.WriteLine("Konsole wird gelöscht, bitte eine beliebige Taste drücken!");
                             Console.Read();
                         }
 
                     }
+
                 }
 
                 Console.Clear();
@@ -358,6 +353,8 @@ namespace PHMultiToolKlassenBibliothek
         }
     }
 }
+
+
 
 
         
