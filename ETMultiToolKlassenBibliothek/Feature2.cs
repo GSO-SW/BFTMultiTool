@@ -426,7 +426,7 @@ namespace ETMultiToolKlassenBibliothek
                 Console.WriteLine("Der Spannungsabfall beträgt {0:N2} Volt oder auch {1:N2} % und bei ihnen kommen somit {2:N2} Volt an \n(Der Spannungsfall kann sich leicht ändern bei anderen Temperaturen als 20°C)", spannungsfall, spannungsfall / (volt / 100), volt - spannungsfall);
                 Console.ReadKey();
             }
-        }
+
         #endregion
 
         #region Leitungsquerschnitt

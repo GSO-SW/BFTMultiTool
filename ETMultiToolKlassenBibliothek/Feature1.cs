@@ -22,6 +22,7 @@ namespace ETMultiToolKlassenBibliothek
 
             do
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 (int, int) cPosBM = Console.GetCursorPosition();
 
                 Console.WriteLine();
@@ -34,7 +35,7 @@ namespace ETMultiToolKlassenBibliothek
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Einheitenbiliothek + Berechnungen SubSubmenü <<<\n" +
+                                  "                              >>> Berechnungen Ohm'sches & Leistungsgesetz SubSubmenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t\t->\tbeendet das Programm");
@@ -47,8 +48,9 @@ namespace ETMultiToolKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Spannung als Energieaufteilung berechnen");
-                Console.WriteLine("\t2 - Strom aus Ladungen je Zeit berechnen\n");
+                Console.WriteLine("\t1 - Ohm'sches Gesetz berechnen");
+                Console.WriteLine("\t2 - Leistungsgesetz berechnen\n");
+                         
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
@@ -57,12 +59,12 @@ namespace ETMultiToolKlassenBibliothek
 
                     case "1":
                         Console.Clear();
-                        //SpannungalsEnergieaufteiling();
+                        OhmschesGesetzberechnen();
                         break;
 
                     case "2":
                         Console.Clear();
-                        StromausLadungjeZeit();
+                        ElektrischeLeistungBerechnen();
                         break;
                                           
                     case "submenü":
@@ -81,9 +83,9 @@ namespace ETMultiToolKlassenBibliothek
 
                         (int, int) cPosAM = Console.GetCursorPosition();
 
-
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
 
+                        Console.ResetColor();
                         break;
                 }
 
@@ -96,29 +98,263 @@ namespace ETMultiToolKlassenBibliothek
         #endregion
 
         #region Rechnungen
-        public static void SpannungalsEnergieaufteiling() 
-        { 
-               
-               
-        }
-
-        public static void StromausLadungjeZeit() 
+        public static void OhmschesGesetzberechnen() 
         {
-            double time;
-            double charge;
 
-            Console.WriteLine("Geben sie die Zeit in Sekunden ein!");
-            time = Convert.ToDouble(Console.ReadLine());
+            Console.Clear();
 
-            Console.WriteLine("Geben sie nun noch ihren Wert für die elektrische Ladung in Ampere ein!");
-            charge = Convert.ToDouble(Console.ReadLine());
+            double P;
+            double I;
+            double U;
+            string choose;
+            bool Exit = false;
+            bool subsubmenü;
 
-            double stromstärke = charge / time;
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                 "                              >>> Berechnung Ohm'sches Gesetz <<<\n" +
+                                 "------------------------------------------------------------------------------------\n\n");
 
-            Console.WriteLine("Die Strom stärke beträgt: " + stromstärke);
-            Console.ReadKey();
-            Console.Clear();      
+                Console.WriteLine("Welchen Wert wollen sie berechnen:\n" + "Die Spannung (1)\n" + "Die Stromstärke (2)\n" + "Den Widerstand (3)\n"
+                     + "Wenn sie das Programm beenden wollen (Exit)\n" + "Wenn sie zu dem vorherigen Menü zurückkehren wollen (submenü)");
+                choose = Convert.ToString(Console.ReadLine());
+                                
+                subsubmenü = false;
+
+                switch (choose)
+                {
+                    case "1":
+
+                        try
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Geben Sie ihren Wert für die Elektische Leistung (P) ein");
+                            P = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischem Strom (I) ein");
+                            I = Convert.ToDouble(Console.ReadLine());
+
+                            U = P / I;
+
+                            Console.WriteLine("Ihr Wert für die elektrische Spannung beträgt {0} Volt!", U);
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Bitte geben sie nur Zeichen in dem richtigen Format ein");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+
+                        break;
+
+                    case "2":
+                        try
+                        {
+
+                            Console.Clear();
+                            Console.WriteLine("Geben Sie ihren Wert für die elektrische Leistung (P) ein");
+                            P = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine("Geben sie nun noch Ihren Wert für die elektrische Spannung (U) ein");
+                            U = Convert.ToDouble(Console.ReadLine());
+
+                            I = P / U;
+
+                            Console.WriteLine("Ihr Wert für Stromstärke beträgt {0} Ampere", I);
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Bitte geben sie nur Zeichen in dem richtigen Format ein");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        break;
+
+                    case "3":
+                        try
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Geben Sie ihren Wert für die elektrische Spannung (U) ein");
+                            U = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischen Strom (I) ein");
+                            I = Convert.ToDouble(Console.ReadLine());
+
+                            P = U * I;
+
+                            Console.WriteLine("Ihr Wert für die elektrische Leistung beträgt {0}", P);
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Bitte geben sie nur Zeichen in dem richtigen Format ein");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        break;
+
+                    case "Exit":
+                                                
+                        Console.Clear();
+                        Exit = true;
+                        break;
+
+                    case "submenü":
+                       
+                        Console.Clear();
+                        subsubmenü = true;             
+                        break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Ungültige Eingabe");
+                        Console.ReadKey();                                           
+                        Console.Clear();
+                        break;
+
+                }
+
+                Console.ResetColor();
+                
+            } while (!Exit & !subsubmenü);
+
+            if (Exit)
+                Environment.Exit(0);
+
         }
-        #endregion
+
+        public static void ElektrischeLeistungBerechnen()
+        {
+
+            Console.Clear();
+
+            double P;
+            double U;
+            double I;
+            string choose;
+            bool Exit = false;
+            bool subsubmenü;
+
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                 "                              >>> Berechnung Elektrisches Gesetz <<<\n" +
+                                 "------------------------------------------------------------------------------------\n\n");
+
+                Console.WriteLine("Welchen Wert wollen sie berechnen:\n" + "Die elektrische Spannung (1) \n" + "Der elektrischem Strom (2)\n" + "Die Elektrische Leistung (3)\n"
+                    + "Wenn sie das Programm beenden wollen (Exit)\n" + "Wenn sie zu dem vorherigen Menü zurückkehren wollen (subsubmenü)");
+                choose = Convert.ToString(Console.ReadLine());
+                                
+                subsubmenü = false;
+
+                switch (choose)
+                {
+                    case "1":
+                        try
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Geben Sie ihren Wert für die Elektische Leistung (P) ein");
+                            P = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischem Strom (I) ein");
+                            I = Convert.ToDouble(Console.ReadLine());
+
+                            U = P / I;
+
+                            Console.WriteLine("Ihr Wert für die elektrische Spannung beträgt {0} Volt!", U);
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Bitte geben sie nur Zeichen in dem richtigen Format ein");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        break;
+
+                    case "2":
+                        try
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Geben Sie ihren Wert für die elektrische Leistung (P) ein");
+                            P = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine("Geben sie nun noch Ihren Wert für die elektrische Spannung (U) ein");
+                            U = Convert.ToDouble(Console.ReadLine());
+
+                            I = P / U;
+
+                            Console.WriteLine("Ihr Wert für Stromstärke beträgt {0} Ampere", I);
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Bitte geben sie nur Zeichen in dem richtigen Format ein");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        break;
+
+                    case "3":
+                        try 
+                        { 
+                        Console.Clear();
+                        Console.WriteLine("Geben Sie ihren Wert für die elektrische Spannung (U) ein");
+                        U = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischen Strom (I) ein");
+                        I = Convert.ToDouble(Console.ReadLine());
+
+                        P = U * I;
+
+                        Console.WriteLine("Ihr Wert für die elektrische Leistung beträgt {0} Watt", P);
+                        Console.ReadKey();
+                        Console.Clear();
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Bitte geben sie nur Zeichen in dem richtigen Format ein");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        break;
+                    
+                    case "Exit":
+                        Console.Clear();
+                        Exit = true;
+                        break;
+                   
+                    case "subsubmenü":
+                        Console.Clear();
+                        subsubmenü = true;
+                        break;
+                    
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Ungültige Eingabe");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+
+                }
+
+                Console.ResetColor();
+
+            } while(!Exit & !subsubmenü);
+
+            if (Exit)
+                Environment.Exit(0);
+        }
+        #endregion;
     }
 }
