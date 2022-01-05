@@ -42,7 +42,8 @@ namespace ETMultiToolKlassenBibliothek
                 Console.WriteLine("Eingabe: submenü\t->\tzurück zum Submenü");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\nBeschreibung Bereich \n\n");
+                Console.WriteLine("\n\nWillkommen in dem SubSubmenü Ohm'sches und Leistungs Gesetz berechnen!\n\n"
+                                       + "In diesem Untermenü können sie alleine mit der Eingabe zweier Ziffern, alle Werte der Formel des Ohm'schen und des Leistungs Gesetzes ermitteln!\n\n");
 
                 Hmenue = false;
 
