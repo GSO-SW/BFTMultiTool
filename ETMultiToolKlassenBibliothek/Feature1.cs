@@ -104,7 +104,7 @@ namespace ETMultiToolKlassenBibliothek
 
             Console.Clear();
 
-            double P;
+            double R;
             double I;
             double U;
             string choose;
@@ -131,13 +131,13 @@ namespace ETMultiToolKlassenBibliothek
                         try
                         {
                             Console.Clear();
-                            Console.WriteLine("Geben Sie ihren Wert für die Elektische Leistung (P) ein");
-                            P = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Geben Sie ihren Wert für den elektrischen Widerstand (R) ein");
+                            R = Convert.ToDouble(Console.ReadLine());
 
                             Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischem Strom (I) ein");
                             I = Convert.ToDouble(Console.ReadLine());
 
-                            U = P / I;
+                            U = R * I;
 
                             Console.WriteLine("Ihr Wert für die elektrische Spannung beträgt {0} Volt!", U);
                             Console.ReadKey();
@@ -157,13 +157,13 @@ namespace ETMultiToolKlassenBibliothek
                         {
 
                             Console.Clear();
-                            Console.WriteLine("Geben Sie ihren Wert für die elektrische Leistung (P) ein");
-                            P = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Geben Sie ihren Wert für den elektrischen Widerstand (R) ein");
+                            R = Convert.ToDouble(Console.ReadLine());
 
                             Console.WriteLine("Geben sie nun noch Ihren Wert für die elektrische Spannung (U) ein");
                             U = Convert.ToDouble(Console.ReadLine());
 
-                            I = P / U;
+                            I = U / R;
 
                             Console.WriteLine("Ihr Wert für Stromstärke beträgt {0} Ampere", I);
                             Console.ReadKey();
@@ -187,9 +187,9 @@ namespace ETMultiToolKlassenBibliothek
                             Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischen Strom (I) ein");
                             I = Convert.ToDouble(Console.ReadLine());
 
-                            P = U * I;
+                            R = U / I;
 
-                            Console.WriteLine("Ihr Wert für die elektrische Leistung beträgt {0}", P);
+                            Console.WriteLine("Ihr Wert für den elektrischen Widerstand beträgt {0}", R);
                             Console.ReadKey();
                             Console.Clear();
                         }
@@ -247,10 +247,10 @@ namespace ETMultiToolKlassenBibliothek
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                 "                              >>> Berechnung Elektrisches Gesetz <<<\n" +
+                                 "                              >>> Berechnung elektrisches Gesetz <<<\n" +
                                  "------------------------------------------------------------------------------------\n\n");
 
-                Console.WriteLine("Welchen Wert wollen sie berechnen:\n" + "Die elektrische Spannung (1) \n" + "Der elektrischem Strom (2)\n" + "Die Elektrische Leistung (3)\n"
+                Console.WriteLine("Welchen Wert wollen sie berechnen:\n" + "Die elektrische Spannung (1) \n" + "Der elektrischem Strom (2)\n" + "Die elektrische Leistung (3)\n"
                     + "Wenn sie das Programm beenden wollen (Exit)\n" + "Wenn sie zu dem vorherigen Menü zurückkehren wollen (subsubmenü)");
                 choose = Convert.ToString(Console.ReadLine());
                                 
@@ -262,7 +262,7 @@ namespace ETMultiToolKlassenBibliothek
                         try
                         {
                             Console.Clear();
-                            Console.WriteLine("Geben Sie ihren Wert für die Elektische Leistung (P) ein");
+                            Console.WriteLine("Geben Sie ihren Wert für die elektische Leistung (P) ein");
                             P = Convert.ToDouble(Console.ReadLine());
 
                             Console.WriteLine("Geben Sie nun noch ihren Wert für den elektrischem Strom (I) ein");
