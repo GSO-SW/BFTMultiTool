@@ -118,8 +118,8 @@ namespace ETMultiToolKlassenBibliothek
                                  "                              >>> Berechnung Ohm'sches Gesetz <<<\n" +
                                  "------------------------------------------------------------------------------------\n\n");
 
-                Console.WriteLine("Welchen Wert wollen sie berechnen:\n" + "Die Spannung (1)\n" + "Die Stromstärke (2)\n" + "Den Widerstand (3)\n"
-                     + "Wenn sie das Programm beenden wollen (Exit)\n" + "Wenn sie zu dem vorherigen Menü zurückkehren wollen (submenü)");
+                Console.WriteLine("Welchen Wert wollen sie berechnen:\n" + "1 - Die Spannung\n" + "2 - Die Stromstärke\n" + "3 - Den Widerstand\n"
+                     + "Exit - Wenn sie das Programm beenden wollen\n" + "subsubmenü - Wenn sie zu dem vorherigen Menü zurückkehren wollen");
                 choose = Convert.ToString(Console.ReadLine());
                                 
                 subsubmenü = false;
@@ -189,7 +189,7 @@ namespace ETMultiToolKlassenBibliothek
 
                             R = U / I;
 
-                            Console.WriteLine("Ihr Wert für den elektrischen Widerstand beträgt {0}", R);
+                            Console.WriteLine("Ihr Wert für den elektrischen Widerstand beträgt {0} Ohm", R);
                             Console.ReadKey();
                             Console.Clear();
                         }
@@ -207,7 +207,7 @@ namespace ETMultiToolKlassenBibliothek
                         Exit = true;
                         break;
 
-                    case "submenü":
+                    case "subsubmenü":
                        
                         Console.Clear();
                         subsubmenü = true;             
@@ -250,8 +250,8 @@ namespace ETMultiToolKlassenBibliothek
                                  "                              >>> Berechnung elektrisches Gesetz <<<\n" +
                                  "------------------------------------------------------------------------------------\n\n");
 
-                Console.WriteLine("Welchen Wert wollen sie berechnen:\n" + "Die elektrische Spannung (1) \n" + "Der elektrischem Strom (2)\n" + "Die elektrische Leistung (3)\n"
-                    + "Wenn sie das Programm beenden wollen (Exit)\n" + "Wenn sie zu dem vorherigen Menü zurückkehren wollen (subsubmenü)");
+                Console.WriteLine("Welchen Wert wollen sie berechnen:\n" + "1 - Die elektrische Spannung\n" + "2 - Der elektrischem Strom\n" + "3 - Die elektrische Leistung (3)\n"
+                    + "Exit - Wenn sie das Programm beenden wollen\n" + "subsubmenü - Wenn sie zu dem vorherigen Menü zurückkehren wollen");
                 choose = Convert.ToString(Console.ReadLine());
                                 
                 subsubmenü = false;
