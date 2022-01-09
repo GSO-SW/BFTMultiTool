@@ -56,7 +56,7 @@ namespace ETMultiToolKlassenBibliothek
                     
                     case "1":
                         Console.Clear();
-                        Feature1.Feature1Funcion1(); //Mit diesem Feature lassen sich viele Formen der Et berechnen 
+                        Feature1.Feature1Funcion1(); //Mit diesem Feature lässt sich das Ohmsche Gesetz und das Leistungsgesetz berechnen
                         break;
 
                     case "2":
