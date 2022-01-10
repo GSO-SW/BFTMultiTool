@@ -17,12 +17,16 @@ namespace ITMultiToolKlassenBibliothek
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Bandbreitenrechner <<<\n" +
+
                                  "hauptmenü um ins Hauptmenü zu gelangen\n" +
                                  "exit um das Programm zu beenden\n" +
+
+
                                   "------------------------------------------------------------------------------------\n\n");
                 string strds = null;
                 try
                 {
+
                     int ds = 0;
                     do
                     {
@@ -47,6 +51,15 @@ namespace ITMultiToolKlassenBibliothek
                             Console.WriteLine("Falsche Angabe Internetgeschwindigkeit sollte über 0 liegen.");
                         }
                     } while (igs <= 0);
+
+                    
+                    Console.Write("Geben sie ihre Downloadgröße in MB ein:");
+                    strds = Console.ReadLine();
+                    int ds = Convert.ToInt32(strds);
+                    Console.Write("Geben sie ihre Internetgeschwindigkeit in Mbit ein:");
+                    strds = Console.ReadLine();
+                    int igs = Convert.ToInt32(strds);
+
                     int tsec = ds * 8 / igs;
                     int std = tsec / 3600;
                     int rsec = tsec % 3600;
