@@ -37,7 +37,8 @@ namespace ETMultiToolKlassenBibliothek
                 Console.WriteLine("Eingabe: hauptmenü\t->\tzurück zum Hauptmenü");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\nBeschreibung Bereich \n\n");
+                Console.WriteLine("\n\nMit Hilfe dieses SubMenues, können sie ganz simpel häufig auftretende" 
+                                    + " Problemstellungen im Elektrotechnik Unterricht lösen\n\n");
 
                 Hmenue = false;
 
