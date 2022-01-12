@@ -125,7 +125,6 @@ namespace MAMultiToolKlassenBibliothek
                                 Console.WriteLine("Erfolg! Die Eingabe war {0}.", zahl);
                                 xserror = false;
                                 xsave = Decimal.Parse(xnosave);
-                                Console.WriteLine(xsave);
 
                             }
                             else
@@ -145,7 +144,6 @@ namespace MAMultiToolKlassenBibliothek
                 string ynosave;
                 if (submenü == false)
                 {
-                    Console.ReadKey();
                     bool yserror = false;
 
 
@@ -194,7 +192,7 @@ namespace MAMultiToolKlassenBibliothek
                         }
 
                     } while (yserror == true && submenü == false);
-                    ysave = decimal.Parse(ynosave);
+                    
                     yserror = false;
 
 
@@ -203,7 +201,7 @@ namespace MAMultiToolKlassenBibliothek
 
                 if (submenü == false)
                 {
-                    Console.ReadKey();
+ 
 
                     string anosave;
                     bool aerror = false;
@@ -255,7 +253,7 @@ namespace MAMultiToolKlassenBibliothek
 
 
                     } while (aerror == true && submenü == false);
-                    asave = Decimal.Parse(anosave);
+                   
                     aerror = false;
 
 
@@ -267,9 +265,9 @@ namespace MAMultiToolKlassenBibliothek
                     //f(x)=a*(x-xs)^2 +ys
 
                     //f(x)=ax^2 +bx+c
-
-                    Console.WriteLine($"f(x)={asave}*(x-{xsave})^2 +{ysave}"); // s(-5/8)
-                    Console.WriteLine($"f(x)={asave}*(x-{xsave})^2 +{ysave}");
+                    Console.WriteLine("so lautet nun ihre Scheitelpunktform:");
+                    Console.WriteLine($"\nf(x)={asave}*(x-{xsave})^2 +{ysave}"); // s(-5/8)
+                    
 
                     decimal klammer1 = 0;
                     decimal klammer2 = 0;
@@ -283,11 +281,17 @@ namespace MAMultiToolKlassenBibliothek
                     {
                         klammer1 = xsave * 2;
                         klammer2 = xsave * xsave;
-                        Console.WriteLine($"f(x)={asave}*(x²{klammer1}x+{klammer2})+{ysave}");
+                        Console.WriteLine("Als erstes wird die erste Binomische Formel angewendet.\nDies wird in der Klammer gekennzeichnet.");
+                       
+                        
+                        Console.WriteLine($"\nf(x)={asave}*(x²{klammer1}x{klammer2})+{ysave}");
 
                         aMAL = (asave * klammer1) * -1;
                         aMAL2 = asave * klammer2 + ysave;
-                        Console.WriteLine($"f(x)={asave}x²+{aMAL}+{aMAL2}");
+                        Console.WriteLine("Jetzt wird die Klammer ausmultipliziert.");
+                        
+                        
+                        Console.WriteLine($"Hier ist ihre Quadratische Funktion:\n\nf(x)={asave}x²+{aMAL}x+{aMAL2}");
 
 
 
@@ -300,11 +304,20 @@ namespace MAMultiToolKlassenBibliothek
                     {
                         klammer1 = xsave * 2;
                         klammer2 = xsave * xsave;
+
+
+                        Console.WriteLine("Als erstes wird die erste Binomische Formel angewendet.\nDies wird in der Klammer gekennzeichnet.");
+                   
+
                         Console.WriteLine($"f(x)={asave}*(x²{klammer1}x+{klammer2})+{ysave}");
 
                         aMAL = asave * klammer1;
                         aMAL2 = asave * klammer2 + ysave;
-                        Console.WriteLine($"f(x)={asave}x²-{aMAL}+{aMAL2}");
+
+
+                        Console.WriteLine("Jetzt wird die Klammer ausmultipliziert.");
+                        
+                        Console.WriteLine($"Hier ist ihre Quadratische Funktion:\n\nf(x)={asave}x²+{aMAL}x+{aMAL2}");
 
                         Console.ReadKey();
                     }
@@ -312,10 +325,10 @@ namespace MAMultiToolKlassenBibliothek
 
                 Console.Clear();
             } while (submenü == false);
-            
+         
 
-           
-        
+
+
         }
 
 
