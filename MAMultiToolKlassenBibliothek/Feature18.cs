@@ -93,8 +93,10 @@ namespace MAMultiToolKlassenBibliothek
             decimal xsave=0;
             decimal ysave=0;
             decimal asave=0;
-            do
+            Console.WriteLine("Hallo\n Wollen sie zurück? geben sie submenü ein.\n wollen sie das Progamm komplett schließen? Geben sie Exit ein. Wollen sie das Feature benutzen? fahren sie fort.");
+            do    
             {
+
                 Console.WriteLine("ScheitelpunktformNormalForm");
                 //Meine Erste Zeile
                 string xnosave;
