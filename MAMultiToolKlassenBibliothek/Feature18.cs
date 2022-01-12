@@ -93,8 +93,10 @@ namespace MAMultiToolKlassenBibliothek
             decimal xsave=0;
             decimal ysave=0;
             decimal asave=0;
-            do
+            Console.WriteLine("Hallo\n Wollen sie zurück? geben sie submenü ein.\n wollen sie das Progamm komplett schließen? Geben sie Exit ein. Wollen sie das Feature benutzen? fahren sie fort.");
+            do    
             {
+
                 Console.WriteLine("ScheitelpunktformNormalForm");
                 //Meine Erste Zeile
                 string xnosave;
@@ -201,7 +203,7 @@ namespace MAMultiToolKlassenBibliothek
 
                 if (submenü == false)
                 {
- 
+                   
 
                     string anosave;
                     bool aerror = false;
@@ -277,21 +279,20 @@ namespace MAMultiToolKlassenBibliothek
                     decimal aMAL3 = 0;
 
 
-                    if (xsave < 0)// zweite binomische formel
+                    if (xsave < 0)// erste binomische formel
                     {
                         klammer1 = xsave * 2;
                         klammer2 = xsave * xsave;
-                        Console.WriteLine("Als erstes wird die erste Binomische Formel angewendet.\nDies wird in der Klammer gekennzeichnet.");
-                       
-                        
-                        Console.WriteLine($"\nf(x)={asave}*(x²{klammer1}x{klammer2})+{ysave}");
+
+                        Console.WriteLine("Als erstes wird in der Klammer mithilfe der Binomischen Formel ausmultipliziert.");
+                        Console.WriteLine($"f(x)={asave}*(x²{klammer1}x+{klammer2})+{ysave}");
 
                         aMAL = (asave * klammer1) * -1;
                         aMAL2 = asave * klammer2 + ysave;
-                        Console.WriteLine("Jetzt wird die Klammer ausmultipliziert.");
-                        
-                        
-                        Console.WriteLine($"Hier ist ihre Quadratische Funktion:\n\nf(x)={asave}x²+{aMAL}x+{aMAL2}");
+                        Console.WriteLine("Dann wird die Klammer aufgelöst.");
+                        Console.WriteLine($"Das ist nun ihre allgeimeine quadratische Funktion \nf(x)={asave}x²+{aMAL}+{aMAL2}");
+
+
 
 
 
@@ -300,24 +301,17 @@ namespace MAMultiToolKlassenBibliothek
                         Console.ReadLine();
 
                     }
-                    else if (xsave > 0)//erste binomische formel
+                    else if (xsave > 0)//zweite binomische formel
                     {
                         klammer1 = xsave * 2;
                         klammer2 = xsave * xsave;
 
-
-                        Console.WriteLine("Als erstes wird die erste Binomische Formel angewendet.\nDies wird in der Klammer gekennzeichnet.");
-                   
-
-                        Console.WriteLine($"f(x)={asave}*(x²{klammer1}x+{klammer2})+{ysave}");
+                        Console.WriteLine("Als erstes wird in der Klammer mithilfe der Binomischen Formel ausmultipliziert.");
+                        Console.WriteLine($"f(x)={asave}*(x²-{klammer1}x+{klammer2})+{ysave}");
 
                         aMAL = asave * klammer1;
                         aMAL2 = asave * klammer2 + ysave;
-
-
-                        Console.WriteLine("Jetzt wird die Klammer ausmultipliziert.");
-                        
-                        Console.WriteLine($"Hier ist ihre Quadratische Funktion:\n\nf(x)={asave}x²+{aMAL}x+{aMAL2}");
+                        Console.WriteLine($"f(x)={asave}x²-{aMAL}+{aMAL2}");
 
                         Console.ReadKey();
                     }
