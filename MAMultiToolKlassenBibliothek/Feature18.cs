@@ -146,7 +146,6 @@ namespace MAMultiToolKlassenBibliothek
                 string ynosave;
                 if (submenü == false)
                 {
-                    
                     bool yserror = false;
 
 
@@ -195,7 +194,7 @@ namespace MAMultiToolKlassenBibliothek
                         }
 
                     } while (yserror == true && submenü == false);
-                    ysave = decimal.Parse(ynosave);
+                    
                     yserror = false;
 
 
@@ -256,7 +255,7 @@ namespace MAMultiToolKlassenBibliothek
 
 
                     } while (aerror == true && submenü == false);
-                    asave = Decimal.Parse(anosave);
+                   
                     aerror = false;
 
 
@@ -268,9 +267,9 @@ namespace MAMultiToolKlassenBibliothek
                     //f(x)=a*(x-xs)^2 +ys
 
                     //f(x)=ax^2 +bx+c
-
-                    Console.WriteLine($"f(x)={asave}*(x-{xsave})^2 +{ysave}"); // s(-5/8)
-                    Console.WriteLine($"f(x)={asave}*(x-{xsave})^2 +{ysave}");
+                    Console.WriteLine("so lautet nun ihre Scheitelpunktform:");
+                    Console.WriteLine($"\nf(x)={asave}*(x-{xsave})^2 +{ysave}"); // s(-5/8)
+                    
 
                     decimal klammer1 = 0;
                     decimal klammer2 = 0;
@@ -297,6 +296,8 @@ namespace MAMultiToolKlassenBibliothek
 
 
 
+
+
                         Console.ReadLine();
 
                     }
@@ -310,8 +311,7 @@ namespace MAMultiToolKlassenBibliothek
 
                         aMAL = asave * klammer1;
                         aMAL2 = asave * klammer2 + ysave;
-                        Console.WriteLine("Dann wird die Klammer aufgelöst.");
-                        Console.WriteLine($" Das ist nun ihre allgeimeine quadratische Funktion \n$f(x)={asave}x²-{aMAL}x+{aMAL2}");
+                        Console.WriteLine($"f(x)={asave}x²-{aMAL}+{aMAL2}");
 
                         Console.ReadKey();
                     }
@@ -319,10 +319,10 @@ namespace MAMultiToolKlassenBibliothek
 
                 Console.Clear();
             } while (submenü == false);
-            
+         
 
-           
-        
+
+
         }
 
 
