@@ -70,7 +70,7 @@ namespace WIMultiToolKlassenBibliothek
                 do
                 {
 
-                    Console.WriteLine("Wiederholen?(true/false)");
+                    Console.WriteLine("Möchten sie den Vorgang wiederholen?(true/false)");
                     str_wiederholen = Console.ReadLine();
                     tryparseout = bool.TryParse(str_wiederholen, out bool_wiederholen);
 
