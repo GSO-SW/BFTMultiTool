@@ -10,9 +10,9 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 | ----------- 	| ----------- 	|-----------	|-----------	|-----------	|-----------	|
 |**Administration**	|Release      	|Administrator	|Kander Akinci 	|AI-Assistant	|Release, main	|
 |		|	|		|		|		|		|		|
-|**Elektrotechnik**	|Menü ET / Spannung als Energieaufteilung & Strom aus Ladungen je Zeit|Teamkoordinator|David Schaele|DavidCXV|ETEntwicklung,Feature1|
+|**Elektrotechnik**	|Menü ET / Ohm'sches Gesetz & Leistungsgesetz berechnen (ggf. + Erweiterungen) |Teamkoordinator|David Schaele|DavidCXV|ETEntwicklung,Feature1|
 |   		|Spannungsfall & Leitungsquerschnitt berechnen |Entwickler|Nicolai Mockenhaupt	|NeoEkusoshisuto|Feature2|
-|   		|Ohm'schesGesetz & Leistungsgesetz |Entwickler|Nico Billig	|Nico-GSO|Feature3|
+|   		|Ohm'schesGesetz & Leistungsgesetz beschreiben |Entwickler|Nico Billig	|Nico-GSO|Feature3|
 |   		|Widerstand, Kondensator & Spule Info und Berechnung|Entwickler|David Waderna|Davobeats|Feature4|
 |		|	|		|		|		|		|		
 |**Physik**	|Menü PY /Vorsätze für Maßeinheiten umwandeln SI –Einheiten umrechnen	|Teamkoordinator|Jonas Högele	|Jonashgl|PHEntwicklung	,Feature5|
@@ -21,8 +21,10 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 |		|Volumen von Würfel, Kugel, Pyramide und Prisma|Entwickler	|Jowan Hamko|jowanh2|Feature8|
 |		|	||||		|		
 |**Informatik**	|Menü IT / Zahlensysteme ineinander umrechnen|Teamkoordinator|Haitam Kazzaz	|Haitham2004|ITEntwicklung,Feature9|				
-|		|	|Entwickler	|	Emre-Can Zeren	|EmreZ55	|Feature10|		
-|		|	|	Entwickler|Mansour Alassaf	|mansourr23	|Feature11|	
+|		|Daten umrechnen und sortieren	|Entwickler	|	Emre-Can Zeren	|EmreZ55	|Feature10|		
+|		|Schnittmenge berechnen	|	Entwickler|Mansour Alassaf	|mansourr23	|Feature11|
+|		|Witz Easter Egg	|	Entwickler|Raphel Hoeck		|Raphel2005H	|Feature20|
+|		|bandbreite berechnen	|	Entwickler|Sergey Zavadovskiy	|SergeyAbi	|Feature21|
 |		|	|	|		|		|		|		
 |**Wirtschaft**	|	|Teamkoordinator|Florian Reuter	|Florian116	|WIEntwicklung,Feature12|				
 |		|	|		|Tamim Hashimi|	Tamim-2003|Feature13|		
