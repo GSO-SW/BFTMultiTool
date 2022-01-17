@@ -37,25 +37,27 @@ namespace ETMultiToolKlassenBibliothek
                 Console.WriteLine("Eingabe: hauptmenü\t->\tzurück zum Hauptmenü");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\nBeschreibung Bereich \n\n");
+                Console.WriteLine("\n\nMit Hilfe dieses SubMenues, können sie ganz simpel häufig auftretende"
+                                    + " Problemstellungen im Elektrotechnik Unterricht lösen\n\n");
 
                 Hmenue = false;
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\t1 - Einheitenbibliothek + Berechnungen");
-                Console.WriteLine("\t2 - Strom AufbAU ");
+                Console.WriteLine("\t1 - Widerstand/Leistungs Berechnung");
+                Console.WriteLine("\t2 - Strom Aufbau ");
                 Console.WriteLine("\t3 - Wiederstand/Leistungs Übersicht");
-                Console.WriteLine("\t4 - Elektronische Bauelemente\n");
+                Console.WriteLine("\t4 - Elektronische Bauelemente");
+                Console.WriteLine("\t5 - Elektronische Bauelemente Version 2 \n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine();
 
                 switch (HauptAusw)
                 {
-                    
+
                     case "1":
                         Console.Clear();
-                        Feature1.Feature1Funcion1(); //Mit diesem Feature lassen sich viele Formen der Et berechnen 
+                        Feature1.Feature1Funcion1(); //Mit diesem Feature lässt sich das Ohmsche Gesetz und das Leistungsgesetz berechnen
                         break;
 
                     case "2":
@@ -72,7 +74,12 @@ namespace ETMultiToolKlassenBibliothek
                         Console.Clear();
                         Feature4.Feature4Funcion1();
                         break;
-                                            
+
+                    case "5":
+                        Console.Clear();
+                        Feature23.Feature23Funcion1();
+                        break;
+
                     case "hauptmenü":
                         Console.Clear();
                         Hmenue = true;
@@ -87,8 +94,8 @@ namespace ETMultiToolKlassenBibliothek
                         Console.ReadKey();
 
                         (int, int) cPosAM = Console.GetCursorPosition();
-                        
-                        
+
+
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
 
                         break;

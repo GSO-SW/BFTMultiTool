@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAMultiToolKlassenBibliothe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PHMultiToolKlassenBibliothek", "PHMultiToolKlassenBibliothek\PHMultiToolKlassenBibliothek.csproj", "{397D783A-A236-48A5-9F8F-C5E435D2A5AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIMultiToolKlassenBibliothek", "WIMultiToolKlassenBibliothek\WIMultiToolKlassenBibliothek.csproj", "{11DABF13-1006-4A35-B9D7-2C69EAD1B65A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WIMultiToolKlassenBibliothek", "WIMultiToolKlassenBibliothek\WIMultiToolKlassenBibliothek.csproj", "{11DABF13-1006-4A35-B9D7-2C69EAD1B65A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,14 +81,14 @@ Global
 		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Debug|ARM32.ActiveCfg = Debug|ARM32
 		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Debug|ARM32.Build.0 = Debug|ARM32
-		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Debug|x64.ActiveCfg = Debug|x64
-		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Debug|x64.Build.0 = Debug|x64
+		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Debug|x64.Build.0 = Debug|Any CPU
 		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Release|ARM32.ActiveCfg = Release|ARM32
 		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Release|ARM32.Build.0 = Release|ARM32
-		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Release|x64.ActiveCfg = Release|x64
-		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Release|x64.Build.0 = Release|x64
+		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Release|x64.ActiveCfg = Release|Any CPU
+		{36FB2166-C720-48A2-854F-25C2F6C2E613}.Release|x64.Build.0 = Release|Any CPU
 		{DDDE3DAD-24EF-49A6-9B7F-720CBFFB07EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DDDE3DAD-24EF-49A6-9B7F-720CBFFB07EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDDE3DAD-24EF-49A6-9B7F-720CBFFB07EE}.Debug|ARM32.ActiveCfg = Debug|ARM32
