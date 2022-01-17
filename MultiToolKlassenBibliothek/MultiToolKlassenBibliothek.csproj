@@ -9,7 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ETMultiToolKlassenBibliothek\ETMultiToolKlassenBibliothek.csproj" />
+    <ProjectReference Include="..\ITMultiToolKlassenBibliothek\ITMultiToolKlassenBibliothek.csproj" />
     <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
+    <ProjectReference Include="..\MAMultiToolKlassenBibliothek\MAMultiToolKlassenBibliothek.csproj" />
+    <ProjectReference Include="..\PHMultiToolKlassenBibliothek\PHMultiToolKlassenBibliothek.csproj" />
   </ItemGroup>
 
 </Project>
