@@ -80,7 +80,7 @@ namespace MultiToolKlassenBibliothek
 
                     case "w":
                         Console.Clear();
-                        WIMultiToolKlassenBibliothek.WIMenue.WISubMenue();
+                        //WIMultiToolKlassenBibliothek.WIMenue.WISubMenue();
                         break;
 
                     case "exit":
