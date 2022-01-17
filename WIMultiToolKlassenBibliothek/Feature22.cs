@@ -57,7 +57,7 @@ namespace WIMultiToolKlassenBibliothek
 
                 } while (tryparseout == false);
 
-                
+
 
                 double GpS = doub_PpP - doub_Variablekosten;
                 Console.WriteLine("{0,-20}{1,20:F2}EUR", "Gewin pro Stück", GpS);
@@ -70,9 +70,9 @@ namespace WIMultiToolKlassenBibliothek
                 do
                 {
 
-                    Console.WriteLine("Wiederholen?(true/false)");
+                    Console.WriteLine("Möchten sie den Vorgang wiederholen?(true/false)");
                     str_wiederholen = Console.ReadLine();
-                    tryparseout = bool.TryParse(str_wiederholen, out);
+                    tryparseout = bool.TryParse(str_wiederholen, out bool_wiederholen);
 
                 } while (tryparseout == false);
 
@@ -82,18 +82,7 @@ namespace WIMultiToolKlassenBibliothek
 
 
 
-            } while (bool_wiederholen==true);
-
-
-
-
-
-
-
-
-
-
-
+            } while (bool_wiederholen == true);
 
 
 
