@@ -19,12 +19,12 @@ namespace ITMultiToolKlassenBibliothek
 
 
             Console.WriteLine(" Bitte geben Sie Name, Alter, Gewicht und Größe ein\n");
-            
+
             Console.WriteLine("Bitte geben Sie Name ein\n");
             string name = Console.ReadLine();
 
-            
-            
+
+
             Console.WriteLine(" Bitte geben Sie Alter ein\n");
             string alter = Console.ReadLine();
             Console.WriteLine(" Bitte geben Sie  Gewicht ein\n");
@@ -36,11 +36,11 @@ namespace ITMultiToolKlassenBibliothek
 
             Console.WriteLine("");
 
-            Console.WriteLine(" [Die Person heißt {0} ist  {1} Jahre Alt , wiegt {2} und ist {3} hoch. ]",name,alter,gewicht,größe);
+            Console.WriteLine(" [Die Person heißt {0} ist  {1} Jahre Alt , wiegt {2} und ist {3} hoch. ]", name, alter, gewicht, größe);
 
             Console.WriteLine("");
 
-            
+
             Console.WriteLine("Programm wird beim  nächsten Tastendruck geschlossen!");
 
             System.Environment.Exit(-1);
@@ -51,6 +51,6 @@ namespace ITMultiToolKlassenBibliothek
 
 
         }
-        
+
     }
 }

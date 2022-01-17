@@ -62,16 +62,16 @@ namespace ITMultiToolKlassenBibliothek
 
 
                 //Aufruf einer Funktion die in die unterschiedlichen Zahlensysteme umrechnet
-                ZahlensystemBackend(auswahl1,auswahl2);
+                ZahlensystemBackend(auswahl1, auswahl2);
 
-                
+
 
 
                 //Frage ob wiederholt werden soll
                 Console.WriteLine("Möchten Sie das Programm wiederholen?(j/n)");
-                wiederholen=Console.ReadLine().ToLower();
+                wiederholen = Console.ReadLine().ToLower();
 
-            } while (wiederholen=="j");
+            } while (wiederholen == "j");
         }
 
 
@@ -79,7 +79,7 @@ namespace ITMultiToolKlassenBibliothek
         #region Backend
 
 
-        private static void ZahlensystemBackend(int a1,int a2)
+        private static void ZahlensystemBackend(int a1, int a2)
         {
             //Ein Array um die Kürzel dynamisch anzusteuern
             string[] z_systeme = { "HEX", "DEZ", "OKT", "BIN" };
@@ -97,11 +97,11 @@ namespace ITMultiToolKlassenBibliothek
             do
             {
 
-                
-                Console.WriteLine("{0}->{1}", z_systeme[a1-1], z_systeme[a2-1]);
+
+                Console.WriteLine("{0}->{1}", z_systeme[a1 - 1], z_systeme[a2 - 1]);
                 Console.WriteLine("Verwenden Sie keine Trennzeichen");
-                Console.Write("Geben Sie den {0} Wert ein:", z_systeme[a1-1]);
-                s_eingabe1=Console.ReadLine();
+                Console.Write("Geben Sie den {0} Wert ein:", z_systeme[a1 - 1]);
+                s_eingabe1 = Console.ReadLine();
 
                 //Es gibt hier keinen Rückgabewert da in der Methode das Ergebnis ausgegeben wird
                 BedingungPrüfen(a1, a2, s_eingabe1, out trypassout);
@@ -113,8 +113,8 @@ namespace ITMultiToolKlassenBibliothek
 
         }
 
-        
-        private static void BedingungPrüfen(int a1,int a2,string s_eingabe, out bool trypassout)
+
+        private static void BedingungPrüfen(int a1, int a2, string s_eingabe, out bool trypassout)
         {
             string[] z_systeme = { "HEX", "DEZ", "OKT", "BIN" };
             trypassout = true;
@@ -126,7 +126,7 @@ namespace ITMultiToolKlassenBibliothek
                     //Dieser Teil wird versucht.
                     try
                     {
-                        
+
                         //Die Eingabe(string) wird in ein Integer umgewandelt.
                         int val_dec = int.Parse(s_eingabe, NumberStyles.HexNumber);
                         int val_okt = ToOctal(val_dec);
@@ -151,7 +151,7 @@ namespace ITMultiToolKlassenBibliothek
                     {
                         Console.WriteLine("Eingabe im falschen Format.");
                         Console.ReadKey();
-                        
+
                         trypassout = false;
                     }
 
@@ -277,7 +277,7 @@ namespace ITMultiToolKlassenBibliothek
                     }
 
                     break;
-                    
+
             }
 
 
@@ -312,7 +312,7 @@ namespace ITMultiToolKlassenBibliothek
 
         public static int BinToDecimal(int binaryNumber)
         {
-            int decimalValue=0;
+            int decimalValue = 0;
             int base1 = 1;
             while (binaryNumber > 0)
             {

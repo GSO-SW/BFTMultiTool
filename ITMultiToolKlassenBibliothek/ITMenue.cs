@@ -54,11 +54,11 @@ namespace ITMultiToolKlassenBibliothek
 
                 switch (HauptAusw)
                 {
-                    
+
                     case "1":
                         Console.Clear();
                         Feature9.Feature9Funcion1();
-                        
+
                         break;
 
                     case "2":
@@ -99,8 +99,8 @@ namespace ITMultiToolKlassenBibliothek
                         Console.ReadKey();
 
                         (int, int) cPosAM = Console.GetCursorPosition();
-                        
-                        
+
+
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
 
                         break;

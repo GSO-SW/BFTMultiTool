@@ -41,7 +41,8 @@ namespace ITMultiToolKlassenBibliothek
                     } while (ds <= 0);
 
                     int igs = 0;
-                    do {
+                    do
+                    {
 
                         Console.Write("Geben sie ihre Internetgeschwindigkeit in Mbit ein:");
                         strds = Console.ReadLine();
@@ -52,13 +53,13 @@ namespace ITMultiToolKlassenBibliothek
                         }
                     } while (igs <= 0);
 
-                    
+
                     Console.Write("Geben sie ihre Downloadgröße in MB ein:");
                     strds = Console.ReadLine();
-                    int ds = Convert.ToInt32(strds);
+                    ds = Convert.ToInt32(strds);
                     Console.Write("Geben sie ihre Internetgeschwindigkeit in Mbit ein:");
                     strds = Console.ReadLine();
-                    int igs = Convert.ToInt32(strds);
+                    igs = Convert.ToInt32(strds);
 
                     int tsec = ds * 8 / igs;
                     int std = tsec / 3600;
