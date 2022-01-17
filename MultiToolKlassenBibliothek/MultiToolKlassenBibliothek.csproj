@@ -14,6 +14,7 @@
     <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
     <ProjectReference Include="..\MAMultiToolKlassenBibliothek\MAMultiToolKlassenBibliothek.csproj" />
     <ProjectReference Include="..\PHMultiToolKlassenBibliothek\PHMultiToolKlassenBibliothek.csproj" />
+    <ProjectReference Include="..\WIMultiToolKlassenBibliothek\WIMultiToolKlassenBibliothek.csproj" />
   </ItemGroup>
 
 </Project>
