@@ -27,9 +27,9 @@ Das Projekt ist in die Bereiche Mathematik, Elektrotechnik… aufgeteilt. Diese 
 |		|bandbreite berechnen	|	Entwickler|Sergey Zavadovskiy	|SergeyAbi	|Feature21|
 |		|	|	|		|		|		|		
 |**Wirtschaft**	|	|Teamkoordinator|Florian Reuter	|Florian116	|WIEntwicklung,Feature12|				
-|		|	|		|Tamim Hashimi|	Tamim-2003|Feature13|		
-|		|	|		|Murtaza Behzad|		|Feature14|		
-|		|	|		|Deniz Kartal|	DenizDRoger|Feature15|	
+|		|	|	Entwickler|Tamim Hashimi|	Tamim-2003|Feature13|		
+|		|	|	Entwickler|Murtaza Behzad|		|Feature14|		
+|		|	|	Entwickler|Deniz Kartal|	DenizDRoger|Feature15|	
 |		|	|		|		|		|		|	
 |**Mathematik**	|Menü MT / ... |Teamkoordinator|Moritz Mersmann|MoritzM1110|MAEntwicklung,Feature16|				
 |		|Funktionsgleichung, Nullstellen und Funktionswerte von Lineare Funktionen berechnen|	Entwickler	|Dennis Jakob	|Dennis180|Feature17|		
